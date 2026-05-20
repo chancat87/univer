@@ -1,20 +1,20 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-VHOETFV3.js";
+} from "../chunk-O35BDTOB.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-JAO7RAZ6.js";
-import "../chunk-SOTD7ILT.js";
+} from "../chunk-PSQDX7HM.js";
+import "../chunk-2XOKAI73.js";
 import {
   UniverDebuggerPlugin
-} from "../chunk-Z7IXD47T.js";
+} from "../chunk-ZBI4XOM2.js";
 import {
   InsertDocImageCommand,
   UniverDocsDrawingUIPlugin
-} from "../chunk-ECTKPHFO.js";
+} from "../chunk-JJPHOOJZ.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
@@ -25,14 +25,14 @@ import "../chunk-MEK4W47U.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-6XLEMCGQ.js";
+} from "../chunk-YBVW43HL.js";
 import {
   FUniver
 } from "../chunk-PTH4ZFW6.js";
-import "../chunk-YLLTPTWC.js";
+import "../chunk-MWDP76KP.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE
-} from "../chunk-2BPF3MDK.js";
+} from "../chunk-22VMBDC5.js";
 import {
   BulletListCommand,
   CutContentCommand,
@@ -66,7 +66,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-QXWAJ3Q5.js";
+} from "../chunk-LYXQRSZ3.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -98,7 +98,7 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-CB54O66K.js";
+} from "../chunk-BJILIWTN.js";
 import {
   zh_CN_default
 } from "../chunk-CF3BOM2J.js";
@@ -461,7 +461,7 @@ var package_default2 = {
     "@univerjs/docs-hyper-link": "workspace:*",
     "@univerjs/docs-ui": "workspace:*",
     "@univerjs/engine-render": "workspace:*",
-    "@univerjs/icons": "^1.2.0",
+    "@univerjs/icons": "1.3.0",
     "@univerjs/ui": "workspace:*"
   },
   devDependencies: {
@@ -2428,7 +2428,7 @@ var package_default3 = {
     "@univerjs/drawing": "workspace:*",
     "@univerjs/drawing-ui": "workspace:*",
     "@univerjs/engine-render": "workspace:*",
-    "@univerjs/icons": "^1.2.0",
+    "@univerjs/icons": "1.3.0",
     "@univerjs/ui": "workspace:*"
   },
   devDependencies: {
@@ -2773,7 +2773,7 @@ var package_default4 = {
     "@univerjs/docs": "workspace:*",
     "@univerjs/docs-ui": "workspace:*",
     "@univerjs/engine-render": "workspace:*",
-    "@univerjs/icons": "^1.2.0",
+    "@univerjs/icons": "1.3.0",
     "@univerjs/thread-comment": "workspace:*",
     "@univerjs/thread-comment-ui": "workspace:*",
     "@univerjs/ui": "workspace:*"
