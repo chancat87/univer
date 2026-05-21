@@ -1,25 +1,25 @@
 import {
   UniverUniscriptPlugin
-} from "../chunk-KZJM5VK7.js";
+} from "../chunk-S6IHLQLT.js";
 import "../chunk-GCGI23F5.js";
 import "../chunk-CQY74AWC.js";
 import "../chunk-CLMLYKFF.js";
 import {
   UniverDebuggerPlugin
-} from "../chunk-2OMOKZ33.js";
-import "../chunk-JJPHOOJZ.js";
+} from "../chunk-TWOBT7QK.js";
+import "../chunk-TDMZD2OC.js";
 import "../chunk-MEK4W47U.js";
-import "../chunk-YBVW43HL.js";
+import "../chunk-A3AFMM7C.js";
 import "../chunk-PTH4ZFW6.js";
 import {
   UniverSheetsNumfmtUIPlugin
-} from "../chunk-NPXL6NL4.js";
+} from "../chunk-YM5MM6UP.js";
 import {
   UniverSheetsNumfmtPlugin
 } from "../chunk-BBXUS2VP.js";
 import {
   UniverSheetsUIPlugin
-} from "../chunk-MWDP76KP.js";
+} from "../chunk-JUXR4H2I.js";
 import {
   UNISCRIT_WORKBOOK_DATA_DEMO
 } from "../chunk-22VMBDC5.js";
