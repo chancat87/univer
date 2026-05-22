@@ -2,7 +2,7 @@ import {
   DEFAULT_SLIDE_DATA,
   ObjectProvider,
   UniverSlidesPlugin
-} from "../chunk-2ZWTIXBC.js";
+} from "../chunk-3MPN2FQO.js";
 import {
   DOCS_COMPONENT_MAIN_LAYER_INDEX,
   DRAWING_IMAGE_ALLOW_IMAGE_LIST,
@@ -18,7 +18,7 @@ import {
   UniverDocsUIPlugin,
   UniverDrawingPlugin,
   getImageSize
-} from "../chunk-KDLVHEZD.js";
+} from "../chunk-UYLQVP27.js";
 import "../chunk-LI6UXASZ.js";
 import {
   AutofillDoubleIcon,
@@ -54,14 +54,14 @@ import {
   scrollbarClassName,
   useDependency,
   useObservable
-} from "../chunk-WMC5D3J2.js";
+} from "../chunk-RDPVWSGF.js";
 import {
   zh_CN_default
-} from "../chunk-KRK2OEW6.js";
-import "../chunk-EKO4WRKA.js";
+} from "../chunk-BX66AN5H.js";
+import "../chunk-CTBLWIU7.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-F55CLEHK.js";
+} from "../chunk-QLAYCCMO.js";
 import {
   FIX_ONE_PIXEL_BLUR_OFFSET,
   IRenderManagerService,
@@ -75,7 +75,7 @@ import {
   fixLineWidthByScale,
   getCurrentTypeOfRenderer,
   pxToNum
-} from "../chunk-RK6SZT5J.js";
+} from "../chunk-ADPAOSVN.js";
 import {
   BehaviorSubject,
   DEFAULT_EMPTY_DOCUMENT_VALUE,
@@ -112,7 +112,7 @@ import {
   merge_default,
   takeUntil,
   toDisposable
-} from "../chunk-EJHY6CWE.js";
+} from "../chunk-P5OMPNXM.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -212,7 +212,7 @@ var SlideRenderController = class extends RxDisposable {
    * @param mainScene
    */
   _createSlide(mainScene) {
-    const model = this._univerInstanceService.getCurrentUnitForType(3 /* UNIVER_SLIDE */);
+    const model = this._univerInstanceService.getCurrentUnitOfType(3 /* UNIVER_SLIDE */);
     const { width: sceneWidth, height: sceneHeight } = mainScene;
     const pageSize = model.getPageSize();
     const { width = 100, height = 100 } = pageSize;
@@ -228,7 +228,7 @@ var SlideRenderController = class extends RxDisposable {
     return slideComponent;
   }
   _addBackgroundRect(scene, fill) {
-    const model = this._univerInstanceService.getCurrentUnitForType(3 /* UNIVER_SLIDE */);
+    const model = this._univerInstanceService.getCurrentUnitOfType(3 /* UNIVER_SLIDE */);
     const pageSize = model.getPageSize();
     const { width: pageWidth = 0, height: pageHeight = 0 } = pageSize;
     const page = new Rect("canvas", {
@@ -562,7 +562,7 @@ var InsertSlideFloatImageCommand = {
   handler: async (accessor, params) => {
     var _a;
     const univerInstanceService = accessor.get(IUniverInstanceService);
-    const unitId = (_a = univerInstanceService.getCurrentUnitForType(3 /* UNIVER_SLIDE */)) == null ? void 0 : _a.getUnitId();
+    const unitId = (_a = univerInstanceService.getCurrentUnitOfType(3 /* UNIVER_SLIDE */)) == null ? void 0 : _a.getUnitId();
     if (!unitId) return false;
     const fileOpenerService = accessor.get(ILocalFileService);
     const files = await fileOpenerService.openFile({
@@ -987,7 +987,7 @@ function RectSidebar() {
   var _a, _b, _c;
   const univerInstanceService = useDependency(IUniverInstanceService);
   const canvasView = useDependency(CanvasView);
-  const currentSlide = univerInstanceService.getCurrentUnitForType(3 /* UNIVER_SLIDE */);
+  const currentSlide = univerInstanceService.getCurrentUnitOfType(3 /* UNIVER_SLIDE */);
   const pageId = (_a = currentSlide == null ? void 0 : currentSlide.getActivePage()) == null ? void 0 : _a.id;
   const unitId = ((_b = univerInstanceService.getFocusedUnit()) == null ? void 0 : _b.getUnitId()) || "";
   if (!pageId || !unitId) return null;
@@ -1228,7 +1228,7 @@ function SlideSideBar() {
   const renderManagerService = useDependency(IRenderManagerService);
   const localeService = useDependency(LocaleService);
   const slideBarRef = (0, import_react3.useRef)(null);
-  const currentSlide = univerInstanceService.getCurrentUnitForType(3 /* UNIVER_SLIDE */);
+  const currentSlide = univerInstanceService.getCurrentUnitOfType(3 /* UNIVER_SLIDE */);
   const pages = currentSlide == null ? void 0 : currentSlide.getPages();
   const pageOrder = currentSlide == null ? void 0 : currentSlide.getPageOrder();
   if (!pages || !pageOrder) {
@@ -1827,7 +1827,7 @@ var package_default = {
     "@univerjs/docs-ui": "workspace:*",
     "@univerjs/drawing": "workspace:*",
     "@univerjs/engine-render": "workspace:*",
-    "@univerjs/icons": "1.3.0",
+    "@univerjs/icons": "1.4.0",
     "@univerjs/slides": "workspace:*",
     "@univerjs/ui": "workspace:*"
   },
@@ -2699,7 +2699,7 @@ var SlideEditorBridgeRenderController = class extends RxDisposable {
     if (!this._curRichText) return;
     this.setEditorVisible(false);
     const curRichText = this._curRichText;
-    const slideData = this._instanceSrv.getCurrentUnitForType(3 /* UNIVER_SLIDE */);
+    const slideData = this._instanceSrv.getCurrentUnitOfType(3 /* UNIVER_SLIDE */);
     if (!slideData) return false;
     curRichText.refreshDocumentByDocData();
     curRichText.resizeToContentSize();
@@ -2826,7 +2826,7 @@ var SlideCanvasPopMangerService = class extends Disposable {
     };
   }
   attachPopupToObject(targetObject, popup) {
-    const workbook = this._univerInstanceService.getCurrentUnitForType(3 /* UNIVER_SLIDE */);
+    const workbook = this._univerInstanceService.getCurrentUnitOfType(3 /* UNIVER_SLIDE */);
     const unitId = workbook.getUnitId();
     const currentRender = this._renderManagerService.getRenderById(unitId);
     if (!currentRender) {
@@ -2892,7 +2892,7 @@ var SlidePopupMenuController = class extends RxDisposable {
   // eslint-disable-next-line max-lines-per-function
   _popupMenuListener(unitId) {
     var _a;
-    const model = this._univerInstanceService.getCurrentUnitForType(3 /* UNIVER_SLIDE */);
+    const model = this._univerInstanceService.getCurrentUnitOfType(3 /* UNIVER_SLIDE */);
     const pages = (_a = model == null ? void 0 : model.getPages()) != null ? _a : {};
     Object.keys(pages).forEach((pageId) => {
       var _a2;
@@ -3113,7 +3113,7 @@ var UniverSlidesUIPlugin = class extends Plugin {
   _markSlideAsFocused() {
     const currentService = this._univerInstanceService;
     try {
-      const slideDataModel = currentService.getCurrentUnitForType(3 /* UNIVER_SLIDE */);
+      const slideDataModel = currentService.getCurrentUnitOfType(3 /* UNIVER_SLIDE */);
       currentService.focusUnit(slideDataModel.getUnitId());
     } catch (e) {
     }

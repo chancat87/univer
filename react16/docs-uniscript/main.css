@@ -6132,6 +6132,9 @@
 .univer-z-10 {
   z-index: 10;
 }
+.univer-z-20 {
+  z-index: 20;
+}
 .univer-z-\[-1\] {
   z-index: -1;
 }
@@ -6575,6 +6578,9 @@
 .univer-max-h-\[--radix-popper-available-height\] {
   max-height: var(--radix-popper-available-height);
 }
+.univer-max-h-\[1000px\] {
+  max-height: 1000px;
+}
 .univer-max-h-\[100px\] {
   max-height: 100px;
 }
@@ -6652,6 +6658,9 @@
 }
 .univer-w-0 {
   width: 0px;
+}
+.univer-w-1 {
+  width: 0.25rem;
 }
 .univer-w-1\/2 {
   width: 50%;
@@ -7008,6 +7017,9 @@
 .univer-animate-spin {
   animation: univer-spin 1s linear infinite;
 }
+.univer-cursor-col-resize {
+  cursor: col-resize;
+}
 .univer-cursor-crosshair {
   cursor: crosshair;
 }
@@ -7161,6 +7173,9 @@
 }
 .univer-gap-4 {
   gap: 1rem;
+}
+.univer-gap-5 {
+  gap: 1.25rem;
 }
 .univer-gap-6 {
   gap: 1.5rem;
@@ -7454,6 +7469,9 @@
 }
 .univer-border-primary-600 {
   border-color: var(--univer-primary-600);
+}
+.univer-border-red-300 {
+  border-color: var(--univer-red-300);
 }
 .univer-border-red-500 {
   border-color: var(--univer-red-500);
@@ -7812,6 +7830,9 @@
 }
 .univer-pb-2 {
   padding-bottom: 0.5rem;
+}
+.univer-pb-2\.5 {
+  padding-bottom: 0.625rem;
 }
 .univer-pb-3 {
   padding-bottom: 0.75rem;
@@ -8224,6 +8245,9 @@
 }
 .univer-opacity-0 {
   opacity: 0;
+}
+.univer-opacity-100 {
+  opacity: 1;
 }
 .univer-opacity-30 {
   opacity: 0.3;
