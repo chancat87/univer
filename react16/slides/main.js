@@ -2,7 +2,7 @@ import {
   DEFAULT_SLIDE_DATA,
   ObjectProvider,
   UniverSlidesPlugin
-} from "../chunk-SOZX7552.js";
+} from "../chunk-AU447C6B.js";
 import {
   DOCS_COMPONENT_MAIN_LAYER_INDEX,
   DRAWING_IMAGE_ALLOW_IMAGE_LIST,
@@ -18,7 +18,7 @@ import {
   UniverDocsUIPlugin,
   UniverDrawingPlugin,
   getImageSize
-} from "../chunk-B2APTGFC.js";
+} from "../chunk-5LSMNLCB.js";
 import "../chunk-LI6UXASZ.js";
 import {
   AutofillDoubleIcon,
@@ -54,14 +54,14 @@ import {
   scrollbarClassName,
   useDependency,
   useObservable
-} from "../chunk-4QKNKDTI.js";
+} from "../chunk-YHX3PO7Y.js";
 import {
   zh_CN_default
-} from "../chunk-KE3NM2PC.js";
-import "../chunk-U5XU3TS2.js";
+} from "../chunk-4QRQ4FBX.js";
+import "../chunk-JAO4FOGC.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-3IJ7FHN5.js";
+} from "../chunk-UPB44MDX.js";
 import {
   FIX_ONE_PIXEL_BLUR_OFFSET,
   IRenderManagerService,
@@ -75,7 +75,7 @@ import {
   fixLineWidthByScale,
   getCurrentTypeOfRenderer,
   pxToNum
-} from "../chunk-BGNMHP4X.js";
+} from "../chunk-M6VABHCX.js";
 import {
   BehaviorSubject,
   DEFAULT_EMPTY_DOCUMENT_VALUE,
@@ -112,7 +112,7 @@ import {
   merge_default,
   takeUntil,
   toDisposable
-} from "../chunk-NFVAY4NN.js";
+} from "../chunk-F6ZBKZEW.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -677,7 +677,7 @@ function ArrangePanel(props) {
       "div",
       {
         className: `univer-w-full univer-text-left univer-text-gray-600 dark:!univer-text-gray-200`,
-        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: localeService.t("image-panel.arrange.title") })
+        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: localeService.t("slides-ui.image-panel.arrange.title") })
       }
     ) }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "univer-relative univer-mt-2.5 univer-flex univer-h-full", children: [
@@ -685,13 +685,13 @@ function ArrangePanel(props) {
         onArrangeBtnClick(0 /* forward */);
       }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { className: "univer-flex univer-items-center univer-gap-1", children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MoveUpIcon, {}),
-        localeService.t("image-panel.arrange.forward")
+        localeService.t("slides-ui.image-panel.arrange.forward")
       ] }) }) }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "univer-w-1/2", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, { onClick: () => {
         onArrangeBtnClick(1 /* backward */);
       }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { className: "univer-flex univer-items-center univer-gap-1", children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MoveDownIcon, {}),
-        localeService.t("image-panel.arrange.backward")
+        localeService.t("slides-ui.image-panel.arrange.backward")
       ] }) }) })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "univer-relative univer-mt-2.5 univer-flex univer-h-full", children: [
@@ -699,13 +699,13 @@ function ArrangePanel(props) {
         onArrangeBtnClick(2 /* front */);
       }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { className: "univer-flex univer-items-center univer-gap-1", children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TopmostIcon, {}),
-        localeService.t("image-panel.arrange.front")
+        localeService.t("slides-ui.image-panel.arrange.front")
       ] }) }) }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "univer-w-1/2", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, { onClick: () => {
         onArrangeBtnClick(3 /* back */);
       }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { className: "univer-flex univer-items-center univer-gap-1", children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BottomIcon, {}),
-        localeService.t("image-panel.arrange.back")
+        localeService.t("slides-ui.image-panel.arrange.back")
       ] }) }) })
     ] })
   ] });
@@ -757,7 +757,7 @@ function ArrangePanel2(props) {
           "div",
           {
             className: `univer-w-full univer-text-left univer-text-gray-600 dark:!univer-text-gray-200`,
-            children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { children: localeService.t("slide.panel.fill.title") })
+            children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { children: localeService.t("slides-ui.panel.fill.title") })
           }
         ) }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "univer-relative univer-mt-2.5 univer-flex univer-h-full", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "univer-w-1/2", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
@@ -913,7 +913,7 @@ function TransformPanel(props) {
           "header",
           {
             className: `univer-text-gray-600 dark:!univer-text-gray-200`,
-            children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { children: localeService.t("image-panel.transform.title") })
+            children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { children: localeService.t("slides-ui.image-panel.transform.title") })
           }
         ),
         /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(
@@ -922,7 +922,7 @@ function TransformPanel(props) {
             className: `univer-grid univer-grid-cols-3 univer-gap-2 [&>div]:univer-grid [&>div]:univer-gap-2`,
             children: [
               /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { children: [
-                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { children: localeService.t("image-panel.transform.width") }),
+                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { children: localeService.t("slides-ui.image-panel.transform.width") }),
                 /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
                   InputNumber,
                   {
@@ -935,7 +935,7 @@ function TransformPanel(props) {
                 )
               ] }),
               /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { children: [
-                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { children: localeService.t("image-panel.transform.height") }),
+                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { children: localeService.t("slides-ui.image-panel.transform.height") }),
                 /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
                   InputNumber,
                   {
@@ -952,19 +952,19 @@ function TransformPanel(props) {
         ),
         /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "univer-relative univer-mt-2.5 univer-flex univer-h-full", children: [
           /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { children: localeService.t("image-panel.transform.x") }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { children: localeService.t("slides-ui.image-panel.transform.x") }),
             /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(InputNumber, { min: 0, precision: 1, value: xPosition, onChange: (val) => {
               handleXChange(val);
             } })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { children: localeService.t("image-panel.transform.y") }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { children: localeService.t("slides-ui.image-panel.transform.y") }),
             /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(InputNumber, { min: 0, precision: 1, value: yPosition, onChange: (val) => {
               handleYChange(val);
             } })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { children: localeService.t("image-panel.transform.rotate") }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { children: localeService.t("slides-ui.image-panel.transform.rotate") }),
             /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
               InputNumber,
               {
@@ -1070,13 +1070,13 @@ var ToggleSlideEditSidebarOperation = {
     let title = "";
     let children = "";
     if (objectType === 4 /* RECT */) {
-      title = "slide.sidebar.shape";
+      title = "slides-ui.sidebar.shape";
       children = COMPONENT_SLIDE_SIDEBAR;
     } else if (objectType === 3 /* IMAGE */) {
-      title = "slide.sidebar.image";
+      title = "slides-ui.sidebar.image";
       children = COMPONENT_SLIDE_SIDEBAR;
     } else if (objectType === 1 /* RICH_TEXT */) {
-      title = "slide.sidebar.text";
+      title = "slides-ui.sidebar.text";
       children = COMPONENT_SLIDE_SIDEBAR;
     }
     if (visible) {
@@ -1276,7 +1276,7 @@ function SlideSideBar() {
           {
             className: clsx(`univer-box-border univer-block univer-h-8 univer-w-full univer-cursor-pointer univer-rounded-md univer-bg-white univer-text-center univer-text-sm univer-leading-8 univer-transition-colors`, borderClassName),
             onClick: handleAppendSlide,
-            children: localeService.t("slide.append")
+            children: localeService.t("slides-ui.append")
           }
         ) }),
         slideList.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(
@@ -1402,14 +1402,14 @@ function SlideImageMenuFactory(accessor) {
     id: SLIDES_IMAGE_MENU_ID,
     type: 3 /* SUBITEMS */,
     icon: "AddImageIcon",
-    tooltip: "slide.image.insert.title",
+    tooltip: "slides-ui.image.insert.title",
     hidden$: getMenuHiddenObservable(accessor, 3 /* UNIVER_SLIDE */)
   };
 }
 function UploadSlideFloatImageMenuFactory(_accessor) {
   return {
     id: InsertSlideFloatImageCommand.id,
-    title: "slide.image.insert.float",
+    title: "slides-ui.image.insert.float",
     type: 0 /* BUTTON */,
     hidden$: getMenuHiddenObservable(_accessor, 3 /* UNIVER_SLIDE */)
   };
@@ -1422,7 +1422,7 @@ function SlideShapeMenuFactory(accessor) {
     id: SHAPE_MENU_ID,
     type: 3 /* SUBITEMS */,
     icon: "GraphIcon",
-    tooltip: "slide.shape.insert.title",
+    tooltip: "slides-ui.shape.insert.title",
     hidden$: getMenuHiddenObservable(accessor, 3 /* UNIVER_SLIDE */)
     // disabled$: getCurrentRangeDisable$(accessor, { workbookTypes: [WorkbookEditablePermission], worksheetTypes: [WorksheetEditPermission], rangeTypes: [RangeProtectionPermissionEditPoint] }),
   };
@@ -1430,7 +1430,7 @@ function SlideShapeMenuFactory(accessor) {
 function UploadSlideFloatRectangleShapeMenuFactory(_accessor) {
   return {
     id: InsertSlideShapeRectangleCommand.id,
-    title: "slide.shape.insert.rectangle",
+    title: "slides-ui.shape.insert.rectangle",
     type: 0 /* BUTTON */,
     hidden$: getMenuHiddenObservable(_accessor, 3 /* UNIVER_SLIDE */)
   };
@@ -1438,7 +1438,7 @@ function UploadSlideFloatRectangleShapeMenuFactory(_accessor) {
 function UploadSlideFloatEllipseShapeMenuFactory(_accessor) {
   return {
     id: InsertSlideShapeEllipseCommand.id,
-    title: "slide.shape.insert.ellipse",
+    title: "slides-ui.shape.insert.ellipse",
     type: 0 /* BUTTON */,
     hidden$: getMenuHiddenObservable(_accessor, 3 /* UNIVER_SLIDE */)
   };
@@ -1450,7 +1450,7 @@ function SlideAddTextMenuItemFactory(_accessor) {
     id: SlideAddTextCommand.id,
     type: 0 /* BUTTON */,
     icon: "TextIcon",
-    tooltip: "slide.text.insert.title",
+    tooltip: "slides-ui.text.insert.title",
     hidden$: getMenuHiddenObservable(_accessor, 3 /* UNIVER_SLIDE */)
   };
 }
@@ -2965,7 +2965,7 @@ var SlidePopupMenuController = class extends RxDisposable {
   }
   _getMenuItemsByObjectType(objectType, oKey, unitId) {
     const menuItems = [{
-      label: "slide.popup.edit",
+      label: "slides-ui.popup.edit",
       index: 0,
       commandId: ToggleSlideEditSidebarOperation.id,
       commandParams: {
@@ -2974,7 +2974,7 @@ var SlidePopupMenuController = class extends RxDisposable {
       },
       disable: false
     }, {
-      label: "slide.popup.delete",
+      label: "slides-ui.popup.delete",
       index: 5,
       commandId: DeleteSlideElementOperation.id,
       commandParams: {

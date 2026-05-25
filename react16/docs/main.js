@@ -1,38 +1,38 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-VIXHIO2P.js";
+} from "../chunk-VVY2OTG7.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-2A5A7OSD.js";
-import "../chunk-MQGMFNAN.js";
+} from "../chunk-NEPERA44.js";
+import "../chunk-T663JDPI.js";
 import {
   UniverDebuggerPlugin
-} from "../chunk-OR5DRHLH.js";
+} from "../chunk-SQSPFSTT.js";
 import {
   InsertDocImageCommand,
   UniverDocsDrawingUIPlugin
-} from "../chunk-35Z3KEZ2.js";
+} from "../chunk-KXR3WMW7.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
   ThreadCommentModel,
   getDT
-} from "../chunk-X2UEXOMP.js";
-import "../chunk-JUPXKG6C.js";
+} from "../chunk-NT3YWP6P.js";
+import "../chunk-Y5I4ATMA.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-B5TCZM56.js";
+} from "../chunk-G6FMMQLI.js";
 import {
   FUniver
-} from "../chunk-UB4LXMSQ.js";
-import "../chunk-7R4I4WTW.js";
+} from "../chunk-CS6WKNAL.js";
+import "../chunk-BL3GZ76K.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE
-} from "../chunk-SOZX7552.js";
+} from "../chunk-AU447C6B.js";
 import {
   BulletListCommand,
   CutContentCommand,
@@ -66,7 +66,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-B2APTGFC.js";
+} from "../chunk-5LSMNLCB.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -98,20 +98,20 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-4QKNKDTI.js";
+} from "../chunk-YHX3PO7Y.js";
 import {
   zh_CN_default
-} from "../chunk-KE3NM2PC.js";
-import "../chunk-U5XU3TS2.js";
+} from "../chunk-4QRQ4FBX.js";
+import "../chunk-JAO4FOGC.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-3IJ7FHN5.js";
+} from "../chunk-UPB44MDX.js";
 import {
   IRenderManagerService,
   UniverRenderEnginePlugin,
   ptToPixel,
   withCurrentTypeOfRenderer
-} from "../chunk-BGNMHP4X.js";
+} from "../chunk-M6VABHCX.js";
 import {
   BehaviorSubject,
   BuildTextUtils,
@@ -147,7 +147,7 @@ import {
   sequenceExecute,
   tap,
   toDisposable
-} from "../chunk-NFVAY4NN.js";
+} from "../chunk-F6ZBKZEW.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -657,8 +657,8 @@ var DocHyperLinkEdit = () => {
           editing ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
             FormLayout,
             {
-              label: localeService.t("docLink.edit.label"),
-              error: showError && isBlankInput(label) ? localeService.t("docLink.edit.labelError") : "",
+              label: localeService.t("docs-hyper-link-ui.edit.label"),
+              error: showError && isBlankInput(label) ? localeService.t("docs-hyper-link-ui.edit.labelError") : "",
               children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
                 Input,
                 {
@@ -677,8 +677,8 @@ var DocHyperLinkEdit = () => {
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
             FormLayout,
             {
-              label: localeService.t("docLink.edit.address"),
-              error: showError && !isLegal ? localeService.t("docLink.edit.addressError") : "",
+              label: localeService.t("docs-hyper-link-ui.edit.address"),
+              error: showError && !isLegal ? localeService.t("docs-hyper-link-ui.edit.addressError") : "",
               children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
                 Input,
                 {
@@ -696,14 +696,14 @@ var DocHyperLinkEdit = () => {
           )
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "univer-flex univer-justify-end univer-gap-3", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, { onClick: handleCancel, children: localeService.t("docLink.edit.cancel") }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, { onClick: handleCancel, children: localeService.t("docs-hyper-link-ui.edit.cancel") }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
             Button,
             {
               variant: "primary",
               disabled: isBlankInput(link),
               onClick: handleConfirm,
-              children: localeService.t("docLink.edit.confirm")
+              children: localeService.t("docs-hyper-link-ui.edit.confirm")
             }
           )
         ] })
@@ -852,11 +852,11 @@ var DocLinkPopup = () => {
               onClick: () => {
                 navigator.clipboard.writeText(url);
                 messageService.show({
-                  content: localeService.t("docLink.info.coped"),
+                  content: localeService.t("docs-hyper-link-ui.info.coped"),
                   type: "info" /* Info */
                 });
               },
-              children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Tooltip, { placement: "bottom", title: localeService.t("docLink.info.copy"), children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(CopyIcon, {}) })
+              children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Tooltip, { placement: "bottom", title: localeService.t("docs-hyper-link-ui.info.copy"), children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(CopyIcon, {}) })
             }
           ),
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
@@ -868,7 +868,7 @@ var DocLinkPopup = () => {
                   link: currentPopup
                 });
               },
-              children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Tooltip, { placement: "bottom", title: localeService.t("docLink.info.edit"), children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(WriteIcon, {}) })
+              children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Tooltip, { placement: "bottom", title: localeService.t("docs-hyper-link-ui.info.edit"), children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(WriteIcon, {}) })
             }
           ),
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
@@ -882,7 +882,7 @@ var DocLinkPopup = () => {
                   segmentId
                 });
               },
-              children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Tooltip, { placement: "bottom", title: localeService.t("docLink.info.cancel"), children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(UnlinkIcon, {}) })
+              children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Tooltip, { placement: "bottom", title: localeService.t("docs-hyper-link-ui.info.cancel"), children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(UnlinkIcon, {}) })
             }
           )
         ] })
@@ -1195,8 +1195,8 @@ function AddHyperLinkMenuItemFactory(accessor) {
     id: ShowDocHyperLinkEditPopupOperation.id,
     type: 0 /* BUTTON */,
     icon: DOC_LINK_ICON,
-    title: "docLink.menu.tooltip",
-    tooltip: "docLink.menu.tooltip",
+    title: "docs-hyper-link-ui.menu.tooltip",
+    tooltip: "docs-hyper-link-ui.menu.tooltip",
     hidden$: getMenuHiddenObservable(accessor, 1 /* UNIVER_DOC */),
     disabled$: new Observable(function(subscribe) {
       const textSelectionService = accessor.get(DocSelectionManagerService);
@@ -1212,7 +1212,7 @@ function AddHyperLinkMenuItemFactory(accessor) {
 var addLinkShortcut = {
   id: ShowDocHyperLinkEditPopupOperation.id,
   binding: 4096 /* CTRL_COMMAND */ | 75 /* K */,
-  description: "docLink.menu.tooltip",
+  description: "docs-hyper-link-ui.menu.tooltip",
   preconditions: whenDocAndEditorFocused
 };
 
@@ -1388,7 +1388,7 @@ function measureTextWidth(text, font) {
 var KeywordInputPlaceholder = ({ popup }) => {
   var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k;
   const localeService = useDependency(LocaleService);
-  const placeholder = localeService.t("docQuickInsert.keywordInputPlaceholder");
+  const placeholder = localeService.t("docs-quick-insert-ui.keywordInputPlaceholder");
   const fontSize = (_b = (_a = popup.extraProps) == null ? void 0 : _a.fontSize) != null ? _b : DEFAULT_FONT_SIZE;
   const fontSizePx = ptToPixel(fontSize);
   const fontString = (_d = (_c = popup.extraProps) == null ? void 0 : _c.fontString) != null ? _d : `${fontSizePx}px sans-serif`;
@@ -1548,7 +1548,7 @@ var QuickInsertPlaceholder = () => {
     "div",
     {
       className: `univer-flex univer-h-full univer-items-center univer-justify-center univer-rounded-lg univer-bg-white univer-px-12 univer-py-6 univer-text-gray-400 univer-shadow-lg`,
-      children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { children: localeService.t("docQuickInsert.placeholder") })
+      children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { children: localeService.t("docs-quick-insert-ui.placeholder") })
     }
   );
 };
@@ -1990,43 +1990,43 @@ var CloseQuickInsertPopupOperation = {
 // ../packages/docs-quick-insert-ui/src/menu/menu.ts
 var textMenu = {
   id: "quick-insert.text.menu",
-  title: "docQuickInsert.menu.text",
+  title: "docs-quick-insert-ui.menu.text",
   icon: "TextIcon",
   keywords: ["text"]
 };
 var numberedListMenu = {
   id: OrderListCommand.id,
-  title: "docQuickInsert.menu.numberedList",
+  title: "docs-quick-insert-ui.menu.numberedList",
   icon: "OrderIcon",
   keywords: ["numbered", "list", "ordered"]
 };
 var bulletedListMenu = {
   id: BulletListCommand.id,
-  title: "docQuickInsert.menu.bulletedList",
+  title: "docs-quick-insert-ui.menu.bulletedList",
   icon: "UnorderIcon",
   keywords: ["bulleted", "list", "unordered"]
 };
 var dividerMenu = {
   id: HorizontalLineCommand.id,
-  title: "docQuickInsert.menu.divider",
+  title: "docs-quick-insert-ui.menu.divider",
   icon: "DividerIcon",
   keywords: ["divider", "line", "separate"]
 };
 var tableMenu = {
   id: DocCreateTableOperation.id,
-  title: "docQuickInsert.menu.table",
+  title: "docs-quick-insert-ui.menu.table",
   icon: "GridIcon",
   keywords: ["table", "grid", "spreadsheet"]
 };
 var imageMenu = {
   id: InsertDocImageCommand.id,
-  title: "docQuickInsert.menu.image",
+  title: "docs-quick-insert-ui.menu.image",
   icon: "AdditionAndSubtractionIcon",
   keywords: ["image", "picture", "photo"]
 };
 var builtInMenus = [
   {
-    title: "docQuickInsert.group.basics",
+    title: "docs-quick-insert-ui.group.basics",
     id: "quick.insert.group.basic" /* Basic */,
     children: [
       textMenu,
@@ -2601,7 +2601,7 @@ var ShowCommentPanelOperation = {
     const sidebarService = accessor.get(ISidebarService);
     if (!panelService.panelVisible || ((_a = sidebarService.options.children) == null ? void 0 : _a.label) !== DOCS_THREAD_COMMENT_PANEL) {
       sidebarService.open({
-        header: { title: "threadCommentUI.panel.title" },
+        header: { title: "docs-thread-comment-ui.panel.title" },
         children: { label: DOCS_THREAD_COMMENT_PANEL },
         width: 320,
         onClose: () => panelService.setPanelVisible(false)
@@ -2623,7 +2623,7 @@ var ToggleCommentPanelOperation = {
     const sidebarService = accessor.get(ISidebarService);
     if (!panelService.panelVisible || ((_a = sidebarService.options.children) == null ? void 0 : _a.label) !== DOCS_THREAD_COMMENT_PANEL) {
       sidebarService.open({
-        header: { title: "threadCommentUI.panel.title" },
+        header: { title: "docs-thread-comment-ui.panel.title" },
         children: { label: DOCS_THREAD_COMMENT_PANEL },
         width: 320,
         onClose: () => panelService.setPanelVisible(false)
@@ -2727,7 +2727,8 @@ var package_default4 = {
   ],
   exports: {
     ".": "./src/index.ts",
-    "./*": "./src/*"
+    "./*": "./src/*",
+    "./locale/*": "./src/locale/*.ts"
   },
   main: "./src/index.ts",
   types: "./lib/types/index.d.ts",
@@ -2745,6 +2746,11 @@ var package_default4 = {
         import: "./lib/es/*",
         require: "./lib/cjs/*",
         types: "./lib/types/index.d.ts"
+      },
+      "./locale/*": {
+        import: "./lib/es/locale/*.js",
+        require: "./lib/cjs/locale/*.js",
+        types: "./lib/types/locale/*.d.ts"
       },
       "./lib/*": "./lib/*"
     }
@@ -2910,8 +2916,8 @@ function AddDocCommentMenuItemFactory(accessor) {
     id: StartAddCommentOperation.id,
     type: 0 /* BUTTON */,
     icon: "CommentIcon",
-    title: "threadCommentUI.panel.addComment",
-    tooltip: "threadCommentUI.panel.addComment",
+    title: "docs-thread-comment-ui.panel.addComment",
+    tooltip: "docs-thread-comment-ui.panel.addComment",
     hidden$: getMenuHiddenObservable(accessor, 1 /* UNIVER_DOC */, void 0, SHEET_EDITOR_UNITS),
     disabled$: new Observable(function(subscribe) {
       const textSelectionService = accessor.get(DocSelectionManagerService);
@@ -2929,8 +2935,8 @@ function ToolbarDocCommentMenuItemFactory(accessor) {
     id: ToggleCommentPanelOperation.id,
     type: 0 /* BUTTON */,
     icon: "CommentIcon",
-    title: "threadCommentUI.panel.addComment",
-    tooltip: "threadCommentUI.panel.addComment",
+    title: "docs-thread-comment-ui.panel.addComment",
+    tooltip: "docs-thread-comment-ui.panel.addComment",
     hidden$: getMenuHiddenObservable(accessor, 1 /* UNIVER_DOC */)
   };
 }
