@@ -1,38 +1,38 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-QYGHAUR5.js";
+} from "../chunk-LFUFXGHK.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-R2DG4QRT.js";
-import "../chunk-BGPBI4PP.js";
+} from "../chunk-WEHD7PBG.js";
+import "../chunk-N3KJ5BIR.js";
 import {
   UniverDebuggerPlugin
-} from "../chunk-AOFJNCC6.js";
+} from "../chunk-TWCPAIAO.js";
 import {
   InsertDocImageCommand,
   UniverDocsDrawingUIPlugin
-} from "../chunk-FZOR35AP.js";
+} from "../chunk-6Y42HTA3.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
   ThreadCommentModel,
   getDT
-} from "../chunk-NT3YWP6P.js";
-import "../chunk-Y5I4ATMA.js";
+} from "../chunk-WFNK2WW3.js";
+import "../chunk-Y65XFGY6.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-UIX6URAS.js";
+} from "../chunk-3PLDZ4VH.js";
 import {
   FUniver
-} from "../chunk-CS6WKNAL.js";
-import "../chunk-PQNRBMEV.js";
+} from "../chunk-BN223HPL.js";
+import "../chunk-6DOBQSM7.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE
-} from "../chunk-TT4X57OA.js";
+} from "../chunk-A6FOZVPY.js";
 import {
   BulletListCommand,
   CutContentCommand,
@@ -48,8 +48,10 @@ import {
   DocSelectionManagerService,
   DocSelectionRenderService,
   DocSkeletonManagerService,
+  EMPTY_PARAGRAPH_MENU_ID,
   HorizontalLineCommand,
   IMEInputCommand,
+  INSERT_BELLOW_MENU_ID,
   InsertCommand,
   MoveCursorOperation,
   NodePositionConvertToCursor,
@@ -66,7 +68,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-UNXLYMKH.js";
+} from "../chunk-H7EOKAK7.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -98,20 +100,20 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-6XPX7EDB.js";
+} from "../chunk-YI67N2NN.js";
 import {
   zh_CN_default
-} from "../chunk-4QRQ4FBX.js";
-import "../chunk-JAO4FOGC.js";
+} from "../chunk-XDJIWBQR.js";
+import "../chunk-OXQW5F2S.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-UPB44MDX.js";
+} from "../chunk-GMC4FNZY.js";
 import {
   IRenderManagerService,
   UniverRenderEnginePlugin,
   ptToPixel,
   withCurrentTypeOfRenderer
-} from "../chunk-M6VABHCX.js";
+} from "../chunk-6BJ26NAD.js";
 import {
   BehaviorSubject,
   BuildTextUtils,
@@ -147,7 +149,7 @@ import {
   sequenceExecute,
   tap,
   toDisposable
-} from "../chunk-F6ZBKZEW.js";
+} from "../chunk-4JSWIADO.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -1078,11 +1080,11 @@ var DocHyperLinkEventRenderController = class extends Disposable {
   _initHover() {
     this.disposeWithMe(
       this._docEventManagerService.hoverCustomRanges$.subscribe((ranges) => {
-        var _a;
+        var _a, _b;
         const link = ranges.find((range) => range.range.rangeType === 0 /* HYPERLINK */);
         const activeRanges = this._docSelectionManagerService.getTextRanges();
-        const currentSegmentId = activeRanges == null ? void 0 : activeRanges[0].segmentId;
-        if (((_a = link == null ? void 0 : link.segmentId) != null ? _a : "") !== currentSegmentId) {
+        const currentSegmentId = (_a = activeRanges == null ? void 0 : activeRanges[0]) == null ? void 0 : _a.segmentId;
+        if (((_b = link == null ? void 0 : link.segmentId) != null ? _b : "") !== currentSegmentId) {
           this._hideInfoPopup();
           return;
         }
@@ -1229,6 +1231,24 @@ var menuSchema = {
       [ShowDocHyperLinkEditPopupOperation.id]: {
         order: 0,
         menuItemFactory: AddHyperLinkMenuItemFactory
+      }
+    }
+  },
+  ["contextMenu.paragraph" /* PARAGRAPH */]: {
+    ["contextMenu.layout" /* LAYOUT */]: {
+      [INSERT_BELLOW_MENU_ID]: {
+        [ShowDocHyperLinkEditPopupOperation.id]: {
+          order: 6,
+          menuItemFactory: AddHyperLinkMenuItemFactory
+        }
+      }
+    },
+    [EMPTY_PARAGRAPH_MENU_ID]: {
+      ["contextMenu.layout" /* LAYOUT */]: {
+        [ShowDocHyperLinkEditPopupOperation.id]: {
+          order: 6,
+          menuItemFactory: AddHyperLinkMenuItemFactory
+        }
       }
     }
   }
