@@ -2,8 +2,8 @@ import {
   UniverFormulaEnginePlugin,
   UniverRPCWorkerThreadPlugin,
   UniverSheetsPlugin
-} from "../chunk-IPFNFSLG.js";
-import "../chunk-MM44YIF4.js";
+} from "../chunk-47V545ES.js";
+import "../chunk-7PNPXMSO.js";
 import {
   Univer
 } from "../chunk-4JSWIADO.js";
