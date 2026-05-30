@@ -1,38 +1,36 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-IYUGM26X.js";
+} from "../chunk-EJG65A3W.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-YYUGOP2J.js";
-import "../chunk-V26JIVWM.js";
-import {
-  UniverDebuggerPlugin
-} from "../chunk-4AOJVOVE.js";
+} from "../chunk-E3ETYNH5.js";
+import "../chunk-A3IJN5O4.js";
 import {
   InsertDocImageCommand,
+  UniverDebuggerPlugin,
   UniverDocsDrawingUIPlugin
-} from "../chunk-4RE3GBNZ.js";
+} from "../chunk-KONYRXBO.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
   ThreadCommentModel,
   getDT
-} from "../chunk-HZIHV4KH.js";
-import "../chunk-562KIWQJ.js";
+} from "../chunk-J7YOEZ2J.js";
+import "../chunk-IBF3NIDV.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-4X74J3VY.js";
+} from "../chunk-EW4PHSHV.js";
 import {
   FUniver
-} from "../chunk-PDE7V4JY.js";
-import "../chunk-44O7LPIC.js";
+} from "../chunk-SGEKE45M.js";
+import "../chunk-F4F2YYY6.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE
-} from "../chunk-CQ6T5GVI.js";
+} from "../chunk-NAN42NNV.js";
 import {
   BulletListCommand,
   CutContentCommand,
@@ -68,7 +66,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-RXK56TCF.js";
+} from "../chunk-QWPPYM36.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -100,20 +98,20 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-AUWBG7XV.js";
+} from "../chunk-A4ZIYGHQ.js";
 import {
   zh_CN_default
-} from "../chunk-P3SQLU4X.js";
-import "../chunk-43TF6VLP.js";
+} from "../chunk-KZ7IYLEF.js";
+import "../chunk-B4NUTUQI.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-VTOJ6EY3.js";
+} from "../chunk-RBUELYHQ.js";
 import {
   IRenderManagerService,
   UniverRenderEnginePlugin,
   ptToPixel,
   withCurrentTypeOfRenderer
-} from "../chunk-MQVOOHA3.js";
+} from "../chunk-UUV633F7.js";
 import {
   BehaviorSubject,
   BuildTextUtils,
@@ -142,6 +140,7 @@ import {
   generateRandomId,
   getBodySlice,
   isInternalEditorID,
+  isSafeUrl,
   map,
   merge_default,
   of,
@@ -149,7 +148,7 @@ import {
   sequenceExecute,
   tap,
   toDisposable
-} from "../chunk-66WYSUE4.js";
+} from "../chunk-5IFCPQIO.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -161,7 +160,7 @@ import {
 // ../packages/docs-hyper-link/package.json
 var package_default = {
   name: "@univerjs/docs-hyper-link",
-  version: "0.24.0",
+  version: "0.25.0",
   private: false,
   description: "Hyperlink model and commands for Univer Docs.",
   author: "DreamNum Co., Ltd. <developer@univer.ai>",
@@ -383,7 +382,7 @@ UniverDocsHyperLinkPlugin = __decorateClass([
 // ../packages/docs-hyper-link-ui/package.json
 var package_default2 = {
   name: "@univerjs/docs-hyper-link-ui",
-  version: "0.24.0",
+  version: "0.25.0",
   private: false,
   description: "Hyperlink editing UI for Univer Docs.",
   author: "DreamNum Co., Ltd. <developer@univer.ai>",
@@ -793,9 +792,10 @@ var ClickDocHyperLinkOperation = {
     const doc = univerInstanceService.getUnit(unitId, 1 /* UNIVER_DOC */);
     const body = doc == null ? void 0 : doc.getSelfOrHeaderFooterModel(segmentId).getBody();
     const link = (_c = (_b = (_a = body == null ? void 0 : body.customRanges) == null ? void 0 : _a.find((range) => range.rangeId === linkId && range.rangeType === 0 /* HYPERLINK */)) == null ? void 0 : _b.properties) == null ? void 0 : _c.url;
-    if (link) {
-      window.open(link, "_blank", "noopener noreferrer");
+    if (!isSafeUrl(link)) {
+      return false;
     }
+    window.open(link, "_blank", "noopener noreferrer");
     return true;
   }
 };
@@ -2365,7 +2365,7 @@ DocQuickInsertUIController = __decorateClass([
 // ../packages/docs-quick-insert-ui/package.json
 var package_default3 = {
   name: "@univerjs/docs-quick-insert-ui",
-  version: "0.24.0",
+  version: "0.25.0",
   private: false,
   description: "Quick insert UI integration for Univer Docs.",
   author: "DreamNum Co., Ltd. <developer@univer.ai>",
@@ -2721,7 +2721,7 @@ var StartAddCommentOperation = {
 // ../packages/docs-thread-comment-ui/package.json
 var package_default4 = {
   name: "@univerjs/docs-thread-comment-ui",
-  version: "0.24.0",
+  version: "0.25.0",
   private: false,
   description: "Thread comment UI integration for Univer Docs.",
   author: "DreamNum Co., Ltd. <developer@univer.ai>",
@@ -2871,6 +2871,11 @@ var DocThreadCommentSelectionController = class extends Disposable {
             }
           }
           if (!this._threadCommentPanelService.activeCommentId) {
+            return;
+          }
+          const addingComment = this._docThreadCommentService.addingComment;
+          const activeComment = this._threadCommentPanelService.activeCommentId;
+          if (addingComment && (activeComment == null ? void 0 : activeComment.unitId) === addingComment.unitId && (activeComment == null ? void 0 : activeComment.subUnitId) === DEFAULT_DOC_SUBUNIT_ID && (activeComment == null ? void 0 : activeComment.commentId) === addingComment.id) {
             return;
           }
           this._commandService.executeCommand(SetActiveCommentOperation.id);
@@ -3176,12 +3181,6 @@ var DocThreadCommentRenderController = class extends Disposable {
     const unitId = this._context.unit.getUnitId();
     const subUnitId = DEFAULT_DOC_SUBUNIT_ID;
     const threadIds = (_c = (_b = (_a = this._context.unit.getBody()) == null ? void 0 : _a.customDecorations) == null ? void 0 : _b.filter((i) => i.type === 0 /* COMMENT */).map((i) => i.id)) != null ? _c : [];
-    threadIds.forEach((id) => {
-      const comment = this._threadCommentModel.getComment(unitId, subUnitId, id);
-      if (!comment) {
-        this._threadCommentModel.addComment(unitId, subUnitId, { id, threadId: id, ref: "", dT: "", personId: "", text: { dataStream: "" }, unitId, subUnitId });
-      }
-    });
     threadIds.length && this._threadCommentModel.syncThreadComments(this._context.unit.getUnitId(), DEFAULT_DOC_SUBUNIT_ID, threadIds);
     let prevThreadIds = threadIds.sort();
     this.disposeWithMe(this._commandService.onCommandExecuted((commandInfo) => {
@@ -3195,26 +3194,13 @@ var DocThreadCommentRenderController = class extends Disposable {
         const currentThreadIdsSorted = currentThreadIds.sort();
         if (JSON.stringify(prevThreadIds) !== JSON.stringify(currentThreadIdsSorted)) {
           const preIds = new Set(prevThreadIds);
-          const currentIds = new Set(currentThreadIdsSorted);
           const addIds = /* @__PURE__ */ new Set();
-          const deleteIds = /* @__PURE__ */ new Set();
           currentThreadIds.forEach((id) => {
             if (!preIds.has(id)) {
               addIds.add(id);
             }
           });
-          prevThreadIds.forEach((id) => {
-            if (!currentIds.has(id)) {
-              deleteIds.add(id);
-            }
-          });
           prevThreadIds = currentThreadIdsSorted;
-          addIds.forEach((id) => {
-            const comment = this._threadCommentModel.getComment(unitId, subUnitId, id);
-            if (!comment) {
-              this._threadCommentModel.addComment(unitId, subUnitId, { id, threadId: id, ref: "", dT: "", personId: "", text: { dataStream: "" }, unitId, subUnitId });
-            }
-          });
           this._threadCommentModel.syncThreadComments(unitId, subUnitId, [...addIds]);
         }
       }
