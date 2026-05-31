@@ -225,11 +225,18 @@
   left: 0px;
   right: 0px;
 }
+.univer-inset-x-2 {
+  left: 0.5rem;
+  right: 0.5rem;
+}
 .-univer-bottom-0\.5 {
   bottom: -0.125rem;
 }
 .-univer-bottom-1 {
   bottom: -0.25rem;
+}
+.-univer-bottom-px {
+  bottom: -1px;
 }
 .-univer-left-0\.5 {
   left: -0.125rem;
@@ -470,6 +477,9 @@
 }
 .univer-mb-0 {
   margin-bottom: 0px;
+}
+.univer-mb-0\.5 {
+  margin-bottom: 0.125rem;
 }
 .univer-mb-1 {
   margin-bottom: 0.25rem;
@@ -3417,6 +3427,9 @@
 .dark\:\!univer-bg-gray-900:where(.univer-dark, .univer-dark *) {
   background-color: var(--univer-gray-900) !important;
 }
+.dark\:\!univer-bg-primary-300:where(.univer-dark, .univer-dark *) {
+  background-color: var(--univer-primary-300) !important;
+}
 .dark\:\!univer-bg-primary-400:where(.univer-dark, .univer-dark *) {
   background-color: var(--univer-primary-400) !important;
 }
@@ -3425,6 +3438,9 @@
 }
 .dark\:\!univer-bg-primary-900:where(.univer-dark, .univer-dark *) {
   background-color: var(--univer-primary-900) !important;
+}
+.dark\:\!univer-bg-transparent:where(.univer-dark, .univer-dark *) {
+  background-color: transparent !important;
 }
 .dark\:\!univer-from-gray-800:where(.univer-dark, .univer-dark *) {
   --tw-gradient-from: var(--univer-gray-800) var(--tw-gradient-from-position) !important;
