@@ -1,42 +1,42 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-PZXBAKML.js";
+} from "../chunk-IWVKXC4B.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-4XWNUFKV.js";
-import "../chunk-A6FIGSGJ.js";
+} from "../chunk-DGJWGYTP.js";
+import "../chunk-PYQRCJV7.js";
 import {
   InsertDocImageCommand,
   UniverDebuggerPlugin,
   UniverDocsDrawingUIPlugin
-} from "../chunk-6OPR354K.js";
+} from "../chunk-DEX2JR7Q.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
   ThreadCommentModel,
   getDT
-} from "../chunk-LGMAUSP7.js";
-import "../chunk-JDROPMWD.js";
+} from "../chunk-UFCKDDQJ.js";
+import "../chunk-F5TH2PYB.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-HD67YVN4.js";
+} from "../chunk-3KJG4PU2.js";
 import {
   FUniver
-} from "../chunk-6HEPUY3H.js";
-import "../chunk-CEZ3ASA2.js";
+} from "../chunk-WRJQEQ2C.js";
+import "../chunk-MQNP6LR7.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE
-} from "../chunk-6AIOLZKF.js";
+} from "../chunk-ILEUWP3Q.js";
 import {
   BulletListCommand,
   CutContentCommand,
   DOC_INTERCEPTOR_POINT,
-  DeleteCommand,
   DeleteLeftCommand,
+  DeleteTextCommand,
   DocBackScrollRenderController,
   DocCanvasPopManagerService,
   DocCreateTableOperation,
@@ -50,7 +50,7 @@ import {
   HorizontalLineCommand,
   IMEInputCommand,
   INSERT_BELLOW_MENU_ID,
-  InsertCommand,
+  InsertTextCommand,
   MoveCursorOperation,
   NodePositionConvertToCursor,
   OrderListCommand,
@@ -66,7 +66,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-UUF7XU7O.js";
+} from "../chunk-2LXZR2FM.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -98,20 +98,20 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-ECONR6RM.js";
+} from "../chunk-DAWPB5V5.js";
 import {
   zh_CN_default
-} from "../chunk-A44DDVT2.js";
-import "../chunk-TVPZ3PEL.js";
+} from "../chunk-54EMUKNB.js";
+import "../chunk-SLOSFHLK.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-CZ2PTCAX.js";
+} from "../chunk-NREJXSOV.js";
 import {
   IRenderManagerService,
   UniverRenderEnginePlugin,
   ptToPixel,
   withCurrentTypeOfRenderer
-} from "../chunk-ZBHWPOF6.js";
+} from "../chunk-EOKJYDPY.js";
 import {
   BehaviorSubject,
   BuildTextUtils,
@@ -148,7 +148,7 @@ import {
   sequenceExecute,
   tap,
   toDisposable
-} from "../chunk-IDTDYMR7.js";
+} from "../chunk-4NZDNFUF.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -2095,7 +2095,7 @@ var DocQuickInsertTriggerController = class extends Disposable {
         if (documentDataModel == null ? void 0 : documentDataModel.getDisabled()) {
           return;
         }
-        if (commandInfo.id === InsertCommand.id) {
+        if (commandInfo.id === InsertTextCommand.id) {
           const params = commandInfo.params;
           if (_docQuickInsertPopupService.editPopup) {
             _docQuickInsertPopupService.setInputOffset({
@@ -2143,7 +2143,7 @@ var DocQuickInsertTriggerController = class extends Disposable {
             }
           }
         }
-        if (commandInfo.id === DeleteCommand.id) {
+        if (commandInfo.id === DeleteTextCommand.id) {
           const params = commandInfo.params;
           if (_docQuickInsertPopupService.editPopup && params.direction === 0 /* LEFT */) {
             const len = (_c = params.len) != null ? _c : 0;
