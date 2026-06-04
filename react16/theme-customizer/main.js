@@ -7,9 +7,8 @@ import {
 } from "../chunk-BOITWLAW.js";
 import {
   en_US_default
-} from "../chunk-4YV37423.js";
+} from "../chunk-VBURN55Z.js";
 import "../chunk-REZ6O7M2.js";
-import "../chunk-EXS3H27I.js";
 import "../chunk-62FTG3QU.js";
 import {
   UniverSheetsNotePlugin,

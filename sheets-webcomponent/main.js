@@ -21,7 +21,7 @@ import {
 import {
   UniverNetworkPlugin
 } from "../chunk-EM76OVIF.js";
-import "../chunk-ENWGQPK7.js";
+import "../chunk-HSXEYOC7.js";
 import {
   UniverSheetsThreadCommentPlugin
 } from "../chunk-SD6NM5MJ.js";
