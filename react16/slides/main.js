@@ -2,7 +2,7 @@ import {
   DEFAULT_SLIDE_DATA,
   ObjectProvider,
   UniverSlidesPlugin
-} from "../chunk-35M3EIPZ.js";
+} from "../chunk-55MM7D42.js";
 import {
   DOCS_COMPONENT_MAIN_LAYER_INDEX,
   DRAWING_IMAGE_ALLOW_IMAGE_LIST,
@@ -18,7 +18,7 @@ import {
   UniverDocsUIPlugin,
   UniverDrawingPlugin,
   getImageSize
-} from "../chunk-KACUFL2P.js";
+} from "../chunk-7GAOXSGD.js";
 import "../chunk-LI6UXASZ.js";
 import {
   AutofillDoubleIcon,
@@ -54,14 +54,16 @@ import {
   scrollbarClassName,
   useDependency,
   useObservable
-} from "../chunk-CKTITCNC.js";
+} from "../chunk-MIJJ7SGO.js";
 import {
   zh_CN_default
-} from "../chunk-P7FR5DXV.js";
-import "../chunk-2T36JBDO.js";
+} from "../chunk-WRHF3QRJ.js";
+import "../chunk-SXJLR43W.js";
+import "../chunk-BCDUZYIJ.js";
+import "../chunk-G4MAVNYM.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-7FLYWHI2.js";
+} from "../chunk-KIV2V2IY.js";
 import {
   FIX_ONE_PIXEL_BLUR_OFFSET,
   IRenderManagerService,
@@ -75,7 +77,7 @@ import {
   fixLineWidthByScale,
   getCurrentTypeOfRenderer,
   pxToNum
-} from "../chunk-YTMFKFYO.js";
+} from "../chunk-3VI6RKZ6.js";
 import {
   BehaviorSubject,
   DEFAULT_EMPTY_DOCUMENT_VALUE,
@@ -112,7 +114,7 @@ import {
   merge_default,
   takeUntil,
   toDisposable
-} from "../chunk-QIKL6BZO.js";
+} from "../chunk-CLNOWGEJ.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -1827,7 +1829,7 @@ var package_default = {
     "@univerjs/docs-ui": "workspace:*",
     "@univerjs/drawing": "workspace:*",
     "@univerjs/engine-render": "workspace:*",
-    "@univerjs/icons": "1.4.0",
+    "@univerjs/icons": "1.5.0",
     "@univerjs/slides": "workspace:*",
     "@univerjs/ui": "workspace:*"
   },
@@ -1838,7 +1840,7 @@ var package_default = {
     rxjs: "^7.8.2",
     tailwindcss: "3.4.18",
     typescript: "^6.0.3",
-    vitest: "^4.1.7"
+    vitest: "^4.1.8"
   }
 };
 
