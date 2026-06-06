@@ -5,18 +5,18 @@ import "../chunk-65H6OSLA.js";
 import {
   UniverNetworkPlugin
 } from "../chunk-63KGSGG2.js";
-import "../chunk-XLUKVQLL.js";
+import "../chunk-Y4KEHQSQ.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE
-} from "../chunk-55MM7D42.js";
+} from "../chunk-LGBT2HHD.js";
 import {
   UniverDocsPlugin,
   UniverDocsUIPlugin
-} from "../chunk-7GAOXSGD.js";
+} from "../chunk-JSH4HPRK.js";
 import "../chunk-LI6UXASZ.js";
 import {
   UniverUIPlugin
-} from "../chunk-MIJJ7SGO.js";
+} from "../chunk-66VJQABC.js";
 import "../chunk-SDBIGTWI.js";
 import {
   zh_CN_default,
