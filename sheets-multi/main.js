@@ -1,6 +1,6 @@
 import {
   UniverSheetsNumfmtUIPlugin
-} from "../chunk-UQNXFSKV.js";
+} from "../chunk-QQLALGYR.js";
 import {
   UniverSheetsFormulaUIPlugin
 } from "../chunk-GX3KAXUW.js";
@@ -27,8 +27,8 @@ import {
 } from "../chunk-MIJJ7SGO.js";
 import {
   zh_CN_default
-} from "../chunk-WRHF3QRJ.js";
-import "../chunk-SXJLR43W.js";
+} from "../chunk-HCOYW2IF.js";
+import "../chunk-N6FCNQNY.js";
 import "../chunk-BCDUZYIJ.js";
 import {
   UniverSheetsFormulaPlugin

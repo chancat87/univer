@@ -1,6 +1,6 @@
 import {
   UniverSheetsNumfmtUIPlugin
-} from "../chunk-UQNXFSKV.js";
+} from "../chunk-QQLALGYR.js";
 import {
   createUniver
 } from "../chunk-6LUB3MOM.js";
@@ -39,7 +39,7 @@ import {
   zh_CN_default3 as zh_CN_default5,
   zh_CN_default4 as zh_CN_default6,
   zh_CN_default5 as zh_CN_default7
-} from "../chunk-SXJLR43W.js";
+} from "../chunk-N6FCNQNY.js";
 import {
   zh_CN_default,
   zh_CN_default2,

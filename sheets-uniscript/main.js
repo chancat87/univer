@@ -6,12 +6,12 @@ import "../chunk-A3DRKKMY.js";
 import "../chunk-WLDOIN2T.js";
 import {
   UniverSheetsNumfmtUIPlugin
-} from "../chunk-UQNXFSKV.js";
+} from "../chunk-QQLALGYR.js";
 import {
   UniverDebuggerPlugin
-} from "../chunk-LO6WZQRG.js";
+} from "../chunk-IOT7YRC7.js";
 import "../chunk-PS54CEWU.js";
-import "../chunk-LUJIK2CK.js";
+import "../chunk-5LUW7HID.js";
 import {
   UniverSheetsNumfmtPlugin
 } from "../chunk-436BBS67.js";
@@ -32,8 +32,8 @@ import {
 import "../chunk-SDBIGTWI.js";
 import {
   zh_CN_default
-} from "../chunk-WRHF3QRJ.js";
-import "../chunk-SXJLR43W.js";
+} from "../chunk-HCOYW2IF.js";
+import "../chunk-N6FCNQNY.js";
 import "../chunk-BCDUZYIJ.js";
 import {
   UniverSheetsFormulaPlugin

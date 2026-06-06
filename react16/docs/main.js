@@ -11,7 +11,7 @@ import {
   InsertDocImageCommand,
   UniverDebuggerPlugin,
   UniverDocsDrawingUIPlugin
-} from "../chunk-B4BZSTML.js";
+} from "../chunk-YP2EMGID.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
@@ -22,7 +22,7 @@ import "../chunk-PS54CEWU.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-LUJIK2CK.js";
+} from "../chunk-5LUW7HID.js";
 import "../chunk-FNXED5ID.js";
 import "../chunk-XLUKVQLL.js";
 import {
@@ -101,8 +101,8 @@ import {
 } from "../chunk-SDBIGTWI.js";
 import {
   zh_CN_default
-} from "../chunk-WRHF3QRJ.js";
-import "../chunk-SXJLR43W.js";
+} from "../chunk-HCOYW2IF.js";
+import "../chunk-N6FCNQNY.js";
 import "../chunk-BCDUZYIJ.js";
 import "../chunk-G4MAVNYM.js";
 import {

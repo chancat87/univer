@@ -4,18 +4,18 @@ import {
 import {
   UniverSheetsNoteUIPlugin,
   UniverSheetsTableUIPlugin
-} from "../chunk-OLDVZRBK.js";
+} from "../chunk-4BT5ONUB.js";
 import {
   UniverSheetsConditionalFormattingUIPlugin,
   UniverSheetsDataValidationUIPlugin,
   UniverSheetsFilterUIPlugin
-} from "../chunk-QLX2MBGC.js";
+} from "../chunk-KPVDVSFF.js";
 import {
   UniverSheetsNumfmtUIPlugin
-} from "../chunk-UQNXFSKV.js";
+} from "../chunk-QQLALGYR.js";
 import {
   en_US_default
-} from "../chunk-INBFWT2C.js";
+} from "../chunk-D3UMTI2X.js";
 import "../chunk-62FTG3QU.js";
 import "../chunk-REZ6O7M2.js";
 import {
