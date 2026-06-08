@@ -2,7 +2,7 @@ import {
   DEFAULT_SLIDE_DATA,
   ObjectProvider,
   UniverSlidesPlugin
-} from "../chunk-LGBT2HHD.js";
+} from "../chunk-TC3IYX7U.js";
 import {
   DOCS_COMPONENT_MAIN_LAYER_INDEX,
   DRAWING_IMAGE_ALLOW_IMAGE_LIST,
@@ -18,7 +18,7 @@ import {
   UniverDocsUIPlugin,
   UniverDrawingPlugin,
   getImageSize
-} from "../chunk-JSH4HPRK.js";
+} from "../chunk-2HMY3XBH.js";
 import "../chunk-LI6UXASZ.js";
 import {
   AutofillDoubleIcon,
@@ -54,16 +54,16 @@ import {
   scrollbarClassName,
   useDependency,
   useObservable
-} from "../chunk-66VJQABC.js";
+} from "../chunk-LWWM426T.js";
 import {
   zh_CN_default
-} from "../chunk-HCOYW2IF.js";
+} from "../chunk-GAMVVSR7.js";
 import "../chunk-N6FCNQNY.js";
 import "../chunk-BCDUZYIJ.js";
-import "../chunk-G4MAVNYM.js";
+import "../chunk-MLKZU577.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-KIV2V2IY.js";
+} from "../chunk-CKHMSDDS.js";
 import {
   FIX_ONE_PIXEL_BLUR_OFFSET,
   IRenderManagerService,
@@ -77,7 +77,7 @@ import {
   fixLineWidthByScale,
   getCurrentTypeOfRenderer,
   pxToNum
-} from "../chunk-3VI6RKZ6.js";
+} from "../chunk-3TEOVAGW.js";
 import {
   BehaviorSubject,
   DEFAULT_EMPTY_DOCUMENT_VALUE,
@@ -114,7 +114,7 @@ import {
   merge_default,
   takeUntil,
   toDisposable
-} from "../chunk-CLNOWGEJ.js";
+} from "../chunk-PRXL3D5H.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -1276,7 +1276,7 @@ function SlideSideBar() {
         /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("header", { className: "univer-flex univer-justify-center univer-pt-4", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
           "a",
           {
-            className: clsx(`univer-box-border univer-block univer-h-8 univer-w-full univer-cursor-pointer univer-rounded-md univer-bg-white univer-text-center univer-text-sm univer-leading-8 univer-transition-colors`, borderClassName),
+            className: clsx(`univer-box-border univer-block univer-h-8 univer-w-full univer-cursor-pointer univer-rounded-md univer-bg-white univer-text-center univer-text-sm univer-transition-colors`, borderClassName),
             onClick: handleAppendSlide,
             children: localeService.t("slides-ui.append")
           }
