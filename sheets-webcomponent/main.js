@@ -1,116 +1,113 @@
 import {
   UniverSheetsFindReplacePlugin
-} from "../chunk-CIYDIV67.js";
+} from "../chunk-4UF34VA2.js";
 import {
   UniverSheetsSortUIPlugin
-} from "../chunk-ELYWGVUU.js";
+} from "../chunk-45WD5CAY.js";
 import {
   UniverSheetsNoteUIPlugin,
   UniverSheetsTableUIPlugin
-} from "../chunk-VSUUHH5P.js";
+} from "../chunk-WXLL4OHO.js";
 import {
   UniverSheetsConditionalFormattingUIPlugin,
   UniverSheetsDataValidationUIPlugin,
   UniverSheetsFilterUIPlugin
-} from "../chunk-OWE5BUJR.js";
+} from "../chunk-OSOY2D3J.js";
 import {
   UniverSheetsThreadCommentUIPlugin
-} from "../chunk-3KSHHVHQ.js";
+} from "../chunk-U6S6ZLAL.js";
 import {
   UniverThreadCommentUIPlugin
-} from "../chunk-RN3GHVMF.js";
+} from "../chunk-BARH6AQS.js";
 import {
   UniverSheetsNumfmtUIPlugin
-} from "../chunk-BQILDS5J.js";
+} from "../chunk-ZPIHTAPT.js";
 import {
   UniverVue3AdapterPlugin,
   UniverWebComponentAdapterPlugin
-} from "../chunk-6RWNTF42.js";
+} from "../chunk-ASYYCPPE.js";
 import {
   UniverSheetsNotePlugin,
   UniverSheetsTablePlugin
-} from "../chunk-LPZ6ZQWW.js";
+} from "../chunk-CZO4TBDP.js";
 import {
   UniverSheetsCrosshairHighlightPlugin
-} from "../chunk-7LPZR25V.js";
+} from "../chunk-IH6WLNJR.js";
 import {
   UniverSheetsThreadCommentPlugin
-} from "../chunk-TJTCVYJW.js";
-import {
-  UniverSheetsZenEditorPlugin
-} from "../chunk-LL4KE2GM.js";
+} from "../chunk-F3COFRZY.js";
 import {
   UniverSheetsHyperLinkPlugin,
   UniverSheetsHyperLinkUIPlugin
-} from "../chunk-A7IGENFH.js";
+} from "../chunk-5MBQNBVJ.js";
 import {
   UniverSheetsSortPlugin
-} from "../chunk-ZUFZIKBA.js";
+} from "../chunk-ZVI52VUS.js";
 import {
   UniverSheetsConditionalFormattingPlugin
-} from "../chunk-JSIEMJXQ.js";
+} from "../chunk-XNNZZF66.js";
 import {
   UniverThreadCommentPlugin
-} from "../chunk-BDBRDHJL.js";
+} from "../chunk-JPOO4OBN.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-PB7LXP3M.js";
+} from "../chunk-4VUYNUJI.js";
 import {
   UniverSheetsDrawingPlugin,
   UniverSheetsDrawingUIPlugin
-} from "../chunk-XLZJ3R5A.js";
-import "../chunk-N72BCOMG.js";
+} from "../chunk-Q3WBWJGU.js";
+import "../chunk-VJLGCXJK.js";
 import {
   UniverSheetsFormulaUIPlugin
-} from "../chunk-QHLXQVBB.js";
+} from "../chunk-CVWXJ7EC.js";
 import {
   UniverSheetsNumfmtPlugin
-} from "../chunk-EHU5BXQO.js";
+} from "../chunk-N6SQANXB.js";
 import {
   UniverSheetsUIPlugin
-} from "../chunk-Q3POQEIN.js";
+} from "../chunk-P7PYTPQ3.js";
 import {
   UniverNetworkPlugin
-} from "../chunk-476QPFAI.js";
+} from "../chunk-EEHGUUTD.js";
 import {
   DEFAULT_WORKBOOK_DATA_DEMO
-} from "../chunk-TC3IYX7U.js";
+} from "../chunk-TBYHE7ZI.js";
 import {
   UniverDocsPlugin,
   UniverDocsUIPlugin,
   UniverSheetsDataValidationPlugin
-} from "../chunk-2HMY3XBH.js";
+} from "../chunk-2CZ5W5IK.js";
 import "../chunk-LI6UXASZ.js";
 import {
   UniverUIPlugin,
   render,
   require_jsx_runtime,
   require_react
-} from "../chunk-LWWM426T.js";
+} from "../chunk-CBDIEJPE.js";
 import {
   FUniver
-} from "../chunk-ZVMLUOKL.js";
+} from "../chunk-NXFO7ESC.js";
 import {
   UniverSheetsFilterPlugin
-} from "../chunk-3LMEOY6C.js";
+} from "../chunk-VTLXXVY6.js";
 import {
   zh_CN_default
-} from "../chunk-GAMVVSR7.js";
+} from "../chunk-UXIY4DXQ.js";
 import "../chunk-N6FCNQNY.js";
 import "../chunk-BCDUZYIJ.js";
 import {
   UniverSheetsFormulaPlugin
-} from "../chunk-MLKZU577.js";
+} from "../chunk-PRLSOEOE.js";
 import {
   UniverFormulaEnginePlugin,
   UniverSheetsPlugin
-} from "../chunk-CKHMSDDS.js";
+} from "../chunk-367XZEO6.js";
 import {
   UniverRenderEnginePlugin
-} from "../chunk-3TEOVAGW.js";
+} from "../chunk-NHNIOZYL.js";
 import {
   Univer
-} from "../chunk-PRXL3D5H.js";
+} from "../chunk-JNYF3CQV.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -792,7 +789,6 @@ var MyWebComponent = class extends i4 {
     univer.registerPlugin(UniverSheetsThreadCommentPlugin);
     univer.registerPlugin(UniverSheetsThreadCommentUIPlugin);
     univer.registerPlugin(UniverSheetsFindReplacePlugin);
-    univer.registerPlugin(UniverSheetsZenEditorPlugin);
     univer.registerPlugin(UniverSheetsCrosshairHighlightPlugin);
     univer.registerPlugin(UniverWatermarkPlugin);
     univer.registerPlugin(UniverWebComponentAdapterPlugin);

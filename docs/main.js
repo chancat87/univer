@@ -1,33 +1,33 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-XGUROYRL.js";
+} from "../chunk-2QLP3W6I.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-RN3GHVMF.js";
+} from "../chunk-BARH6AQS.js";
 import {
   InsertDocImageCommand,
   UniverDebuggerPlugin,
   UniverDocsDrawingUIPlugin
-} from "../chunk-7KZZSGMQ.js";
+} from "../chunk-PNAWLM5K.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
   ThreadCommentModel,
   getDT
-} from "../chunk-BDBRDHJL.js";
-import "../chunk-PB7LXP3M.js";
+} from "../chunk-JPOO4OBN.js";
+import "../chunk-4VUYNUJI.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-XLZJ3R5A.js";
-import "../chunk-Q3POQEIN.js";
-import "../chunk-UFD2Q4OH.js";
+} from "../chunk-Q3WBWJGU.js";
+import "../chunk-P7PYTPQ3.js";
+import "../chunk-4RNL4ZJM.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE
-} from "../chunk-TC3IYX7U.js";
+} from "../chunk-TBYHE7ZI.js";
 import {
   BulletListCommand,
   CutContentCommand,
@@ -63,7 +63,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-2HMY3XBH.js";
+} from "../chunk-2CZ5W5IK.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -95,30 +95,29 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-LWWM426T.js";
+} from "../chunk-CBDIEJPE.js";
 import {
   FUniver
-} from "../chunk-ZVMLUOKL.js";
+} from "../chunk-NXFO7ESC.js";
 import {
   zh_CN_default
-} from "../chunk-GAMVVSR7.js";
+} from "../chunk-UXIY4DXQ.js";
 import "../chunk-N6FCNQNY.js";
 import "../chunk-BCDUZYIJ.js";
-import "../chunk-MLKZU577.js";
+import "../chunk-PRLSOEOE.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-CKHMSDDS.js";
+} from "../chunk-367XZEO6.js";
 import {
   IRenderManagerService,
   UniverRenderEnginePlugin,
   ptToPixel,
   withCurrentTypeOfRenderer
-} from "../chunk-3TEOVAGW.js";
+} from "../chunk-NHNIOZYL.js";
 import {
   BehaviorSubject,
   BuildTextUtils,
   DOCS_NORMAL_EDITOR_UNIT_ID_KEY,
-  DOCS_ZEN_EDITOR_UNIT_ID_KEY,
   DependentOn,
   Disposable,
   DisposableCollection,
@@ -150,7 +149,7 @@ import {
   sequenceExecute,
   tap,
   toDisposable
-} from "../chunk-PRXL3D5H.js";
+} from "../chunk-JNYF3CQV.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -464,7 +463,7 @@ var package_default2 = {
     "@univerjs/docs-hyper-link": "workspace:*",
     "@univerjs/docs-ui": "workspace:*",
     "@univerjs/engine-render": "workspace:*",
-    "@univerjs/icons": "1.5.0",
+    "@univerjs/icons": "1.10.0",
     "@univerjs/ui": "workspace:*"
   },
   devDependencies: {
@@ -1063,7 +1062,7 @@ var DocHyperLinkEventRenderController = class extends Disposable {
     __publicField(this, "_hyperLinkPopupService", _hyperLinkPopupService);
     __publicField(this, "_docSkeletonManagerService", _docSkeletonManagerService);
     __publicField(this, "_docSelectionManagerService", _docSelectionManagerService);
-    if (this._context.unitId === DOCS_ZEN_EDITOR_UNIT_ID_KEY || this._context.unitId === DOCS_NORMAL_EDITOR_UNIT_ID_KEY) {
+    if (this._context.unitId === DOCS_NORMAL_EDITOR_UNIT_ID_KEY) {
       return;
     }
     this._initHover();
@@ -2450,7 +2449,7 @@ var package_default3 = {
     "@univerjs/drawing": "workspace:*",
     "@univerjs/drawing-ui": "workspace:*",
     "@univerjs/engine-render": "workspace:*",
-    "@univerjs/icons": "1.5.0",
+    "@univerjs/icons": "1.10.0",
     "@univerjs/ui": "workspace:*"
   },
   devDependencies: {
@@ -2801,7 +2800,7 @@ var package_default4 = {
     "@univerjs/docs": "workspace:*",
     "@univerjs/docs-ui": "workspace:*",
     "@univerjs/engine-render": "workspace:*",
-    "@univerjs/icons": "1.5.0",
+    "@univerjs/icons": "1.10.0",
     "@univerjs/thread-comment": "workspace:*",
     "@univerjs/thread-comment-ui": "workspace:*",
     "@univerjs/ui": "workspace:*"

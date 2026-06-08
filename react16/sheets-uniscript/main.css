@@ -135,9 +135,6 @@
 .univer-right-5 {
   right: 1.25rem;
 }
-.univer-right-6 {
-  right: 1.5rem;
-}
 .univer-right-8 {
   right: 2rem;
 }
@@ -155,9 +152,6 @@
 }
 .univer-top-1\/2 {
   top: 50%;
-}
-.univer-top-2 {
-  top: 0.5rem;
 }
 .univer-top-4 {
   top: 1rem;
@@ -188,9 +182,6 @@
 }
 .univer-z-20 {
   z-index: 20;
-}
-.univer-z-\[-1\] {
-  z-index: -1;
 }
 .univer-z-\[10000\] {
   z-index: 10000;
@@ -2933,9 +2924,6 @@
 .hover\:univer-text-gray-900:hover {
   color: var(--univer-gray-900);
 }
-.hover\:univer-text-green-600:hover {
-  color: var(--univer-green-600);
-}
 .hover\:univer-text-primary-500:hover {
   color: var(--univer-primary-500);
 }
@@ -2944,9 +2932,6 @@
 }
 .hover\:univer-text-red-500:hover {
   color: var(--univer-red-500);
-}
-.hover\:univer-text-red-600:hover {
-  color: var(--univer-red-600);
 }
 .hover\:univer-text-slate-900:hover {
   --tw-text-opacity: 1;
@@ -10020,9 +10005,6 @@
 .univer-right-5 {
   right: 1.25rem;
 }
-.univer-right-6 {
-  right: 1.5rem;
-}
 .univer-right-8 {
   right: 2rem;
 }
@@ -10040,9 +10022,6 @@
 }
 .univer-top-1\/2 {
   top: 50%;
-}
-.univer-top-2 {
-  top: 0.5rem;
 }
 .univer-top-4 {
   top: 1rem;
@@ -10073,9 +10052,6 @@
 }
 .univer-z-20 {
   z-index: 20;
-}
-.univer-z-\[-1\] {
-  z-index: -1;
 }
 .univer-z-\[10000\] {
   z-index: 10000;
@@ -12818,9 +12794,6 @@
 .hover\:univer-text-gray-900:hover {
   color: var(--univer-gray-900);
 }
-.hover\:univer-text-green-600:hover {
-  color: var(--univer-green-600);
-}
 .hover\:univer-text-primary-500:hover {
   color: var(--univer-primary-500);
 }
@@ -12829,9 +12802,6 @@
 }
 .hover\:univer-text-red-500:hover {
   color: var(--univer-red-500);
-}
-.hover\:univer-text-red-600:hover {
-  color: var(--univer-red-600);
 }
 .hover\:univer-text-slate-900:hover {
   --tw-text-opacity: 1;
