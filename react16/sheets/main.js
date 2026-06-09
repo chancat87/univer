@@ -55,7 +55,7 @@ import {
 import "../chunk-62FTG3QU.js";
 import "../chunk-REZ6O7M2.js";
 import "../chunk-NXE33TAM.js";
-import "../chunk-LRRARWUP.js";
+import "../chunk-K66STIJQ.js";
 import {
   UniverVue3AdapterPlugin,
   UniverWebComponentAdapterPlugin
@@ -64,13 +64,13 @@ import {
   UniverSheetsNotePlugin,
   UniverSheetsTablePlugin
 } from "../chunk-YSZAIWUS.js";
-import "../chunk-OT6YJABG.js";
+import "../chunk-47Y32NUN.js";
 import {
   UniverSheetsThreadCommentPlugin
 } from "../chunk-XK6B3T5S.js";
 import {
   UniverSheetsHyperLinkPlugin
-} from "../chunk-J56WIIMS.js";
+} from "../chunk-UBXYV655.js";
 import {
   UniverSheetsSortPlugin
 } from "../chunk-NQJP32X7.js";
@@ -79,21 +79,21 @@ import {
 } from "../chunk-N22XZ366.js";
 import {
   UniverDebuggerPlugin
-} from "../chunk-5GA2O64S.js";
+} from "../chunk-BKYKO43I.js";
 import "../chunk-W4QGCLCX.js";
 import "../chunk-TL5J2JF3.js";
-import "../chunk-DZG24DRY.js";
-import "../chunk-J77PFIYW.js";
-import "../chunk-RKU3O5VZ.js";
+import "../chunk-HUKUPM6I.js";
+import "../chunk-KNYKQRPC.js";
+import "../chunk-M423MIMK.js";
 import "../chunk-XD2C667V.js";
-import "../chunk-RGR2G2GE.js";
+import "../chunk-426AM33U.js";
 import {
   UniverSheetsNumfmtPlugin
 } from "../chunk-SB2KM3E7.js";
 import {
   UniverSheetsUIPlugin,
   whenSheetEditorFocused
-} from "../chunk-UWQ4OTPN.js";
+} from "../chunk-DXBLSXJT.js";
 import "../chunk-VLFHJMSF.js";
 import {
   UniverNetworkPlugin
@@ -691,13 +691,13 @@ function createNewInstance() {
     univer.createUnit(2 /* UNIVER_SHEET */, DEFAULT_WORKBOOK_DATA_DEMO);
   }
   setTimeout(() => {
-    import("../lazy-36LFH7RP.js").then((lazy) => {
+    import("../lazy-MV2XIAUM.js").then((lazy) => {
       const plugins = lazy.default();
       univer.registerPlugins(plugins);
     });
   }, LOAD_LAZY_PLUGINS_TIMEOUT);
   setTimeout(() => {
-    import("../very-lazy-TTZAG4DN.js").then((lazy) => {
+    import("../very-lazy-LH6766QC.js").then((lazy) => {
       const plugins = lazy.default();
       univer.registerPlugins(plugins);
     });

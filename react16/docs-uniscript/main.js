@@ -1,12 +1,12 @@
 import {
   UniverUniscriptPlugin
-} from "../chunk-GWXR4QBB.js";
+} from "../chunk-OVPXRD5D.js";
 import "../chunk-GMDX6E2J.js";
 import "../chunk-A3DRKKMY.js";
 import "../chunk-WLDOIN2T.js";
 import {
   UniverSheetsUIPlugin
-} from "../chunk-UWQ4OTPN.js";
+} from "../chunk-DXBLSXJT.js";
 import {
   DEFAULT_DOCUMENT_DATA_CN
 } from "../chunk-MG6S74S4.js";
