@@ -1,13 +1,13 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-AORSTISZ.js";
+} from "../chunk-YWTFQ46V.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-RXZWIRYR.js";
-import "../chunk-U3BQRSUQ.js";
+} from "../chunk-3VF2AUSX.js";
+import "../chunk-O4VRDMUQ.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
@@ -18,20 +18,20 @@ import {
   InsertDocImageCommand,
   UniverDebuggerPlugin,
   UniverDocsDrawingUIPlugin
-} from "../chunk-TXOPOWUG.js";
+} from "../chunk-XJXJ5HAL.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-D43JDEGE.js";
+} from "../chunk-AHEUMPVE.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-42INSGKJ.js";
-import "../chunk-MPJI6OR4.js";
-import "../chunk-PEWXDFYY.js";
+} from "../chunk-R6IISLB3.js";
+import "../chunk-FEDSVBAQ.js";
+import "../chunk-RWWWEYQQ.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE,
   loadDebuggerLocale
-} from "../chunk-7BNND2YP.js";
+} from "../chunk-DMVEE645.js";
 import {
   BulletListCommand,
   CutContentCommand,
@@ -48,6 +48,7 @@ import {
   DocSelectionRenderService,
   DocSkeletonManagerService,
   EMPTY_PARAGRAPH_MENU_ID,
+  FLOAT_TOOLBAR_MENU_POSITION,
   HorizontalLineCommand,
   IMEInputCommand,
   INSERT_BELLOW_MENU_ID,
@@ -67,7 +68,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-UF57BQM6.js";
+} from "../chunk-XRVQCUPD.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -99,25 +100,25 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-NCH7R6DO.js";
+} from "../chunk-GPJNXDNJ.js";
 import {
   FUniver
 } from "../chunk-66S2PCKH.js";
 import {
   zh_CN_default
-} from "../chunk-LZVISBJK.js";
+} from "../chunk-Q2T25765.js";
 import "../chunk-7J6TSD4B.js";
-import "../chunk-75OJL7X3.js";
-import "../chunk-EWNZ5QNE.js";
+import "../chunk-OEYKKT7I.js";
+import "../chunk-L2LRQXJ3.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-4S5OHSTW.js";
+} from "../chunk-R53I7K3Y.js";
 import {
   IRenderManagerService,
   UniverRenderEnginePlugin,
   ptToPixel,
   withCurrentTypeOfRenderer
-} from "../chunk-Z4Z3C7ZE.js";
+} from "../chunk-5J4ZCI76.js";
 import {
   BehaviorSubject,
   BuildTextUtils,
@@ -1231,6 +1232,12 @@ var menuSchema = {
       menuItemFactory: AddHyperLinkMenuItemFactory
     }
   },
+  [FLOAT_TOOLBAR_MENU_POSITION]: {
+    [ShowDocHyperLinkEditPopupOperation.id]: {
+      order: 20,
+      menuItemFactory: AddHyperLinkMenuItemFactory
+    }
+  },
   ["contextMenu.mainArea" /* MAIN_AREA */]: {
     ["contextMenu.data" /* DATA */]: {
       [ShowDocHyperLinkEditPopupOperation.id]: {
@@ -1301,6 +1308,7 @@ var DocHyperLinkUIController = class extends Disposable {
     });
   }
   _initMenus() {
+    this._menuManagerService.appendRootMenu({ [FLOAT_TOOLBAR_MENU_POSITION]: {} });
     this._menuManagerService.mergeMenu(menuSchema);
   }
 };
@@ -2979,6 +2987,12 @@ var menuSchema2 = {
       menuItemFactory: ToolbarDocCommentMenuItemFactory
     }
   },
+  [FLOAT_TOOLBAR_MENU_POSITION]: {
+    [StartAddCommentOperation.id]: {
+      order: 21,
+      menuItemFactory: AddDocCommentMenuItemFactory
+    }
+  },
   ["contextMenu.mainArea" /* MAIN_AREA */]: {
     ["contextMenu.data" /* DATA */]: {
       [StartAddCommentOperation.id]: {
@@ -3102,6 +3116,7 @@ var DocThreadCommentUIController = class extends Disposable {
     });
   }
   _initMenus() {
+    this._menuManagerService.appendRootMenu({ [FLOAT_TOOLBAR_MENU_POSITION]: {} });
     this._menuManagerService.mergeMenu(menuSchema2);
   }
   _initComponents() {

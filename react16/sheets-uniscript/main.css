@@ -195,6 +195,9 @@
 .univer-z-\[100\] {
   z-index: 100;
 }
+.univer-z-\[1019\] {
+  z-index: 1019;
+}
 .univer-z-\[1020\] {
   z-index: 1020;
 }
@@ -426,6 +429,10 @@
 .\!univer-size-3\.5 {
   width: 0.875rem !important;
   height: 0.875rem !important;
+}
+.\!univer-size-4 {
+  width: 1rem !important;
+  height: 1rem !important;
 }
 .univer-size-0 {
   width: 0px;
@@ -671,6 +678,9 @@
 .univer-min-h-1 {
   min-height: 0.25rem;
 }
+.univer-min-h-10 {
+  min-height: 2.5rem;
+}
 .univer-min-h-3\.5 {
   min-height: 0.875rem;
 }
@@ -880,6 +890,9 @@
 }
 .univer-min-w-6 {
   min-width: 1.5rem;
+}
+.univer-min-w-64 {
+  min-width: 16rem;
 }
 .univer-min-w-72 {
   min-width: 18rem;
@@ -1212,6 +1225,15 @@
 }
 .univer-justify-around {
   justify-content: space-around;
+}
+.univer-justify-items-start {
+  justify-items: start;
+}
+.univer-justify-items-center {
+  justify-items: center;
+}
+.univer-gap-0 {
+  gap: 0px;
 }
 .univer-gap-0\.5 {
   gap: 0.125rem;
@@ -2811,6 +2833,9 @@
 .data-\[state\=open\]\:univer-bg-gray-100[data-state=open] {
   background-color: var(--univer-gray-100);
 }
+.data-\[variant\=destructive\]\:univer-text-red-600[data-variant=destructive] {
+  color: var(--univer-red-600);
+}
 .data-\[disabled\]\:univer-opacity-50[data-disabled] {
   opacity: 0.5;
 }
@@ -3032,6 +3057,9 @@
 .focus\:univer-ring-offset-2:focus {
   --tw-ring-offset-width: 2px ;
 }
+.data-\[variant\=destructive\]\:focus\:univer-bg-red-50:focus[data-variant=destructive] {
+  background-color: var(--univer-red-50);
+}
 .focus-visible\:univer-ring-2:focus-visible {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -3240,6 +3268,9 @@
 .dark\:\!univer-bg-transparent:where(.univer-dark, .univer-dark *) {
   background-color: transparent !important;
 }
+.dark\:univer-bg-gray-700:where(.univer-dark, .univer-dark *) {
+  background-color: var(--univer-gray-700);
+}
 .dark\:\!univer-from-gray-800:where(.univer-dark, .univer-dark *) {
   --tw-gradient-from: var(--univer-gray-800) var(--tw-gradient-from-position) !important;
   --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position) !important;
@@ -3331,6 +3362,9 @@
 .dark\:data-\[state\=open\]\:\!univer-bg-gray-600[data-state=open]:where(.univer-dark, .univer-dark *) {
   background-color: var(--univer-gray-600) !important;
 }
+.dark\:data-\[variant\=destructive\]\:\!univer-text-red-400[data-variant=destructive]:where(.univer-dark, .univer-dark *) {
+  color: var(--univer-red-400) !important;
+}
 .dark\:hover\:\!univer-bg-gray-600:hover:where(.univer-dark, .univer-dark *) {
   background-color: var(--univer-gray-600) !important;
 }
@@ -3357,6 +3391,9 @@
 }
 .dark\:focus\:\!univer-ring-primary-900:focus:where(.univer-dark, .univer-dark *) {
   --tw-ring-color: var(--univer-primary-900) !important;
+}
+.dark\:data-\[variant\=destructive\]\:focus\:\!univer-bg-red-900:focus[data-variant=destructive]:where(.univer-dark, .univer-dark *) {
+  background-color: var(--univer-red-900) !important;
 }
 .dark\:focus-visible\:\!univer-border-gray-600:focus-visible:where(.univer-dark, .univer-dark *) {
   border-color: var(--univer-gray-600) !important;
@@ -10065,6 +10102,9 @@
 .univer-z-\[100\] {
   z-index: 100;
 }
+.univer-z-\[1019\] {
+  z-index: 1019;
+}
 .univer-z-\[1020\] {
   z-index: 1020;
 }
@@ -10296,6 +10336,10 @@
 .\!univer-size-3\.5 {
   width: 0.875rem !important;
   height: 0.875rem !important;
+}
+.\!univer-size-4 {
+  width: 1rem !important;
+  height: 1rem !important;
 }
 .univer-size-0 {
   width: 0px;
@@ -10541,6 +10585,9 @@
 .univer-min-h-1 {
   min-height: 0.25rem;
 }
+.univer-min-h-10 {
+  min-height: 2.5rem;
+}
 .univer-min-h-3\.5 {
   min-height: 0.875rem;
 }
@@ -10750,6 +10797,9 @@
 }
 .univer-min-w-6 {
   min-width: 1.5rem;
+}
+.univer-min-w-64 {
+  min-width: 16rem;
 }
 .univer-min-w-72 {
   min-width: 18rem;
@@ -11082,6 +11132,15 @@
 }
 .univer-justify-around {
   justify-content: space-around;
+}
+.univer-justify-items-start {
+  justify-items: start;
+}
+.univer-justify-items-center {
+  justify-items: center;
+}
+.univer-gap-0 {
+  gap: 0px;
 }
 .univer-gap-0\.5 {
   gap: 0.125rem;
@@ -12681,6 +12740,9 @@
 .data-\[state\=open\]\:univer-bg-gray-100[data-state=open] {
   background-color: var(--univer-gray-100);
 }
+.data-\[variant\=destructive\]\:univer-text-red-600[data-variant=destructive] {
+  color: var(--univer-red-600);
+}
 .data-\[disabled\]\:univer-opacity-50[data-disabled] {
   opacity: 0.5;
 }
@@ -12902,6 +12964,9 @@
 .focus\:univer-ring-offset-2:focus {
   --tw-ring-offset-width: 2px ;
 }
+.data-\[variant\=destructive\]\:focus\:univer-bg-red-50:focus[data-variant=destructive] {
+  background-color: var(--univer-red-50);
+}
 .focus-visible\:univer-ring-2:focus-visible {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -13110,6 +13175,9 @@
 .dark\:\!univer-bg-transparent:where(.univer-dark, .univer-dark *) {
   background-color: transparent !important;
 }
+.dark\:univer-bg-gray-700:where(.univer-dark, .univer-dark *) {
+  background-color: var(--univer-gray-700);
+}
 .dark\:\!univer-from-gray-800:where(.univer-dark, .univer-dark *) {
   --tw-gradient-from: var(--univer-gray-800) var(--tw-gradient-from-position) !important;
   --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position) !important;
@@ -13201,6 +13269,9 @@
 .dark\:data-\[state\=open\]\:\!univer-bg-gray-600[data-state=open]:where(.univer-dark, .univer-dark *) {
   background-color: var(--univer-gray-600) !important;
 }
+.dark\:data-\[variant\=destructive\]\:\!univer-text-red-400[data-variant=destructive]:where(.univer-dark, .univer-dark *) {
+  color: var(--univer-red-400) !important;
+}
 .dark\:hover\:\!univer-bg-gray-600:hover:where(.univer-dark, .univer-dark *) {
   background-color: var(--univer-gray-600) !important;
 }
@@ -13227,6 +13298,9 @@
 }
 .dark\:focus\:\!univer-ring-primary-900:focus:where(.univer-dark, .univer-dark *) {
   --tw-ring-color: var(--univer-primary-900) !important;
+}
+.dark\:data-\[variant\=destructive\]\:focus\:\!univer-bg-red-900:focus[data-variant=destructive]:where(.univer-dark, .univer-dark *) {
+  background-color: var(--univer-red-900) !important;
 }
 .dark\:focus-visible\:\!univer-border-gray-600:focus-visible:where(.univer-dark, .univer-dark *) {
   border-color: var(--univer-gray-600) !important;
