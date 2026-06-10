@@ -1,33 +1,37 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-7LIU4RCV.js";
+} from "../chunk-AORSTISZ.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-RCRW6VC3.js";
-import {
-  InsertDocImageCommand,
-  UniverDebuggerPlugin,
-  UniverDocsDrawingUIPlugin
-} from "../chunk-2ASWOH5K.js";
+} from "../chunk-RXZWIRYR.js";
+import "../chunk-U3BQRSUQ.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
   ThreadCommentModel,
   getDT
 } from "../chunk-I2H6IZXB.js";
-import "../chunk-IOYWP7BT.js";
+import {
+  InsertDocImageCommand,
+  UniverDebuggerPlugin,
+  UniverDocsDrawingUIPlugin
+} from "../chunk-7ZLGFAOY.js";
+import {
+  UniverWatermarkPlugin
+} from "../chunk-D43JDEGE.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-UY6HPM6Z.js";
-import "../chunk-SHS2QU7R.js";
-import "../chunk-RKYKGLPR.js";
+} from "../chunk-EZOI764H.js";
+import "../chunk-KVUD5FLD.js";
+import "../chunk-PEWXDFYY.js";
 import {
-  DEFAULT_DOCUMENT_DATA_SIMPLE
-} from "../chunk-VWBPVFU7.js";
+  DEFAULT_DOCUMENT_DATA_SIMPLE,
+  loadDebuggerLocale
+} from "../chunk-WI5YIR35.js";
 import {
   BulletListCommand,
   CutContentCommand,
@@ -63,7 +67,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-NDZAFLT3.js";
+} from "../chunk-UF57BQM6.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -95,7 +99,7 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-JUXP4HVV.js";
+} from "../chunk-NCH7R6DO.js";
 import {
   FUniver
 } from "../chunk-66S2PCKH.js";
@@ -104,16 +108,16 @@ import {
 } from "../chunk-7GI54JNG.js";
 import "../chunk-N6FCNQNY.js";
 import "../chunk-75OJL7X3.js";
-import "../chunk-T3S76CBR.js";
+import "../chunk-EWNZ5QNE.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-42RBW3MT.js";
+} from "../chunk-4S5OHSTW.js";
 import {
   IRenderManagerService,
   UniverRenderEnginePlugin,
   ptToPixel,
   withCurrentTypeOfRenderer
-} from "../chunk-KC3DSKIX.js";
+} from "../chunk-Z4Z3C7ZE.js";
 import {
   BehaviorSubject,
   BuildTextUtils,
@@ -3290,14 +3294,18 @@ univer.registerPlugin(UniverDocsThreadCommentUIPlugin);
 univer.registerPlugin(UniverDocsHyperLinkUIPlugin);
 univer.registerPlugin(UniverDocsMentionUIPlugin);
 univer.registerPlugin(UniverDocsQuickInsertUIPlugin);
+univer.registerPlugin(UniverWatermarkPlugin);
 if (!IS_E2E) {
   univer.createUnit(1 /* UNIVER_DOC */, DEFAULT_DOCUMENT_DATA_SIMPLE);
   univer.registerPlugin(UniverDebuggerPlugin, {
-    fabEntryUnitType: 1 /* UNIVER_DOC */
+    fabEntryUnitType: 1 /* UNIVER_DOC */,
+    localeLoader: loadDebuggerLocale
   });
 } else {
   univer.registerPlugin(UniverDebuggerPlugin, {
     fab: false,
+    fabEntryUnitType: 1 /* UNIVER_DOC */,
+    localeLoader: loadDebuggerLocale,
     performanceMonitor: {
       enabled: false
     }

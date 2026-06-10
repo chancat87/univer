@@ -5,31 +5,31 @@ import "../chunk-VVWZ3UVA.js";
 import {
   UniverNetworkPlugin
 } from "../chunk-NXGKZ7Y6.js";
-import "../chunk-RKYKGLPR.js";
+import "../chunk-PEWXDFYY.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE
-} from "../chunk-VWBPVFU7.js";
+} from "../chunk-WI5YIR35.js";
 import {
   UniverDocsPlugin,
   UniverDocsUIPlugin
-} from "../chunk-NDZAFLT3.js";
+} from "../chunk-UF57BQM6.js";
 import "../chunk-LI6UXASZ.js";
 import {
   UniverUIPlugin
-} from "../chunk-JUXP4HVV.js";
+} from "../chunk-NCH7R6DO.js";
 import "../chunk-66S2PCKH.js";
 import {
   zh_CN_default,
   zh_CN_default2,
   zh_CN_default3
 } from "../chunk-75OJL7X3.js";
-import "../chunk-T3S76CBR.js";
+import "../chunk-EWNZ5QNE.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-42RBW3MT.js";
+} from "../chunk-4S5OHSTW.js";
 import {
   UniverRenderEnginePlugin
-} from "../chunk-KC3DSKIX.js";
+} from "../chunk-Z4Z3C7ZE.js";
 import {
   mergeLocales
 } from "../chunk-33LYH36L.js";

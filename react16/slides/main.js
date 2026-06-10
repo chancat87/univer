@@ -1,8 +1,18 @@
+import "../chunk-U3BQRSUQ.js";
+import {
+  UniverDebuggerPlugin
+} from "../chunk-7ZLGFAOY.js";
+import {
+  UniverWatermarkPlugin
+} from "../chunk-D43JDEGE.js";
+import "../chunk-EZOI764H.js";
+import "../chunk-KVUD5FLD.js";
 import {
   DEFAULT_SLIDE_DATA,
   ObjectProvider,
-  UniverSlidesPlugin
-} from "../chunk-VWBPVFU7.js";
+  UniverSlidesPlugin,
+  loadDebuggerLocale
+} from "../chunk-WI5YIR35.js";
 import {
   DOCS_COMPONENT_MAIN_LAYER_INDEX,
   DRAWING_IMAGE_ALLOW_IMAGE_LIST,
@@ -18,7 +28,7 @@ import {
   UniverDocsUIPlugin,
   UniverDrawingPlugin,
   getImageSize
-} from "../chunk-NDZAFLT3.js";
+} from "../chunk-UF57BQM6.js";
 import "../chunk-LI6UXASZ.js";
 import {
   AutofillDoubleIcon,
@@ -54,16 +64,17 @@ import {
   scrollbarClassName,
   useDependency,
   useObservable
-} from "../chunk-JUXP4HVV.js";
+} from "../chunk-NCH7R6DO.js";
+import "../chunk-66S2PCKH.js";
 import {
   zh_CN_default
 } from "../chunk-7GI54JNG.js";
 import "../chunk-N6FCNQNY.js";
 import "../chunk-75OJL7X3.js";
-import "../chunk-T3S76CBR.js";
+import "../chunk-EWNZ5QNE.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-42RBW3MT.js";
+} from "../chunk-4S5OHSTW.js";
 import {
   FIX_ONE_PIXEL_BLUR_OFFSET,
   IRenderManagerService,
@@ -77,7 +88,7 @@ import {
   fixLineWidthByScale,
   getCurrentTypeOfRenderer,
   pxToNum
-} from "../chunk-KC3DSKIX.js";
+} from "../chunk-Z4Z3C7ZE.js";
 import {
   BehaviorSubject,
   DEFAULT_EMPTY_DOCUMENT_VALUE,
@@ -3150,5 +3161,14 @@ univer.registerPlugin(UniverFormulaEnginePlugin);
 univer.registerPlugin(UniverDrawingPlugin);
 univer.registerPlugin(UniverSlidesPlugin);
 univer.registerPlugin(UniverSlidesUIPlugin);
+univer.registerPlugin(UniverWatermarkPlugin);
+univer.registerPlugin(UniverDebuggerPlugin, {
+  fab: false,
+  fabEntryUnitType: 3 /* UNIVER_SLIDE */,
+  localeLoader: loadDebuggerLocale,
+  performanceMonitor: {
+    enabled: false
+  }
+});
 univer.createUnit(3 /* UNIVER_SLIDE */, DEFAULT_SLIDE_DATA);
 window.univer = univer;
