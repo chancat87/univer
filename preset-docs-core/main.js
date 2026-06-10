@@ -8,7 +8,7 @@ import {
 import "../chunk-PEWXDFYY.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE
-} from "../chunk-WI5YIR35.js";
+} from "../chunk-7BNND2YP.js";
 import {
   UniverDocsPlugin,
   UniverDocsUIPlugin

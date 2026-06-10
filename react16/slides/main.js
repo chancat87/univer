@@ -1,18 +1,18 @@
 import "../chunk-U3BQRSUQ.js";
 import {
   UniverDebuggerPlugin
-} from "../chunk-7ZLGFAOY.js";
+} from "../chunk-PCQ6EKMJ.js";
 import {
   UniverWatermarkPlugin
 } from "../chunk-D43JDEGE.js";
-import "../chunk-EZOI764H.js";
-import "../chunk-KVUD5FLD.js";
+import "../chunk-42INSGKJ.js";
+import "../chunk-MPJI6OR4.js";
 import {
   DEFAULT_SLIDE_DATA,
   ObjectProvider,
   UniverSlidesPlugin,
   loadDebuggerLocale
-} from "../chunk-WI5YIR35.js";
+} from "../chunk-7BNND2YP.js";
 import {
   DOCS_COMPONENT_MAIN_LAYER_INDEX,
   DRAWING_IMAGE_ALLOW_IMAGE_LIST,
@@ -68,8 +68,8 @@ import {
 import "../chunk-66S2PCKH.js";
 import {
   zh_CN_default
-} from "../chunk-7GI54JNG.js";
-import "../chunk-N6FCNQNY.js";
+} from "../chunk-LZVISBJK.js";
+import "../chunk-7J6TSD4B.js";
 import "../chunk-75OJL7X3.js";
 import "../chunk-EWNZ5QNE.js";
 import {
