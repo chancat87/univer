@@ -1,13 +1,13 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-YWTFQ46V.js";
+} from "../chunk-6NC53Y4G.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-3VF2AUSX.js";
-import "../chunk-O4VRDMUQ.js";
+} from "../chunk-ZYMM673D.js";
+import "../chunk-ATRM5JGV.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
@@ -18,20 +18,20 @@ import {
   InsertDocImageCommand,
   UniverDebuggerPlugin,
   UniverDocsDrawingUIPlugin
-} from "../chunk-LXLZ4CBH.js";
+} from "../chunk-CSRV36FX.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-AHEUMPVE.js";
+} from "../chunk-Y3NDNT34.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-R6IISLB3.js";
-import "../chunk-FEDSVBAQ.js";
-import "../chunk-RWWWEYQQ.js";
+} from "../chunk-F5CDAC6W.js";
+import "../chunk-3B6IQAI6.js";
+import "../chunk-RRFS26DH.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE,
   loadDebuggerLocale
-} from "../chunk-DMVEE645.js";
+} from "../chunk-3MNABGKM.js";
 import {
   BulletListCommand,
   CutContentCommand,
@@ -68,7 +68,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-XRVQCUPD.js";
+} from "../chunk-6CUJERGO.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -100,7 +100,7 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-GPJNXDNJ.js";
+} from "../chunk-UELYZQA7.js";
 import {
   FUniver
 } from "../chunk-66S2PCKH.js";
@@ -109,16 +109,16 @@ import {
 } from "../chunk-Q2T25765.js";
 import "../chunk-7J6TSD4B.js";
 import "../chunk-OEYKKT7I.js";
-import "../chunk-L2LRQXJ3.js";
+import "../chunk-ELKFKEHS.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-R53I7K3Y.js";
+} from "../chunk-75Z4XWR6.js";
 import {
   IRenderManagerService,
   UniverRenderEnginePlugin,
   ptToPixel,
   withCurrentTypeOfRenderer
-} from "../chunk-5J4ZCI76.js";
+} from "../chunk-EXOHZCIQ.js";
 import {
   BehaviorSubject,
   BuildTextUtils,
@@ -468,7 +468,7 @@ var package_default2 = {
     "@univerjs/docs-hyper-link": "workspace:*",
     "@univerjs/docs-ui": "workspace:*",
     "@univerjs/engine-render": "workspace:*",
-    "@univerjs/icons": "1.10.0",
+    "@univerjs/icons": "1.11.0",
     "@univerjs/ui": "workspace:*"
   },
   devDependencies: {
@@ -2461,7 +2461,7 @@ var package_default3 = {
     "@univerjs/drawing": "workspace:*",
     "@univerjs/drawing-ui": "workspace:*",
     "@univerjs/engine-render": "workspace:*",
-    "@univerjs/icons": "1.10.0",
+    "@univerjs/icons": "1.11.0",
     "@univerjs/ui": "workspace:*"
   },
   devDependencies: {
@@ -2812,7 +2812,7 @@ var package_default4 = {
     "@univerjs/docs": "workspace:*",
     "@univerjs/docs-ui": "workspace:*",
     "@univerjs/engine-render": "workspace:*",
-    "@univerjs/icons": "1.10.0",
+    "@univerjs/icons": "1.11.0",
     "@univerjs/thread-comment": "workspace:*",
     "@univerjs/thread-comment-ui": "workspace:*",
     "@univerjs/ui": "workspace:*"
