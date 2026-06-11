@@ -654,9 +654,6 @@
 .univer-max-h-\[400px\] {
   max-height: 400px;
 }
-.univer-max-h-\[40vh\] {
-  max-height: 40vh;
-}
 .univer-max-h-\[500px\] {
   max-height: 500px;
 }
@@ -962,9 +959,6 @@
 }
 .univer-max-w-\[560px\] {
   max-width: 560px;
-}
-.univer-max-w-\[60vw\] {
-  max-width: 60vw;
 }
 .univer-max-w-\[calc\(100\%-112px\)\] {
   max-width: calc(100% - 112px);
@@ -1780,6 +1774,9 @@
 }
 .univer-fill-primary-600 {
   fill: var(--univer-primary-600);
+}
+.univer-object-contain {
+  object-fit: contain;
 }
 .\!univer-p-2\.5 {
   padding: 0.625rem !important;
@@ -4792,9 +4789,6 @@
 .univer-max-h-\[400px\] {
   max-height: 400px;
 }
-.univer-max-h-\[40vh\] {
-  max-height: 40vh;
-}
 .univer-max-h-\[500px\] {
   max-height: 500px;
 }
@@ -5100,9 +5094,6 @@
 }
 .univer-max-w-\[560px\] {
   max-width: 560px;
-}
-.univer-max-w-\[60vw\] {
-  max-width: 60vw;
 }
 .univer-max-w-\[calc\(100\%-112px\)\] {
   max-width: calc(100% - 112px);
@@ -5918,6 +5909,9 @@
 }
 .univer-fill-primary-600 {
   fill: var(--univer-primary-600);
+}
+.univer-object-contain {
+  object-fit: contain;
 }
 .\!univer-p-2\.5 {
   padding: 0.625rem !important;
