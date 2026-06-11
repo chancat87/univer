@@ -18,7 +18,7 @@ import {
   InsertDocImageCommand,
   UniverDebuggerPlugin,
   UniverDocsDrawingUIPlugin
-} from "../chunk-XJXJ5HAL.js";
+} from "../chunk-QG2L5AK2.js";
 import {
   UniverWatermarkPlugin
 } from "../chunk-AHEUMPVE.js";
