@@ -1,37 +1,37 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-JCCQOVMB.js";
+} from "../chunk-CCSQSQKK.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-RFPJWNQD.js";
-import "../chunk-ATRM5JGV.js";
+} from "../chunk-5TQJ7CD5.js";
+import "../chunk-QFQYMO4L.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
   ThreadCommentModel,
   getDT
-} from "../chunk-I2H6IZXB.js";
+} from "../chunk-KKVWMOCX.js";
 import {
   InsertDocImageCommand,
   UniverDebuggerPlugin,
   UniverDocsDrawingUIPlugin
-} from "../chunk-FYTTO2MQ.js";
+} from "../chunk-VEQFXLIO.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-Y3NDNT34.js";
+} from "../chunk-EOQXJPS7.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-NQKL7SKD.js";
-import "../chunk-US5ZXWDO.js";
-import "../chunk-GZPKBMOV.js";
+} from "../chunk-NUW5ZHXO.js";
+import "../chunk-DYJ2U24P.js";
+import "../chunk-JI4D773Z.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE,
   loadDebuggerLocale
-} from "../chunk-XNNBDH5V.js";
+} from "../chunk-VDFEGK7S.js";
 import {
   BulletListCommand,
   CutContentCommand,
@@ -68,7 +68,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-YCKGGZSC.js";
+} from "../chunk-ZBWRYDUJ.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -100,25 +100,25 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-5GQ6JDMJ.js";
+} from "../chunk-FIGZ5VDW.js";
 import {
   FUniver
-} from "../chunk-66S2PCKH.js";
+} from "../chunk-BW43X265.js";
 import {
   zh_CN_default
-} from "../chunk-N7ZRCU45.js";
+} from "../chunk-HBLKBZG3.js";
 import "../chunk-GQQW6W3C.js";
 import "../chunk-OEYKKT7I.js";
-import "../chunk-ELKFKEHS.js";
+import "../chunk-JC4PXT54.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-75Z4XWR6.js";
+} from "../chunk-2L3NWO5X.js";
 import {
   IRenderManagerService,
   UniverRenderEnginePlugin,
   ptToPixel,
   withCurrentTypeOfRenderer
-} from "../chunk-EXOHZCIQ.js";
+} from "../chunk-PPZWG4HX.js";
 import {
   BehaviorSubject,
   BuildTextUtils,
@@ -154,7 +154,7 @@ import {
   sequenceExecute,
   tap,
   toDisposable
-} from "../chunk-33LYH36L.js";
+} from "../chunk-E3BE2WWO.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -468,7 +468,7 @@ var package_default2 = {
     "@univerjs/docs-hyper-link": "workspace:*",
     "@univerjs/docs-ui": "workspace:*",
     "@univerjs/engine-render": "workspace:*",
-    "@univerjs/icons": "1.11.0",
+    "@univerjs/icons": "1.12.0",
     "@univerjs/ui": "workspace:*"
   },
   devDependencies: {
@@ -1485,24 +1485,30 @@ function QuickInsertMenu(props) {
   const {
     menus,
     focusedMenuIndex,
-    focusedMenuRef,
-    menuNodeMapRef,
     componentManager,
     onFocusedMenuIndexChange,
+    onFocusedMenuChange,
     onSelect
   } = props;
   const flatMenus = (0, import_react3.useMemo)(() => flattenMenuItems(menus), [menus]);
+  const menuNodeMapRef = (0, import_react3.useRef)(/* @__PURE__ */ new Map());
   (0, import_react3.useEffect)(() => {
     var _a, _b;
     const focusedMenu = Number.isNaN(focusedMenuIndex) ? null : (_a = flatMenus[focusedMenuIndex]) != null ? _a : null;
-    focusedMenuRef.current = focusedMenu;
+    onFocusedMenuChange(focusedMenu);
     if (!focusedMenu) {
       return;
     }
     (_b = menuNodeMapRef.current.get(focusedMenu.id)) == null ? void 0 : _b.scrollIntoView({
       block: "nearest"
     });
-  }, [flatMenus, focusedMenuIndex, focusedMenuRef, menuNodeMapRef]);
+  }, [flatMenus, focusedMenuIndex, onFocusedMenuChange]);
+  (0, import_react3.useEffect)(() => {
+    const menuNodeMap = menuNodeMapRef.current;
+    return () => {
+      menuNodeMap.clear();
+    };
+  }, []);
   const itemIndexRef = (0, import_react3.useRef)(0);
   itemIndexRef.current = 0;
   function renderMenus(currentMenus) {
@@ -1651,6 +1657,9 @@ var QuickInsertPopup = () => {
     docQuickInsertPopupService.emitMenuSelected(menu);
     commandService.executeCommand(CloseQuickInsertPopupOperation.id);
   };
+  const handleFocusedMenuChange = (0, import_react4.useCallback)((menu) => {
+    focusedMenuRef.current = menu;
+  }, []);
   (0, import_react4.useEffect)(() => {
     const disposableCollection = new DisposableCollection();
     const shortcutItems = shortcutService.getAllShortcuts();
@@ -1732,12 +1741,6 @@ var QuickInsertPopup = () => {
   (0, import_react4.useEffect)(() => {
     setFocusedMenuIndex(0);
   }, [filteredMenus]);
-  const menuNodeMapRef = (0, import_react4.useRef)(/* @__PURE__ */ new Map());
-  (0, import_react4.useEffect)(() => {
-    return () => {
-      menuNodeMapRef.current.clear();
-    };
-  }, []);
   const hasMenus = filteredMenus.length > 0;
   const Placeholder = (currentPopup == null ? void 0 : currentPopup.popup.Placeholder) || componentManager.get(QuickInsertPlaceholder.componentKey);
   return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "univer-mt-2", children: hasMenus ? /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
@@ -1745,10 +1748,9 @@ var QuickInsertPopup = () => {
     {
       menus: filteredMenus,
       focusedMenuIndex,
-      focusedMenuRef,
-      menuNodeMapRef,
       componentManager,
       onFocusedMenuIndexChange: setFocusedMenuIndex,
+      onFocusedMenuChange: handleFocusedMenuChange,
       onSelect: handleMenuSelect
     }
   ) : Placeholder && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Placeholder, {}) });
@@ -2461,7 +2463,7 @@ var package_default3 = {
     "@univerjs/drawing": "workspace:*",
     "@univerjs/drawing-ui": "workspace:*",
     "@univerjs/engine-render": "workspace:*",
-    "@univerjs/icons": "1.11.0",
+    "@univerjs/icons": "1.12.0",
     "@univerjs/ui": "workspace:*"
   },
   devDependencies: {
@@ -2812,7 +2814,7 @@ var package_default4 = {
     "@univerjs/docs": "workspace:*",
     "@univerjs/docs-ui": "workspace:*",
     "@univerjs/engine-render": "workspace:*",
-    "@univerjs/icons": "1.11.0",
+    "@univerjs/icons": "1.12.0",
     "@univerjs/thread-comment": "workspace:*",
     "@univerjs/thread-comment-ui": "workspace:*",
     "@univerjs/ui": "workspace:*"
