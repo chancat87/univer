@@ -168,9 +168,6 @@
 .univer-top-\[5px\] {
   top: 5px;
 }
-.univer-top-\[calc\(50\%-6px\)\] {
-  top: calc(50% - 6px);
-}
 .univer-top-px {
   top: 1px;
 }
@@ -445,6 +442,10 @@
 .univer-size-1 {
   width: 0.25rem;
   height: 0.25rem;
+}
+.univer-size-1\.5 {
+  width: 0.375rem;
+  height: 0.375rem;
 }
 .univer-size-10 {
   width: 2.5rem;
@@ -843,6 +844,12 @@
 .univer-w-\[512px\] {
   width: 512px;
 }
+.univer-w-\[52px\] {
+  width: 52px;
+}
+.univer-w-\[68px\] {
+  width: 68px;
+}
 .univer-w-\[72px\] {
   width: 72px;
 }
@@ -1062,6 +1069,11 @@
 }
 .univer-rotate-\[-90deg\] {
   --tw-rotate: -90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.univer-scale-125 {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .univer-transform {
@@ -3030,6 +3042,9 @@
 .focus\:univer-bg-gray-100:focus {
   background-color: var(--univer-gray-100);
 }
+.focus\:univer-bg-gray-50:focus {
+  background-color: var(--univer-gray-50);
+}
 .focus\:univer-bg-white:focus {
   background-color: var(--univer-white);
 }
@@ -3057,6 +3072,10 @@
 .data-\[variant\=destructive\]\:focus\:univer-bg-red-50:focus[data-variant=destructive] {
   background-color: var(--univer-red-50);
 }
+.focus-visible\:univer-outline-none:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
 .focus-visible\:univer-ring-2:focus-visible {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -3064,6 +3083,9 @@
     var(--tw-ring-offset-shadow),
     var(--tw-ring-shadow),
     var(--tw-shadow, 0 0 #0000);
+}
+.focus-visible\:univer-ring-primary-100:focus-visible {
+  --tw-ring-color: var(--univer-primary-100) ;
 }
 .focus-visible\:univer-ring-primary-500:focus-visible {
   --tw-ring-color: var(--univer-primary-500) ;
@@ -3134,8 +3156,8 @@
   background-color: transparent;
 }
 @media (min-width: 640px) {
-  .sm\:\!univer-block {
-    display: block !important;
+  .sm\:\!univer-flex {
+    display: flex !important;
   }
   .sm\:univer-grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3234,6 +3256,9 @@
 }
 .dark\:\!univer-bg-gray-200:where(.univer-dark, .univer-dark *) {
   background-color: var(--univer-gray-200) !important;
+}
+.dark\:\!univer-bg-gray-300:where(.univer-dark, .univer-dark *) {
+  background-color: var(--univer-gray-300) !important;
 }
 .dark\:\!univer-bg-gray-500:where(.univer-dark, .univer-dark *) {
   background-color: var(--univer-gray-500) !important;
@@ -3385,6 +3410,9 @@
 }
 .dark\:focus\:\!univer-bg-gray-600:focus:where(.univer-dark, .univer-dark *) {
   background-color: var(--univer-gray-600) !important;
+}
+.dark\:focus\:\!univer-bg-gray-900:focus:where(.univer-dark, .univer-dark *) {
+  background-color: var(--univer-gray-900) !important;
 }
 .dark\:focus\:\!univer-ring-primary-900:focus:where(.univer-dark, .univer-dark *) {
   --tw-ring-color: var(--univer-primary-900) !important;
@@ -3873,6 +3901,9 @@
 .\[\&_input\]\:univer-w-7 input {
   width: 1.75rem;
 }
+.\[\&_input\]\:univer-w-\[52px\] input {
+  width: 52px;
+}
 .\[\&_input\]\:\!univer-appearance-none input {
   -webkit-appearance: none !important;
   appearance: none !important;
@@ -3913,13 +3944,28 @@
 .\[\&_input\]\:univer-p-0 input {
   padding: 0px;
 }
+.\[\&_input\]\:univer-px-1 input {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
 .\[\&_input\]\:univer-px-1\.5 input {
   padding-left: 0.375rem;
   padding-right: 0.375rem;
 }
+.\[\&_input\]\:univer-text-center input {
+  text-align: center;
+}
 .\[\&_input\]\:univer-text-sm input {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+.\[\&_input\]\:univer-text-xs input {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.\[\&_input\]\:univer-tabular-nums input {
+  --tw-numeric-spacing: tabular-nums;
+  font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 .\[\&_input\]\:\!univer-leading-none input {
   line-height: 1 !important;
@@ -10072,9 +10118,6 @@
 .univer-top-\[5px\] {
   top: 5px;
 }
-.univer-top-\[calc\(50\%-6px\)\] {
-  top: calc(50% - 6px);
-}
 .univer-top-px {
   top: 1px;
 }
@@ -10349,6 +10392,10 @@
 .univer-size-1 {
   width: 0.25rem;
   height: 0.25rem;
+}
+.univer-size-1\.5 {
+  width: 0.375rem;
+  height: 0.375rem;
 }
 .univer-size-10 {
   width: 2.5rem;
@@ -10747,6 +10794,12 @@
 .univer-w-\[512px\] {
   width: 512px;
 }
+.univer-w-\[52px\] {
+  width: 52px;
+}
+.univer-w-\[68px\] {
+  width: 68px;
+}
 .univer-w-\[72px\] {
   width: 72px;
 }
@@ -10966,6 +11019,11 @@
 }
 .univer-rotate-\[-90deg\] {
   --tw-rotate: -90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.univer-scale-125 {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .univer-transform {
@@ -12934,6 +12992,9 @@
 .focus\:univer-bg-gray-100:focus {
   background-color: var(--univer-gray-100);
 }
+.focus\:univer-bg-gray-50:focus {
+  background-color: var(--univer-gray-50);
+}
 .focus\:univer-bg-white:focus {
   background-color: var(--univer-white);
 }
@@ -12961,6 +13022,10 @@
 .data-\[variant\=destructive\]\:focus\:univer-bg-red-50:focus[data-variant=destructive] {
   background-color: var(--univer-red-50);
 }
+.focus-visible\:univer-outline-none:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
 .focus-visible\:univer-ring-2:focus-visible {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -12968,6 +13033,9 @@
     var(--tw-ring-offset-shadow),
     var(--tw-ring-shadow),
     var(--tw-shadow, 0 0 #0000);
+}
+.focus-visible\:univer-ring-primary-100:focus-visible {
+  --tw-ring-color: var(--univer-primary-100) ;
 }
 .focus-visible\:univer-ring-primary-500:focus-visible {
   --tw-ring-color: var(--univer-primary-500) ;
@@ -13038,8 +13106,8 @@
   background-color: transparent;
 }
 @media (min-width: 640px) {
-  .sm\:\!univer-block {
-    display: block !important;
+  .sm\:\!univer-flex {
+    display: flex !important;
   }
   .sm\:univer-grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -13138,6 +13206,9 @@
 }
 .dark\:\!univer-bg-gray-200:where(.univer-dark, .univer-dark *) {
   background-color: var(--univer-gray-200) !important;
+}
+.dark\:\!univer-bg-gray-300:where(.univer-dark, .univer-dark *) {
+  background-color: var(--univer-gray-300) !important;
 }
 .dark\:\!univer-bg-gray-500:where(.univer-dark, .univer-dark *) {
   background-color: var(--univer-gray-500) !important;
@@ -13289,6 +13360,9 @@
 }
 .dark\:focus\:\!univer-bg-gray-600:focus:where(.univer-dark, .univer-dark *) {
   background-color: var(--univer-gray-600) !important;
+}
+.dark\:focus\:\!univer-bg-gray-900:focus:where(.univer-dark, .univer-dark *) {
+  background-color: var(--univer-gray-900) !important;
 }
 .dark\:focus\:\!univer-ring-primary-900:focus:where(.univer-dark, .univer-dark *) {
   --tw-ring-color: var(--univer-primary-900) !important;
@@ -13777,6 +13851,9 @@
 .\[\&_input\]\:univer-w-7 input {
   width: 1.75rem;
 }
+.\[\&_input\]\:univer-w-\[52px\] input {
+  width: 52px;
+}
 .\[\&_input\]\:\!univer-appearance-none input {
   -webkit-appearance: none !important;
   appearance: none !important;
@@ -13817,13 +13894,28 @@
 .\[\&_input\]\:univer-p-0 input {
   padding: 0px;
 }
+.\[\&_input\]\:univer-px-1 input {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
 .\[\&_input\]\:univer-px-1\.5 input {
   padding-left: 0.375rem;
   padding-right: 0.375rem;
 }
+.\[\&_input\]\:univer-text-center input {
+  text-align: center;
+}
 .\[\&_input\]\:univer-text-sm input {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+.\[\&_input\]\:univer-text-xs input {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.\[\&_input\]\:univer-tabular-nums input {
+  --tw-numeric-spacing: tabular-nums;
+  font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 .\[\&_input\]\:\!univer-leading-none input {
   line-height: 1 !important;
