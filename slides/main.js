@@ -1,18 +1,18 @@
-import "../chunk-QFQYMO4L.js";
+import "../chunk-BTS6OIOT.js";
 import {
   UniverDebuggerPlugin
-} from "../chunk-FK65U3L6.js";
+} from "../chunk-S4ONZMMG.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-EOQXJPS7.js";
-import "../chunk-MWVVGLEV.js";
-import "../chunk-467D3BKM.js";
+} from "../chunk-L7E5LAEI.js";
+import "../chunk-LBZ4BWUL.js";
+import "../chunk-6V7MZKRN.js";
 import {
   DEFAULT_SLIDE_DATA,
   ObjectProvider,
   UniverSlidesPlugin,
   loadDebuggerLocale
-} from "../chunk-AZVYFSXE.js";
+} from "../chunk-ZKICHKAT.js";
 import {
   DOCS_COMPONENT_MAIN_LAYER_INDEX,
   DRAWING_IMAGE_ALLOW_IMAGE_LIST,
@@ -28,7 +28,7 @@ import {
   UniverDocsUIPlugin,
   UniverDrawingPlugin,
   getImageSize
-} from "../chunk-WC3WXPWM.js";
+} from "../chunk-NNJ2PAFS.js";
 import "../chunk-LI6UXASZ.js";
 import {
   AutofillDoubleIcon,
@@ -64,17 +64,17 @@ import {
   scrollbarClassName,
   useDependency,
   useObservable
-} from "../chunk-NZHRBDP3.js";
-import "../chunk-BW43X265.js";
+} from "../chunk-DFLNXVRZ.js";
+import "../chunk-Z2NBOTBN.js";
 import {
   zh_CN_default
-} from "../chunk-T3MW5U7A.js";
+} from "../chunk-ES66ZAH2.js";
 import "../chunk-GQQW6W3C.js";
 import "../chunk-XGMSUR6J.js";
-import "../chunk-JC4PXT54.js";
+import "../chunk-6FFDUATW.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-2L3NWO5X.js";
+} from "../chunk-CXZNL3JJ.js";
 import {
   FIX_ONE_PIXEL_BLUR_OFFSET,
   IRenderManagerService,
@@ -88,7 +88,7 @@ import {
   fixLineWidthByScale,
   getCurrentTypeOfRenderer,
   pxToNum
-} from "../chunk-PPZWG4HX.js";
+} from "../chunk-XFPFZZHP.js";
 import {
   BehaviorSubject,
   DEFAULT_EMPTY_DOCUMENT_VALUE,
@@ -117,6 +117,7 @@ import {
   Univer,
   createIdentifier,
   createInternalEditorID,
+  createParagraphId,
   debounce_default,
   filter,
   generateRandomId,
@@ -125,7 +126,7 @@ import {
   merge_default,
   takeUntil,
   toDisposable
-} from "../chunk-E3BE2WWO.js";
+} from "../chunk-EGKTDU4O.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -1575,7 +1576,8 @@ function SlideEditorContainer() {
       textRuns: [],
       paragraphs: [
         {
-          startIndex: 0
+          startIndex: 0,
+          paragraphId: createParagraphId(/* @__PURE__ */ new Set())
         }
       ]
     },
@@ -2425,7 +2427,8 @@ var SlideEditingRenderController = class extends Disposable {
       } else {
         body.paragraphs = [
           {
-            startIndex: 0
+            startIndex: 0,
+            paragraphId: createParagraphId(/* @__PURE__ */ new Set())
           }
         ];
       }
