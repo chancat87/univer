@@ -70,7 +70,7 @@
   bottom: 0;
 }
 
-/* temp_stylePlugin:../node_modules/.pnpm/react-mosaic-component@6.2.0_@types+node@25.9.3_@types+react@19.2.16_dnd-core@16.0.1_re_36e577393ed6d24198a0afe337b2a1e3/node_modules/react-mosaic-component/react-mosaic-component.css */
+/* temp_stylePlugin:../node_modules/.pnpm/react-mosaic-component@6.2.0_@types+node@25.9.3_@types+react@19.2.17_dnd-core@16.0.1_re_35bc0cd576c99ebf834febbc419dbb8e/node_modules/react-mosaic-component/react-mosaic-component.css */
 .mosaic {
   height: 100%;
   width: 100%;
@@ -1829,9 +1829,6 @@
 }
 .univer-items-center {
   align-items: center;
-}
-.univer-items-stretch {
-  align-items: stretch;
 }
 .univer-justify-start {
   justify-content: flex-start;

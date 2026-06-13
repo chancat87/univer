@@ -1,120 +1,120 @@
 import {
   UniverSheetsFindReplacePlugin
-} from "../chunk-OCEBFR7L.js";
+} from "../chunk-YOMOPFNB.js";
 import {
   UniverSheetsSortUIPlugin
-} from "../chunk-I3T66LKM.js";
+} from "../chunk-PQT3SSVH.js";
 import {
   UniverSheetsNoteUIPlugin,
   UniverSheetsTableUIPlugin
-} from "../chunk-QVTDZDQK.js";
+} from "../chunk-ZHIJYZKC.js";
 import {
   UniverSheetsConditionalFormattingUIPlugin,
   UniverSheetsDataValidationUIPlugin,
   UniverSheetsFilterUIPlugin
-} from "../chunk-JSJ4DQRU.js";
+} from "../chunk-2CN5XG3D.js";
 import {
   UniverSheetsThreadCommentUIPlugin
-} from "../chunk-OBQHLRL2.js";
+} from "../chunk-RYFGXZWC.js";
 import {
   UniverThreadCommentUIPlugin
-} from "../chunk-MEMCCI52.js";
+} from "../chunk-CZCIAS6S.js";
 import {
   UniverSheetsNumfmtUIPlugin
-} from "../chunk-A7DV5CLR.js";
+} from "../chunk-FPUPASMG.js";
 import {
   UniverVue3AdapterPlugin,
   UniverWebComponentAdapterPlugin
-} from "../chunk-RG3TU545.js";
+} from "../chunk-FAKJUI73.js";
 import {
   UniverSheetsNotePlugin,
   UniverSheetsTablePlugin
-} from "../chunk-EROWMTXR.js";
+} from "../chunk-A7MLXFGP.js";
 import {
   UniverSheetsCrosshairHighlightPlugin
-} from "../chunk-LNLJQUKS.js";
+} from "../chunk-Y7LBGVUS.js";
 import {
   UniverSheetsThreadCommentPlugin
-} from "../chunk-YVPJJBJJ.js";
+} from "../chunk-AIUC26FK.js";
 import {
   UniverSheetsHyperLinkPlugin,
   UniverSheetsHyperLinkUIPlugin
-} from "../chunk-L5TUQ5O4.js";
+} from "../chunk-BRXXWSGR.js";
 import {
   UniverSheetsSortPlugin
-} from "../chunk-O4ZMPXLF.js";
+} from "../chunk-MNBQ3BDD.js";
 import {
   UniverSheetsConditionalFormattingPlugin
-} from "../chunk-RNPX4WRU.js";
+} from "../chunk-TQ4OGOD3.js";
 import {
   UniverThreadCommentPlugin
-} from "../chunk-5MJIZA7Y.js";
+} from "../chunk-QYV3PGEQ.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-KY62Z2HS.js";
+} from "../chunk-QL42RB2Y.js";
 import {
   UniverSheetsDrawingPlugin,
   UniverSheetsDrawingUIPlugin
-} from "../chunk-QSN5EZAZ.js";
-import "../chunk-CJZDC26C.js";
+} from "../chunk-6XUBQ4BO.js";
+import "../chunk-GJIBN4UL.js";
 import {
   UniverSheetsFormulaUIPlugin
-} from "../chunk-GXWVLXXZ.js";
+} from "../chunk-I4TKPU5B.js";
 import {
   UniverSheetsNumfmtPlugin
-} from "../chunk-66FMYFLY.js";
+} from "../chunk-6TIP2OPB.js";
 import {
   UniverSheetsUIPlugin
-} from "../chunk-LFWH636K.js";
+} from "../chunk-ITPY5S42.js";
 import {
   UniverNetworkPlugin
-} from "../chunk-W4CESNA5.js";
+} from "../chunk-AMPLZCVP.js";
 import {
   DEFAULT_WORKBOOK_DATA_DEMO
-} from "../chunk-RAQB7QKQ.js";
+} from "../chunk-RPFYPI5O.js";
 import {
   UniverDocsPlugin,
   UniverDocsUIPlugin,
   UniverSheetsDataValidationPlugin
-} from "../chunk-XRVR2H52.js";
+} from "../chunk-VSYBWRXI.js";
 import "../chunk-LI6UXASZ.js";
 import {
   UniverUIPlugin,
   render,
   require_jsx_runtime,
   require_react
-} from "../chunk-GDSMKYWA.js";
+} from "../chunk-OWRD2DAJ.js";
 import {
   FUniver
-} from "../chunk-Z2NBOTBN.js";
+} from "../chunk-VH2IWGAA.js";
 import {
   UniverSheetsFilterPlugin
-} from "../chunk-OSRA6HXZ.js";
+} from "../chunk-V5FG6ZLV.js";
 import {
   zh_CN_default
-} from "../chunk-ES66ZAH2.js";
+} from "../chunk-DGBRMZM3.js";
 import "../chunk-GQQW6W3C.js";
 import "../chunk-XGMSUR6J.js";
 import {
   UniverSheetsFormulaPlugin
-} from "../chunk-QYY2YWST.js";
+} from "../chunk-5ED2IM6Z.js";
 import {
   UniverFormulaEnginePlugin,
   UniverSheetsPlugin
-} from "../chunk-G66X4HVS.js";
+} from "../chunk-RNEMECLQ.js";
 import {
   UniverRenderEnginePlugin
-} from "../chunk-3Z2XPC36.js";
+} from "../chunk-RQTPWJDA.js";
 import {
   Univer
-} from "../chunk-EGKTDU4O.js";
+} from "../chunk-5NEQ5UIN.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
   __toESM
 } from "../chunk-DO7PIA5W.js";
 
-// ../node_modules/.pnpm/@lit+react@1.0.8_@types+react@19.2.16/node_modules/@lit/react/create-component.js
+// ../node_modules/.pnpm/@lit+react@1.0.8_@types+react@19.2.17/node_modules/@lit/react/create-component.js
 var e = /* @__PURE__ */ new Set(["children", "localName", "ref", "style", "className"]);
 var n = /* @__PURE__ */ new WeakMap();
 var t = (e6, t5, o6, l3, a3) => {

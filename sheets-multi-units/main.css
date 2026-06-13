@@ -1398,9 +1398,6 @@
 .univer-items-center {
   align-items: center;
 }
-.univer-items-stretch {
-  align-items: stretch;
-}
 .univer-justify-start {
   justify-content: flex-start;
 }
@@ -5391,9 +5388,6 @@
 }
 .univer-items-center {
   align-items: center;
-}
-.univer-items-stretch {
-  align-items: stretch;
 }
 .univer-justify-start {
   justify-content: flex-start;

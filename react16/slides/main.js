@@ -1,18 +1,18 @@
-import "../chunk-AL72XNUO.js";
+import "../chunk-LNLBFPTO.js";
 import {
   UniverDebuggerPlugin
-} from "../chunk-G5J2AE2K.js";
+} from "../chunk-QD22ZXZH.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-KY62Z2HS.js";
-import "../chunk-QSN5EZAZ.js";
-import "../chunk-LFWH636K.js";
+} from "../chunk-QL42RB2Y.js";
+import "../chunk-6XUBQ4BO.js";
+import "../chunk-ITPY5S42.js";
 import {
   DEFAULT_SLIDE_DATA,
   ObjectProvider,
   UniverSlidesPlugin,
   loadDebuggerLocale
-} from "../chunk-RAQB7QKQ.js";
+} from "../chunk-RPFYPI5O.js";
 import {
   DOCS_COMPONENT_MAIN_LAYER_INDEX,
   DRAWING_IMAGE_ALLOW_IMAGE_LIST,
@@ -28,7 +28,7 @@ import {
   UniverDocsUIPlugin,
   UniverDrawingPlugin,
   getImageSize
-} from "../chunk-XRVR2H52.js";
+} from "../chunk-VSYBWRXI.js";
 import "../chunk-LI6UXASZ.js";
 import {
   AutofillDoubleIcon,
@@ -64,17 +64,17 @@ import {
   scrollbarClassName,
   useDependency,
   useObservable
-} from "../chunk-GDSMKYWA.js";
-import "../chunk-Z2NBOTBN.js";
+} from "../chunk-OWRD2DAJ.js";
+import "../chunk-VH2IWGAA.js";
 import {
   zh_CN_default
-} from "../chunk-ES66ZAH2.js";
+} from "../chunk-DGBRMZM3.js";
 import "../chunk-GQQW6W3C.js";
 import "../chunk-XGMSUR6J.js";
-import "../chunk-QYY2YWST.js";
+import "../chunk-5ED2IM6Z.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-G66X4HVS.js";
+} from "../chunk-RNEMECLQ.js";
 import {
   FIX_ONE_PIXEL_BLUR_OFFSET,
   IRenderManagerService,
@@ -88,7 +88,7 @@ import {
   fixLineWidthByScale,
   getCurrentTypeOfRenderer,
   pxToNum
-} from "../chunk-3Z2XPC36.js";
+} from "../chunk-RQTPWJDA.js";
 import {
   BehaviorSubject,
   DEFAULT_EMPTY_DOCUMENT_VALUE,
@@ -126,7 +126,7 @@ import {
   merge_default,
   takeUntil,
   toDisposable
-} from "../chunk-EGKTDU4O.js";
+} from "../chunk-5NEQ5UIN.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -642,7 +642,7 @@ var UpdateSlideElementOperation = {
   }
 };
 
-// ../packages/slides-ui/src/components/panels/ArrangePanel.tsx
+// ../packages/slides-ui/src/views/panels/ArrangePanel.tsx
 var import_jsx_runtime = __toESM(require_jsx_runtime());
 function ArrangePanel(props) {
   const { pageId, unitId } = props;
@@ -725,7 +725,7 @@ function ArrangePanel(props) {
   ] });
 }
 
-// ../packages/slides-ui/src/components/panels/FillPanel.tsx
+// ../packages/slides-ui/src/views/panels/FillPanel.tsx
 var import_react = __toESM(require_react());
 var import_jsx_runtime2 = __toESM(require_jsx_runtime());
 function ArrangePanel2(props) {
@@ -795,7 +795,7 @@ function ArrangePanel2(props) {
   );
 }
 
-// ../packages/slides-ui/src/components/panels/TransformPanel.tsx
+// ../packages/slides-ui/src/views/panels/TransformPanel.tsx
 var import_react2 = __toESM(require_react());
 var import_jsx_runtime3 = __toESM(require_jsx_runtime());
 function TransformPanel(props) {
@@ -994,7 +994,7 @@ function TransformPanel(props) {
   );
 }
 
-// ../packages/slides-ui/src/components/sidebar/Sidebar.tsx
+// ../packages/slides-ui/src/views/sidebar/Sidebar.tsx
 var import_jsx_runtime4 = __toESM(require_jsx_runtime());
 var COMPONENT_SLIDE_SIDEBAR = "COMPONENT_SLIDE_SIDEBAR";
 function RectSidebar() {
@@ -1232,92 +1232,6 @@ var SetSlidePageThumbOperation = {
   }
 };
 
-// ../packages/slides-ui/src/components/slide-bar/SlideBar.tsx
-var import_react3 = __toESM(require_react());
-var import_jsx_runtime5 = __toESM(require_jsx_runtime());
-function SlideSideBar() {
-  var _a, _b;
-  const univerInstanceService = useDependency(IUniverInstanceService);
-  const commandService = useDependency(ICommandService);
-  const renderManagerService = useDependency(IRenderManagerService);
-  const localeService = useDependency(LocaleService);
-  const slideBarRef = (0, import_react3.useRef)(null);
-  const currentSlide = univerInstanceService.getCurrentUnitOfType(3 /* UNIVER_SLIDE */);
-  const pages = currentSlide == null ? void 0 : currentSlide.getPages();
-  const pageOrder = currentSlide == null ? void 0 : currentSlide.getPageOrder();
-  if (!pages || !pageOrder) {
-    return null;
-  }
-  const slideList = pageOrder.map((id) => pages[id]);
-  const [activatePageId, setActivatePageId] = (0, import_react3.useState)((_b = (_a = currentSlide == null ? void 0 : currentSlide.getActivePage()) == null ? void 0 : _a.id) != null ? _b : null);
-  const divRefs = (0, import_react3.useMemo)(() => slideList.map(() => (0, import_react3.createRef)()), [slideList]);
-  (0, import_react3.useEffect)(() => {
-    const subscriber = currentSlide == null ? void 0 : currentSlide.activePage$.subscribe((page) => {
-      var _a2;
-      const id = (_a2 = page == null ? void 0 : page.id) != null ? _a2 : null;
-      id && setActivatePageId(id);
-    });
-    return () => {
-      subscriber == null ? void 0 : subscriber.unsubscribe();
-    };
-  }, []);
-  (0, import_react3.useEffect)(() => {
-    divRefs.forEach((ref, index) => {
-      var _a2;
-      if (ref.current) {
-        const slide = slideList[index];
-        (_a2 = renderManagerService.getRenderById(slide.id)) == null ? void 0 : _a2.engine.setContainer(ref.current);
-      }
-    });
-    if (divRefs.length > 0) {
-      commandService.syncExecuteCommand(SetSlidePageThumbOperation.id, { unitId: currentSlide == null ? void 0 : currentSlide.getUnitId() });
-    }
-  }, [divRefs, slideList, renderManagerService, commandService, currentSlide]);
-  const activatePage = (0, import_react3.useCallback)((page) => {
-    commandService.syncExecuteCommand(ActivateSlidePageOperation.id, { id: page, unitId: currentSlide == null ? void 0 : currentSlide.getUnitId() });
-  }, [commandService, currentSlide]);
-  const handleAppendSlide = (0, import_react3.useCallback)(() => {
-    commandService.syncExecuteCommand(AppendSlideOperation.id, { unitId: currentSlide == null ? void 0 : currentSlide.getUnitId() });
-  }, [commandService, currentSlide]);
-  return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
-    "aside",
-    {
-      ref: slideBarRef,
-      className: clsx(`univer-flex univer-h-full univer-w-64 univer-flex-col univer-overflow-y-auto univer-overflow-x-hidden`, scrollbarClassName),
-      children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "univer-px-4", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("header", { className: "univer-flex univer-justify-center univer-pt-4", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
-          "a",
-          {
-            className: clsx(`univer-box-border univer-block univer-h-8 univer-w-full univer-cursor-pointer univer-rounded-md univer-bg-white univer-text-center univer-text-sm univer-transition-colors`, borderClassName),
-            onClick: handleAppendSlide,
-            children: localeService.t("slides-ui.append")
-          }
-        ) }),
-        slideList.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(
-          "div",
-          {
-            className: clsx("univer-my-4 univer-flex univer-gap-2", {
-              "[&>div]:univer-border-primary-600 [&>span]:univer-text-primary-600": item.id === activatePageId
-            }),
-            onClick: () => activatePage(item.id),
-            children: [
-              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { children: index + 1 }),
-              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
-                "div",
-                {
-                  ref: divRefs[index],
-                  className: clsx(`univer-relative univer-box-border univer-h-32 univer-w-52 univer-bg-white hover:univer-border-primary-600`, borderClassName)
-                }
-              )
-            ]
-          },
-          item.id
-        ))
-      ] })
-    }
-  );
-}
-
 // ../packages/slides-ui/src/const.ts
 var SLIDE_EDITOR_ID = createInternalEditorID("SLIDE_EDITOR");
 
@@ -1327,87 +1241,6 @@ var SetTextEditArrowOperation = {
   type: 1 /* OPERATION */,
   handler: () => true
 };
-
-// ../packages/slides-ui/src/components/image-popup-menu/component-name.ts
-var COMPONENT_SLIDE_IMAGE_POPUP_MENU = "COMPONENT_SLIDE_IMAGE_POPUP_MENU";
-
-// ../packages/slides-ui/src/components/image-popup-menu/ImagePopupMenu.tsx
-var import_react4 = __toESM(require_react());
-var import_jsx_runtime6 = __toESM(require_jsx_runtime());
-function SlideImagePopupMenu(props) {
-  var _a, _b;
-  const menuItems = (_b = (_a = props.popup) == null ? void 0 : _a.extraProps) == null ? void 0 : _b.menuItems;
-  if (!menuItems) {
-    return null;
-  }
-  const commandService = useDependency(ICommandService);
-  const localeService = useDependency(LocaleService);
-  const [visible, setVisible] = (0, import_react4.useState)(false);
-  const [isHovered, setHovered] = (0, import_react4.useState)(false);
-  const handleMouseEnter = () => {
-    setHovered(true);
-  };
-  const handleMouseLeave = () => {
-    setHovered(false);
-  };
-  const onVisibleChange = (visible2) => {
-    setVisible(visible2);
-  };
-  const handleClick = (item) => {
-    commandService.executeCommand(item.commandId, item.commandParams);
-    setVisible(false);
-  };
-  const showMore = visible || isHovered;
-  const availableMenu = menuItems.filter((item) => !item.disable);
-  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
-    "div",
-    {
-      onMouseEnter: handleMouseEnter,
-      onMouseLeave: handleMouseLeave,
-      children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
-        Dropdown,
-        {
-          align: "start",
-          overlay: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
-            "ul",
-            {
-              className: clsx(`univer-m-0 univer-box-border univer-grid univer-list-none univer-items-center univer-gap-1 univer-rounded-lg univer-bg-white univer-p-1.5 univer-text-sm univer-shadow-lg`, borderClassName),
-              children: availableMenu.map((item) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
-                "li",
-                {
-                  className: `univer-relative univer-box-border univer-flex univer-h-8 univer-cursor-pointer univer-items-center univer-rounded univer-text-sm univer-transition-colors hover:univer-bg-gray-100`,
-                  onClick: () => handleClick(item),
-                  children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "univer-px-2 univer-py-1.5 univer-align-middle", children: localeService.t(item.label) })
-                },
-                item.index
-              ))
-            }
-          ),
-          open: visible,
-          onOpenChange: onVisibleChange,
-          children: /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(
-            "div",
-            {
-              className: clsx(`univer-flex univer-items-center univer-gap-2 univer-rounded univer-p-1 hover:univer-bg-gray-100 dark:hover:!univer-bg-gray-800`, borderClassName, {
-                "univer-bg-gray-100 dark:!univer-bg-gray-800": visible,
-                "univer-bg-white dark:!univer-bg-gray-900": !visible
-              }),
-              children: [
-                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
-                  AutofillDoubleIcon,
-                  {
-                    className: `univer-fill-primary-600 univer-text-gray-900 dark:!univer-text-white`
-                  }
-                ),
-                showMore && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(MoreDownIcon, { className: "dark:!univer-text-white" })
-              ]
-            }
-          )
-        }
-      )
-    }
-  );
-}
 
 // ../packages/slides-ui/src/menu/image.menu.ts
 var SLIDES_IMAGE_MENU_ID = "slide.menu.image";
@@ -1500,7 +1333,7 @@ var menuSchema = {
 };
 
 // ../packages/slides-ui/src/views/editor-container/EditorContainer.tsx
-var import_react5 = __toESM(require_react());
+var import_react3 = __toESM(require_react());
 
 // ../packages/slides-ui/src/services/slide-editor-manager.service.ts
 var SlideEditorManagerService = class {
@@ -1548,7 +1381,7 @@ var ISlideEditorManagerService = createIdentifier(
 );
 
 // ../packages/slides-ui/src/views/editor-container/EditorContainer.tsx
-var import_jsx_runtime7 = __toESM(require_jsx_runtime());
+var import_jsx_runtime5 = __toESM(require_jsx_runtime());
 var HIDDEN_EDITOR_POSITION = -1e3;
 var EDITOR_DEFAULT_POSITION = {
   width: 0,
@@ -1557,7 +1390,7 @@ var EDITOR_DEFAULT_POSITION = {
   left: HIDDEN_EDITOR_POSITION
 };
 function SlideEditorContainer() {
-  const [state, setState] = (0, import_react5.useState)({
+  const [state, setState] = (0, import_react3.useState)({
     ...EDITOR_DEFAULT_POSITION
   });
   const slideEditorManagerService = useDependency(ISlideEditorManagerService);
@@ -1585,7 +1418,7 @@ function SlideEditorContainer() {
       documentFlavor: 0 /* UNSPECIFIED */
     }
   };
-  (0, import_react5.useEffect)(() => {
+  (0, import_react3.useEffect)(() => {
     slideEditorManagerService.state$.subscribe((param) => {
       if (param == null) {
         return;
@@ -1617,12 +1450,12 @@ function SlideEditorContainer() {
       }
     });
   }, []);
-  (0, import_react5.useEffect)(() => {
+  (0, import_react3.useEffect)(() => {
     if (!disableAutoFocus) {
       slideEditorManagerService.setFocus(true);
     }
   }, [disableAutoFocus, state]);
-  return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
     "div",
     {
       className: clsx("univer-absolute univer-z-10 univer-box-border univer-flex", borderClassName),
@@ -1632,6 +1465,173 @@ function SlideEditorContainer() {
         width: state.width,
         height: state.height
       }
+    }
+  );
+}
+
+// ../packages/slides-ui/src/views/image-popup-menu/component-name.ts
+var COMPONENT_SLIDE_IMAGE_POPUP_MENU = "COMPONENT_SLIDE_IMAGE_POPUP_MENU";
+
+// ../packages/slides-ui/src/views/image-popup-menu/ImagePopupMenu.tsx
+var import_react4 = __toESM(require_react());
+var import_jsx_runtime6 = __toESM(require_jsx_runtime());
+function SlideImagePopupMenu(props) {
+  var _a, _b;
+  const menuItems = (_b = (_a = props.popup) == null ? void 0 : _a.extraProps) == null ? void 0 : _b.menuItems;
+  if (!menuItems) {
+    return null;
+  }
+  const commandService = useDependency(ICommandService);
+  const localeService = useDependency(LocaleService);
+  const [visible, setVisible] = (0, import_react4.useState)(false);
+  const [isHovered, setHovered] = (0, import_react4.useState)(false);
+  const handleMouseEnter = () => {
+    setHovered(true);
+  };
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
+  const onVisibleChange = (visible2) => {
+    setVisible(visible2);
+  };
+  const handleClick = (item) => {
+    commandService.executeCommand(item.commandId, item.commandParams);
+    setVisible(false);
+  };
+  const showMore = visible || isHovered;
+  const availableMenu = menuItems.filter((item) => !item.disable);
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+    "div",
+    {
+      onMouseEnter: handleMouseEnter,
+      onMouseLeave: handleMouseLeave,
+      children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+        Dropdown,
+        {
+          align: "start",
+          overlay: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+            "ul",
+            {
+              className: clsx(`univer-m-0 univer-box-border univer-grid univer-list-none univer-items-center univer-gap-1 univer-rounded-lg univer-bg-white univer-p-1.5 univer-text-sm univer-shadow-lg`, borderClassName),
+              children: availableMenu.map((item) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+                "li",
+                {
+                  className: `univer-relative univer-box-border univer-flex univer-h-8 univer-cursor-pointer univer-items-center univer-rounded univer-text-sm univer-transition-colors hover:univer-bg-gray-100`,
+                  onClick: () => handleClick(item),
+                  children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { className: "univer-px-2 univer-py-1.5 univer-align-middle", children: localeService.t(item.label) })
+                },
+                item.index
+              ))
+            }
+          ),
+          open: visible,
+          onOpenChange: onVisibleChange,
+          children: /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(
+            "div",
+            {
+              className: clsx(`univer-flex univer-items-center univer-gap-2 univer-rounded univer-p-1 hover:univer-bg-gray-100 dark:hover:!univer-bg-gray-800`, borderClassName, {
+                "univer-bg-gray-100 dark:!univer-bg-gray-800": visible,
+                "univer-bg-white dark:!univer-bg-gray-900": !visible
+              }),
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+                  AutofillDoubleIcon,
+                  {
+                    className: `univer-fill-primary-600 univer-text-gray-900 dark:!univer-text-white`
+                  }
+                ),
+                showMore && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(MoreDownIcon, { className: "dark:!univer-text-white" })
+              ]
+            }
+          )
+        }
+      )
+    }
+  );
+}
+
+// ../packages/slides-ui/src/views/slide-bar/SlideBar.tsx
+var import_react5 = __toESM(require_react());
+var import_jsx_runtime7 = __toESM(require_jsx_runtime());
+function SlideSideBar() {
+  var _a, _b;
+  const univerInstanceService = useDependency(IUniverInstanceService);
+  const commandService = useDependency(ICommandService);
+  const renderManagerService = useDependency(IRenderManagerService);
+  const localeService = useDependency(LocaleService);
+  const slideBarRef = (0, import_react5.useRef)(null);
+  const currentSlide = univerInstanceService.getCurrentUnitOfType(3 /* UNIVER_SLIDE */);
+  const pages = currentSlide == null ? void 0 : currentSlide.getPages();
+  const pageOrder = currentSlide == null ? void 0 : currentSlide.getPageOrder();
+  if (!pages || !pageOrder) {
+    return null;
+  }
+  const slideList = pageOrder.map((id) => pages[id]);
+  const [activatePageId, setActivatePageId] = (0, import_react5.useState)((_b = (_a = currentSlide == null ? void 0 : currentSlide.getActivePage()) == null ? void 0 : _a.id) != null ? _b : null);
+  const divRefs = (0, import_react5.useMemo)(() => slideList.map(() => (0, import_react5.createRef)()), [slideList]);
+  (0, import_react5.useEffect)(() => {
+    const subscriber = currentSlide == null ? void 0 : currentSlide.activePage$.subscribe((page) => {
+      var _a2;
+      const id = (_a2 = page == null ? void 0 : page.id) != null ? _a2 : null;
+      id && setActivatePageId(id);
+    });
+    return () => {
+      subscriber == null ? void 0 : subscriber.unsubscribe();
+    };
+  }, []);
+  (0, import_react5.useEffect)(() => {
+    divRefs.forEach((ref, index) => {
+      var _a2;
+      if (ref.current) {
+        const slide = slideList[index];
+        (_a2 = renderManagerService.getRenderById(slide.id)) == null ? void 0 : _a2.engine.setContainer(ref.current);
+      }
+    });
+    if (divRefs.length > 0) {
+      commandService.syncExecuteCommand(SetSlidePageThumbOperation.id, { unitId: currentSlide == null ? void 0 : currentSlide.getUnitId() });
+    }
+  }, [divRefs, slideList, renderManagerService, commandService, currentSlide]);
+  const activatePage = (0, import_react5.useCallback)((page) => {
+    commandService.syncExecuteCommand(ActivateSlidePageOperation.id, { id: page, unitId: currentSlide == null ? void 0 : currentSlide.getUnitId() });
+  }, [commandService, currentSlide]);
+  const handleAppendSlide = (0, import_react5.useCallback)(() => {
+    commandService.syncExecuteCommand(AppendSlideOperation.id, { unitId: currentSlide == null ? void 0 : currentSlide.getUnitId() });
+  }, [commandService, currentSlide]);
+  return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+    "aside",
+    {
+      ref: slideBarRef,
+      className: clsx(`univer-flex univer-h-full univer-w-64 univer-flex-col univer-overflow-y-auto univer-overflow-x-hidden`, scrollbarClassName),
+      children: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "univer-px-4", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("header", { className: "univer-flex univer-justify-center univer-pt-4", children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+          "a",
+          {
+            className: clsx(`univer-box-border univer-block univer-h-8 univer-w-full univer-cursor-pointer univer-rounded-md univer-bg-white univer-text-center univer-text-sm univer-transition-colors`, borderClassName),
+            onClick: handleAppendSlide,
+            children: localeService.t("slides-ui.append")
+          }
+        ) }),
+        slideList.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(
+          "div",
+          {
+            className: clsx("univer-my-4 univer-flex univer-gap-2", {
+              "[&>div]:univer-border-primary-600 [&>span]:univer-text-primary-600": item.id === activatePageId
+            }),
+            onClick: () => activatePage(item.id),
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { children: index + 1 }),
+              /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+                "div",
+                {
+                  ref: divRefs[index],
+                  className: clsx(`univer-relative univer-box-border univer-h-32 univer-w-52 univer-bg-white hover:univer-border-primary-600`, borderClassName)
+                }
+              )
+            ]
+          },
+          item.id
+        ))
+      ] })
     }
   );
 }

@@ -1,37 +1,37 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-BHVSB4LT.js";
+} from "../chunk-QETDJ3WG.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-MEMCCI52.js";
-import "../chunk-AL72XNUO.js";
+} from "../chunk-CZCIAS6S.js";
+import "../chunk-LNLBFPTO.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
   ThreadCommentModel,
   getDT
-} from "../chunk-5MJIZA7Y.js";
+} from "../chunk-QYV3PGEQ.js";
 import {
   InsertDocImageCommand,
   UniverDebuggerPlugin,
   UniverDocsDrawingUIPlugin
-} from "../chunk-G5J2AE2K.js";
+} from "../chunk-QD22ZXZH.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-KY62Z2HS.js";
+} from "../chunk-QL42RB2Y.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-QSN5EZAZ.js";
-import "../chunk-LFWH636K.js";
-import "../chunk-5VMCP7ZK.js";
+} from "../chunk-6XUBQ4BO.js";
+import "../chunk-ITPY5S42.js";
+import "../chunk-BEFP5CHR.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE,
   loadDebuggerLocale
-} from "../chunk-RAQB7QKQ.js";
+} from "../chunk-RPFYPI5O.js";
 import {
   BulletListCommand,
   CutContentCommand,
@@ -68,7 +68,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-XRVR2H52.js";
+} from "../chunk-VSYBWRXI.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -100,25 +100,25 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-GDSMKYWA.js";
+} from "../chunk-OWRD2DAJ.js";
 import {
   FUniver
-} from "../chunk-Z2NBOTBN.js";
+} from "../chunk-VH2IWGAA.js";
 import {
   zh_CN_default
-} from "../chunk-ES66ZAH2.js";
+} from "../chunk-DGBRMZM3.js";
 import "../chunk-GQQW6W3C.js";
 import "../chunk-XGMSUR6J.js";
-import "../chunk-QYY2YWST.js";
+import "../chunk-5ED2IM6Z.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-G66X4HVS.js";
+} from "../chunk-RNEMECLQ.js";
 import {
   IRenderManagerService,
   UniverRenderEnginePlugin,
   ptToPixel,
   withCurrentTypeOfRenderer
-} from "../chunk-3Z2XPC36.js";
+} from "../chunk-RQTPWJDA.js";
 import {
   BehaviorSubject,
   BuildTextUtils,
@@ -154,7 +154,7 @@ import {
   sequenceExecute,
   tap,
   toDisposable
-} from "../chunk-EGKTDU4O.js";
+} from "../chunk-5NEQ5UIN.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -487,7 +487,7 @@ var DOCS_HYPER_LINK_UI_PLUGIN_CONFIG_KEY = "docs-hyper-link-ui.config";
 var configSymbol2 = Symbol(DOCS_HYPER_LINK_UI_PLUGIN_CONFIG_KEY);
 var defaultPluginConfig2 = {};
 
-// ../packages/docs-hyper-link-ui/src/views/hyper-link-edit/index.tsx
+// ../packages/docs-hyper-link-ui/src/views/DocHyperLinkEdit.tsx
 var import_react = __toESM(require_react());
 
 // ../packages/docs-hyper-link-ui/src/commands/commands/add-link.command.ts
@@ -577,7 +577,7 @@ function isBlankInput(value) {
   return value.trim().length === 0;
 }
 
-// ../packages/docs-hyper-link-ui/src/views/hyper-link-edit/index.tsx
+// ../packages/docs-hyper-link-ui/src/views/DocHyperLinkEdit.tsx
 var import_jsx_runtime = __toESM(require_jsx_runtime());
 function hasProtocol(urlString) {
   const pattern = /^[a-zA-Z]+:\/\//;
@@ -806,7 +806,7 @@ var ClickDocHyperLinkOperation = {
   }
 };
 
-// ../packages/docs-hyper-link-ui/src/views/hyper-link-popup/index.tsx
+// ../packages/docs-hyper-link-ui/src/views/DocLinkPopup.tsx
 var import_jsx_runtime2 = __toESM(require_jsx_runtime());
 var DocLinkPopup = () => {
   var _a, _b;
@@ -3005,7 +3005,7 @@ var menuSchema2 = {
   }
 };
 
-// ../packages/docs-thread-comment-ui/src/views/doc-thread-comment-panel/index.tsx
+// ../packages/docs-thread-comment-ui/src/views/DocThreadCommentPanel.tsx
 var import_react6 = __toESM(require_react());
 var import_jsx_runtime8 = __toESM(require_jsx_runtime());
 var DocThreadCommentPanel = () => {
