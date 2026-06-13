@@ -1,13 +1,13 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-3BX6QDVZ.js";
+} from "../chunk-BHVSB4LT.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-WQVN6GQY.js";
-import "../chunk-BTS6OIOT.js";
+} from "../chunk-MEMCCI52.js";
+import "../chunk-AL72XNUO.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
@@ -18,20 +18,20 @@ import {
   InsertDocImageCommand,
   UniverDebuggerPlugin,
   UniverDocsDrawingUIPlugin
-} from "../chunk-B5ZKID2M.js";
+} from "../chunk-G5J2AE2K.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-L7E5LAEI.js";
+} from "../chunk-KY62Z2HS.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-LBZ4BWUL.js";
-import "../chunk-6V7MZKRN.js";
-import "../chunk-WBOVN7EG.js";
+} from "../chunk-QSN5EZAZ.js";
+import "../chunk-LFWH636K.js";
+import "../chunk-5VMCP7ZK.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE,
   loadDebuggerLocale
-} from "../chunk-ZKICHKAT.js";
+} from "../chunk-RAQB7QKQ.js";
 import {
   BulletListCommand,
   CutContentCommand,
@@ -68,7 +68,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-NNJ2PAFS.js";
+} from "../chunk-XRVR2H52.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -100,7 +100,7 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-DFLNXVRZ.js";
+} from "../chunk-GDSMKYWA.js";
 import {
   FUniver
 } from "../chunk-Z2NBOTBN.js";
@@ -109,16 +109,16 @@ import {
 } from "../chunk-ES66ZAH2.js";
 import "../chunk-GQQW6W3C.js";
 import "../chunk-XGMSUR6J.js";
-import "../chunk-6FFDUATW.js";
+import "../chunk-QYY2YWST.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-CXZNL3JJ.js";
+} from "../chunk-G66X4HVS.js";
 import {
   IRenderManagerService,
   UniverRenderEnginePlugin,
   ptToPixel,
   withCurrentTypeOfRenderer
-} from "../chunk-XFPFZZHP.js";
+} from "../chunk-3Z2XPC36.js";
 import {
   BehaviorSubject,
   BuildTextUtils,
