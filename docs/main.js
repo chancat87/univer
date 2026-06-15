@@ -1,12 +1,12 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-BB3FCHD3.js";
+} from "../chunk-NHYQMIQ3.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-UMEMDVWW.js";
+} from "../chunk-Z72RDGFI.js";
 import "../chunk-3O5N4NRK.js";
 import {
   AddCommentMutation,
@@ -18,20 +18,20 @@ import {
   InsertDocImageCommand,
   UniverDebuggerPlugin,
   UniverDocsDrawingUIPlugin
-} from "../chunk-ZYIZ3FIV.js";
+} from "../chunk-CR24K3IV.js";
 import {
   UniverWatermarkPlugin
 } from "../chunk-IR4OGUQE.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-KPCYPN2H.js";
-import "../chunk-SH32ZBX3.js";
-import "../chunk-UF7LOQPM.js";
+} from "../chunk-T4PRNKCT.js";
+import "../chunk-AXTASDKZ.js";
+import "../chunk-HYIUNMX3.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE,
   loadDebuggerLocale
-} from "../chunk-3MVPNDQV.js";
+} from "../chunk-DLXB6LWY.js";
 import {
   BulletListCommand,
   CutContentCommand,
@@ -68,7 +68,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-CQ4VYZJ4.js";
+} from "../chunk-RBUEDVUD.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -101,7 +101,7 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-YZ63L5OB.js";
+} from "../chunk-TMJAJNJS.js";
 import {
   FUniver
 } from "../chunk-MNEZ7YZ7.js";
@@ -573,154 +573,6 @@ var UpdateDocHyperLinkCommand = {
   }
 };
 
-// ../packages/docs-hyper-link-ui/src/views/hyper-link-edit/utils.ts
-function isBlankInput(value) {
-  return value.trim().length === 0;
-}
-
-// ../packages/docs-hyper-link-ui/src/views/DocHyperLinkEdit.tsx
-var import_jsx_runtime = __toESM(require_jsx_runtime());
-function hasProtocol(urlString) {
-  const pattern = /^[a-zA-Z]+:\/\//;
-  return pattern.test(urlString);
-}
-function isEmail(url) {
-  const pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-  return pattern.test(url);
-}
-function transformUrl(urlStr) {
-  return hasProtocol(urlStr) ? urlStr : isEmail(urlStr) ? `mailto://${urlStr}` : `https://${urlStr}`;
-}
-var DocHyperLinkEdit = () => {
-  const hyperLinkService = useDependency(DocHyperLinkPopupService);
-  const localeService = useDependency(LocaleService);
-  const editing = useObservable(hyperLinkService.editingLink$);
-  const commandService = useDependency(ICommandService);
-  const univerInstanceService = useDependency(IUniverInstanceService);
-  const docSelectionManagerService = useDependency(DocSelectionManagerService);
-  const [link, setLink] = (0, import_react.useState)("");
-  const [label, setLabel] = (0, import_react.useState)("");
-  const [showError, setShowError] = (0, import_react.useState)(false);
-  const isLegal = Tools.isLegalUrl(link);
-  const doc = editing ? univerInstanceService.getUnit(editing.unitId, 1 /* UNIVER_DOC */) : univerInstanceService.getCurrentUnitOfType(1 /* UNIVER_DOC */);
-  (0, import_react.useEffect)(() => {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _i;
-    const activeRange = docSelectionManagerService.getActiveTextRange();
-    if (!activeRange) {
-      return;
-    }
-    if (editing) {
-      const body2 = (_a = doc == null ? void 0 : doc.getSelfOrHeaderFooterModel(editing.segmentId)) == null ? void 0 : _a.getBody();
-      const matchedRange2 = (_b = body2 == null ? void 0 : body2.customRanges) == null ? void 0 : _b.find((i) => (editing == null ? void 0 : editing.linkId) === i.rangeId && i.startIndex === editing.startIndex && i.endIndex === editing.endIndex);
-      if (doc && matchedRange2) {
-        setLink((_d = (_c = matchedRange2.properties) == null ? void 0 : _c.url) != null ? _d : "");
-        setLabel(BuildTextUtils.transform.getPlainText(getBodySlice(body2, matchedRange2.startIndex, matchedRange2.endIndex + 1).dataStream));
-      }
-      return;
-    }
-    const body = (_e = doc == null ? void 0 : doc.getSelfOrHeaderFooterModel(activeRange.segmentId)) == null ? void 0 : _e.getBody();
-    const selection = body ? activeRange : null;
-    const matchedRange = selection && ((_g = BuildTextUtils.customRange.getCustomRangesInterestsWithSelection(selection, (_f = body == null ? void 0 : body.customRanges) != null ? _f : [])) == null ? void 0 : _g[0]);
-    if (doc && matchedRange) {
-      setLink((_i = (_h = matchedRange == null ? void 0 : matchedRange.properties) == null ? void 0 : _h.url) != null ? _i : "");
-    }
-  }, [doc, editing, docSelectionManagerService, univerInstanceService]);
-  const handleCancel = () => {
-    hyperLinkService.hideEditPopup();
-  };
-  const handleConfirm = () => {
-    setShowError(true);
-    if (!isLegal || !doc) {
-      return;
-    }
-    const linkFinal = transformUrl(link);
-    if (!editing) {
-      commandService.executeCommand(AddDocHyperLinkCommand.id, {
-        unitId: doc.getUnitId(),
-        payload: linkFinal
-      });
-    } else {
-      if (isBlankInput(label)) {
-        return;
-      }
-      commandService.executeCommand(UpdateDocHyperLinkCommand.id, {
-        unitId: doc.getUnitId(),
-        payload: linkFinal,
-        linkId: editing.linkId,
-        label,
-        segmentId: editing.segmentId
-      });
-    }
-    hyperLinkService.hideEditPopup();
-  };
-  if (!doc) {
-    return;
-  }
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
-    "div",
-    {
-      className: clsx(`univer-box-border univer-w-[328px] univer-rounded-xl univer-bg-white univer-px-6 univer-py-5 univer-shadow dark:!univer-bg-gray-900`, borderClassName),
-      children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-          editing ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-            FormLayout,
-            {
-              label: localeService.t("docs-hyper-link-ui.edit.label"),
-              error: showError && isBlankInput(label) ? localeService.t("docs-hyper-link-ui.edit.labelError") : "",
-              children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-                Input,
-                {
-                  value: label,
-                  onChange: setLabel,
-                  autoFocus: true,
-                  onKeyDown: (evt) => {
-                    if (evt.keyCode === 13 /* ENTER */) {
-                      handleConfirm();
-                    }
-                  }
-                }
-              )
-            }
-          ) : null,
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-            FormLayout,
-            {
-              label: localeService.t("docs-hyper-link-ui.edit.address"),
-              error: showError && !isLegal ? localeService.t("docs-hyper-link-ui.edit.addressError") : "",
-              children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-                Input,
-                {
-                  value: link,
-                  onChange: setLink,
-                  autoFocus: true,
-                  onKeyDown: (evt) => {
-                    if (evt.keyCode === 13 /* ENTER */) {
-                      handleConfirm();
-                    }
-                  }
-                }
-              )
-            }
-          )
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "univer-flex univer-justify-end univer-gap-3", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, { onClick: handleCancel, children: localeService.t("docs-hyper-link-ui.edit.cancel") }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-            Button,
-            {
-              variant: "primary",
-              disabled: isBlankInput(link),
-              onClick: handleConfirm,
-              children: localeService.t("docs-hyper-link-ui.edit.confirm")
-            }
-          )
-        ] })
-      ]
-    }
-  );
-};
-DocHyperLinkEdit.componentKey = "docs-hyper-link-edit";
-
 // ../packages/docs-hyper-link-ui/src/commands/commands/delete-link.command.ts
 var DeleteDocHyperLinkCommand = {
   type: 0 /* COMMAND */,
@@ -808,7 +660,7 @@ var ClickDocHyperLinkOperation = {
 };
 
 // ../packages/docs-hyper-link-ui/src/views/DocLinkPopup.tsx
-var import_jsx_runtime2 = __toESM(require_jsx_runtime());
+var import_jsx_runtime = __toESM(require_jsx_runtime());
 var DocLinkPopup = () => {
   var _a, _b;
   const hyperLinkService = useDependency(DocHyperLinkPopupService);
@@ -828,7 +680,7 @@ var DocLinkPopup = () => {
     return null;
   }
   const url = (_b = link.properties) == null ? void 0 : _b.url;
-  return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
     "div",
     {
       className: clsx(`univer-box-border univer-flex univer-max-w-80 univer-items-center univer-justify-between univer-overflow-hidden univer-rounded-lg univer-bg-white univer-p-3 univer-shadow dark:!univer-bg-gray-900`, borderClassName),
@@ -836,25 +688,25 @@ var DocLinkPopup = () => {
         hyperLinkService.hideInfoPopup();
       },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
           "div",
           {
             className: `univer-flex univer-h-6 univer-flex-1 univer-cursor-pointer univer-items-center univer-truncate univer-text-sm univer-leading-5 univer-text-primary-500`,
             onClick: () => window.open(url, void 0, "noopener noreferrer"),
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
                 "div",
                 {
                   className: `univer-mr-2 univer-flex univer-size-5 univer-flex-[0_0_auto] univer-items-center univer-justify-center univer-text-base univer-text-gray-900 dark:!univer-text-white`,
-                  children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(LinkIcon, {})
+                  children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LinkIcon, {})
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Tooltip, { showIfEllipsis: true, title: url, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "univer-flex-1 univer-truncate", children: url }) })
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tooltip, { showIfEllipsis: true, title: url, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "univer-flex-1 univer-truncate", children: url }) })
             ]
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "univer-flex univer-h-6 univer-flex-[0_0_auto] univer-items-center univer-justify-center", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "univer-flex univer-h-6 univer-flex-[0_0_auto] univer-items-center univer-justify-center", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
             "div",
             {
               className: `univer-ml-2 univer-flex univer-size-6 univer-cursor-pointer univer-items-center univer-justify-center univer-rounded univer-text-base`,
@@ -865,10 +717,10 @@ var DocLinkPopup = () => {
                   type: "info" /* Info */
                 });
               },
-              children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Tooltip, { placement: "bottom", title: localeService.t("docs-hyper-link-ui.info.copy"), children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(CopyIcon, {}) })
+              children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tooltip, { placement: "bottom", title: localeService.t("docs-hyper-link-ui.info.copy"), children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CopyIcon, {}) })
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
             "div",
             {
               className: `univer-ml-2 univer-flex univer-size-6 univer-cursor-pointer univer-items-center univer-justify-center univer-rounded univer-text-base`,
@@ -877,10 +729,10 @@ var DocLinkPopup = () => {
                   link: currentPopup
                 });
               },
-              children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Tooltip, { placement: "bottom", title: localeService.t("docs-hyper-link-ui.info.edit"), children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(WriteIcon, {}) })
+              children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tooltip, { placement: "bottom", title: localeService.t("docs-hyper-link-ui.info.edit"), children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(WriteIcon, {}) })
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
             "div",
             {
               className: `univer-ml-2 univer-flex univer-size-6 univer-cursor-pointer univer-items-center univer-justify-center univer-rounded univer-text-base`,
@@ -891,7 +743,7 @@ var DocLinkPopup = () => {
                   segmentId
                 });
               },
-              children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Tooltip, { placement: "bottom", title: localeService.t("docs-hyper-link-ui.info.cancel"), children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(UnlinkIcon, {}) })
+              children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Tooltip, { placement: "bottom", title: localeService.t("docs-hyper-link-ui.info.cancel"), children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(UnlinkIcon, {}) })
             }
           )
         ] })
@@ -1009,6 +861,184 @@ DocHyperLinkPopupService = __decorateClass([
   __decorateParam(1, Inject(DocSelectionManagerService)),
   __decorateParam(2, IUniverInstanceService)
 ], DocHyperLinkPopupService);
+
+// ../packages/docs-hyper-link-ui/src/views/hyper-link-edit/utils.ts
+function isBlankInput(value) {
+  return value.trim().length === 0;
+}
+
+// ../packages/docs-hyper-link-ui/src/views/DocHyperLinkEdit.tsx
+var import_jsx_runtime2 = __toESM(require_jsx_runtime());
+function hasProtocol(urlString) {
+  const pattern = /^[a-zA-Z]+:\/\//;
+  return pattern.test(urlString);
+}
+function isEmail(url) {
+  const pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  return pattern.test(url);
+}
+function transformUrl(urlStr) {
+  return hasProtocol(urlStr) ? urlStr : isEmail(urlStr) ? `mailto://${urlStr}` : `https://${urlStr}`;
+}
+var DocHyperLinkEdit = () => {
+  const hyperLinkService = useDependency(DocHyperLinkPopupService);
+  const localeService = useDependency(LocaleService);
+  const editing = useObservable(hyperLinkService.editingLink$);
+  const commandService = useDependency(ICommandService);
+  const univerInstanceService = useDependency(IUniverInstanceService);
+  const docSelectionManagerService = useDependency(DocSelectionManagerService);
+  const [link, setLink] = (0, import_react.useState)("");
+  const [label, setLabel] = (0, import_react.useState)("");
+  const [showError, setShowError] = (0, import_react.useState)(false);
+  const isLegal = Tools.isLegalUrl(link);
+  const doc = editing ? univerInstanceService.getUnit(editing.unitId, 1 /* UNIVER_DOC */) : univerInstanceService.getCurrentUnitOfType(1 /* UNIVER_DOC */);
+  (0, import_react.useEffect)(() => {
+    var _a, _b, _c, _d, _e, _f, _g, _h, _i;
+    const activeRange = docSelectionManagerService.getActiveTextRange();
+    if (!activeRange) {
+      return;
+    }
+    if (editing) {
+      const body2 = (_a = doc == null ? void 0 : doc.getSelfOrHeaderFooterModel(editing.segmentId)) == null ? void 0 : _a.getBody();
+      const matchedRange2 = (_b = body2 == null ? void 0 : body2.customRanges) == null ? void 0 : _b.find((i) => (editing == null ? void 0 : editing.linkId) === i.rangeId && i.startIndex === editing.startIndex && i.endIndex === editing.endIndex);
+      if (doc && matchedRange2) {
+        setLink((_d = (_c = matchedRange2.properties) == null ? void 0 : _c.url) != null ? _d : "");
+        setLabel(BuildTextUtils.transform.getPlainText(getBodySlice(body2, matchedRange2.startIndex, matchedRange2.endIndex + 1).dataStream));
+      }
+      return;
+    }
+    const body = (_e = doc == null ? void 0 : doc.getSelfOrHeaderFooterModel(activeRange.segmentId)) == null ? void 0 : _e.getBody();
+    const selection = body ? activeRange : null;
+    const matchedRange = selection && ((_g = BuildTextUtils.customRange.getCustomRangesInterestsWithSelection(selection, (_f = body == null ? void 0 : body.customRanges) != null ? _f : [])) == null ? void 0 : _g[0]);
+    if (doc && matchedRange) {
+      setLink((_i = (_h = matchedRange == null ? void 0 : matchedRange.properties) == null ? void 0 : _h.url) != null ? _i : "");
+    }
+  }, [doc, editing, docSelectionManagerService, univerInstanceService]);
+  const handleCancel = () => {
+    hyperLinkService.hideEditPopup();
+  };
+  const handleConfirm = () => {
+    setShowError(true);
+    if (!isLegal || !doc) {
+      return;
+    }
+    const linkFinal = transformUrl(link);
+    if (!editing) {
+      commandService.executeCommand(AddDocHyperLinkCommand.id, {
+        unitId: doc.getUnitId(),
+        payload: linkFinal
+      });
+    } else {
+      if (isBlankInput(label)) {
+        return;
+      }
+      commandService.executeCommand(UpdateDocHyperLinkCommand.id, {
+        unitId: doc.getUnitId(),
+        payload: linkFinal,
+        linkId: editing.linkId,
+        label,
+        segmentId: editing.segmentId
+      });
+    }
+    hyperLinkService.hideEditPopup();
+  };
+  if (!doc) {
+    return;
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(
+    "div",
+    {
+      className: clsx(`univer-box-border univer-w-[328px] univer-rounded-xl univer-bg-white univer-px-6 univer-py-5 univer-shadow dark:!univer-bg-gray-900`, borderClassName),
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
+          editing ? /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+            FormLayout,
+            {
+              label: localeService.t("docs-hyper-link-ui.edit.label"),
+              error: showError && isBlankInput(label) ? localeService.t("docs-hyper-link-ui.edit.labelError") : "",
+              children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+                Input,
+                {
+                  value: label,
+                  onChange: setLabel,
+                  autoFocus: true,
+                  onKeyDown: (evt) => {
+                    if (evt.keyCode === 13 /* ENTER */) {
+                      handleConfirm();
+                    }
+                  }
+                }
+              )
+            }
+          ) : null,
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+            FormLayout,
+            {
+              label: localeService.t("docs-hyper-link-ui.edit.address"),
+              error: showError && !isLegal ? localeService.t("docs-hyper-link-ui.edit.addressError") : "",
+              children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+                Input,
+                {
+                  value: link,
+                  onChange: setLink,
+                  autoFocus: true,
+                  onKeyDown: (evt) => {
+                    if (evt.keyCode === 13 /* ENTER */) {
+                      handleConfirm();
+                    }
+                  }
+                }
+              )
+            }
+          )
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "univer-flex univer-justify-end univer-gap-3", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Button, { onClick: handleCancel, children: localeService.t("docs-hyper-link-ui.edit.cancel") }),
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+            Button,
+            {
+              variant: "primary",
+              disabled: isBlankInput(link),
+              onClick: handleConfirm,
+              children: localeService.t("docs-hyper-link-ui.edit.confirm")
+            }
+          )
+        ] })
+      ]
+    }
+  );
+};
+DocHyperLinkEdit.componentKey = "docs-hyper-link-edit";
+
+// ../packages/docs-hyper-link-ui/src/controllers/components.controller.ts
+var ComponentsController = class extends Disposable {
+  constructor(_componentManager, _iconManager) {
+    super();
+    __publicField(this, "_componentManager", _componentManager);
+    __publicField(this, "_iconManager", _iconManager);
+    this._registerComponents();
+    this._registerIcons();
+  }
+  _registerComponents() {
+    [
+      [DocHyperLinkEdit.componentKey, DocHyperLinkEdit],
+      [DocLinkPopup.componentKey, DocLinkPopup]
+    ].forEach(([key, comp]) => {
+      this.disposeWithMe(
+        this._componentManager.register(key, comp)
+      );
+    });
+  }
+  _registerIcons() {
+    this.disposeWithMe(this._iconManager.register({
+      LinkIcon
+    }));
+  }
+};
+ComponentsController = __decorateClass([
+  __decorateParam(0, Inject(ComponentManager)),
+  __decorateParam(1, Inject(IconManager))
+], ComponentsController);
 
 // ../packages/docs-hyper-link-ui/src/controllers/doc-hyper-link-selection.controller.ts
 var DocHyperLinkSelectionController = class extends Disposable {
@@ -1268,33 +1298,14 @@ var menuSchema = {
 
 // ../packages/docs-hyper-link-ui/src/controllers/ui.controller.ts
 var DocHyperLinkUIController = class extends Disposable {
-  constructor(_componentManager, _iconManager, _commandService, _menuManagerService, _shortcutService) {
+  constructor(_commandService, _menuManagerService, _shortcutService) {
     super();
-    __publicField(this, "_componentManager", _componentManager);
-    __publicField(this, "_iconManager", _iconManager);
     __publicField(this, "_commandService", _commandService);
     __publicField(this, "_menuManagerService", _menuManagerService);
     __publicField(this, "_shortcutService", _shortcutService);
-    this._initComponents();
-    this._registerIcons();
     this._initCommands();
     this._initMenus();
     this._initShortcut();
-  }
-  _initComponents() {
-    [
-      [DocHyperLinkEdit.componentKey, DocHyperLinkEdit],
-      [DocLinkPopup.componentKey, DocLinkPopup]
-    ].forEach(([key, comp]) => {
-      this.disposeWithMe(
-        this._componentManager.register(key, comp)
-      );
-    });
-  }
-  _registerIcons() {
-    this.disposeWithMe(this._iconManager.register({
-      LinkIcon
-    }));
   }
   _initCommands() {
     [
@@ -1319,11 +1330,9 @@ var DocHyperLinkUIController = class extends Disposable {
   }
 };
 DocHyperLinkUIController = __decorateClass([
-  __decorateParam(0, Inject(ComponentManager)),
-  __decorateParam(1, Inject(IconManager)),
-  __decorateParam(2, ICommandService),
-  __decorateParam(3, IMenuManagerService),
-  __decorateParam(4, IShortcutService)
+  __decorateParam(0, ICommandService),
+  __decorateParam(1, IMenuManagerService),
+  __decorateParam(2, IShortcutService)
 ], DocHyperLinkUIController);
 
 // ../packages/docs-hyper-link-ui/src/types/const/index.ts
@@ -1348,6 +1357,8 @@ var UniverDocsHyperLinkUIPlugin = class extends Plugin {
     this._configService.setConfig(DOCS_HYPER_LINK_UI_PLUGIN_CONFIG_KEY, rest);
   }
   onStarting() {
+    this._injector.add([ComponentsController]);
+    this._injector.get(ComponentsController);
     const deps = [
       [DocHyperLinkPopupService],
       [DocHyperLinkUIController],
@@ -2208,6 +2219,154 @@ DocQuickInsertTriggerController = __decorateClass([
   __decorateParam(4, Inject(IUniverInstanceService))
 ], DocQuickInsertTriggerController);
 
+// ../packages/docs-quick-insert-ui/src/controllers/ui.controller.ts
+var DocQuickInsertUIController = class extends Disposable {
+  constructor(_commandService, _docQuickInsertPopupService) {
+    super();
+    __publicField(this, "_commandService", _commandService);
+    __publicField(this, "_docQuickInsertPopupService", _docQuickInsertPopupService);
+    this._initCommands();
+    this._initComponents();
+    this._initMenus();
+  }
+  _initCommands() {
+    [
+      DeleteSearchKeyCommand,
+      ShowQuickInsertPopupOperation,
+      CloseQuickInsertPopupOperation
+    ].forEach((operation) => {
+      this.disposeWithMe(this._commandService.registerCommand(operation));
+    });
+  }
+  _initComponents() {
+    const popups = [
+      {
+        keyword: "/",
+        menus$: of(builtInMenus),
+        // only show when the cursor is at the beginning of a line
+        preconditions: (params) => {
+          var _a;
+          return ((_a = params.range.startNodePosition) == null ? void 0 : _a.glyph) === 0;
+        }
+      }
+    ];
+    popups.forEach((popup) => {
+      this.disposeWithMe(this._docQuickInsertPopupService.registerPopup(popup));
+    });
+  }
+  _initMenus() {
+  }
+};
+DocQuickInsertUIController = __decorateClass([
+  __decorateParam(0, ICommandService),
+  __decorateParam(1, Inject(DocQuickInsertPopupService))
+], DocQuickInsertUIController);
+
+// ../packages/docs-quick-insert-ui/package.json
+var package_default3 = {
+  name: "@univerjs/docs-quick-insert-ui",
+  version: "0.25.0",
+  private: false,
+  description: "Quick insert UI integration for Univer Docs.",
+  author: "DreamNum Co., Ltd. <developer@univer.ai>",
+  license: "Apache-2.0",
+  funding: {
+    type: "opencollective",
+    url: "https://opencollective.com/univer"
+  },
+  homepage: "https://univer.ai",
+  repository: {
+    type: "git",
+    url: "https://github.com/dream-num/univer"
+  },
+  bugs: {
+    url: "https://github.com/dream-num/univer/issues"
+  },
+  keywords: [
+    "univer",
+    "docs",
+    "quick-insert",
+    "insert",
+    "ui"
+  ],
+  exports: {
+    ".": "./src/index.ts",
+    "./*": "./src/*",
+    "./locale/*": "./src/locale/*.ts"
+  },
+  main: "./src/index.ts",
+  types: "./lib/types/index.d.ts",
+  publishConfig: {
+    access: "public",
+    main: "./lib/es/index.js",
+    module: "./lib/es/index.js",
+    exports: {
+      ".": {
+        import: "./lib/es/index.js",
+        require: "./lib/cjs/index.js",
+        types: "./lib/types/index.d.ts"
+      },
+      "./*": {
+        import: "./lib/es/*",
+        require: "./lib/cjs/*",
+        types: "./lib/types/index.d.ts"
+      },
+      "./locale/*": {
+        import: "./lib/es/locale/*.js",
+        require: "./lib/cjs/locale/*.js",
+        types: "./lib/types/locale/*.d.ts"
+      },
+      "./lib/*": "./lib/*"
+    }
+  },
+  directories: {
+    lib: "lib"
+  },
+  files: [
+    "lib"
+  ],
+  scripts: {
+    test: "vitest run",
+    "test:watch": "vitest",
+    coverage: "vitest run --coverage",
+    typecheck: "tsc --noEmit",
+    "build:bundle": "univer-cli build",
+    "build:types": "tsc -p tsconfig.node.json",
+    build: "pnpm run build:bundle && pnpm run build:types"
+  },
+  peerDependencies: {
+    react: "^16.9.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc",
+    rxjs: ">=7.0.0"
+  },
+  dependencies: {
+    "@univerjs/core": "workspace:*",
+    "@univerjs/design": "workspace:*",
+    "@univerjs/docs": "workspace:*",
+    "@univerjs/docs-drawing": "workspace:*",
+    "@univerjs/docs-drawing-ui": "workspace:*",
+    "@univerjs/docs-ui": "workspace:*",
+    "@univerjs/drawing": "workspace:*",
+    "@univerjs/drawing-ui": "workspace:*",
+    "@univerjs/engine-render": "workspace:*",
+    "@univerjs/icons": "1.12.0",
+    "@univerjs/ui": "workspace:*"
+  },
+  devDependencies: {
+    "@univerjs-infra/shared": "workspace:*",
+    postcss: "^8.5.15",
+    react: "18.3.1",
+    rxjs: "^7.8.2",
+    tailwindcss: "3.4.18",
+    typescript: "^6.0.3",
+    vitest: "^4.1.9"
+  }
+};
+
+// ../packages/docs-quick-insert-ui/src/config/config.ts
+var DOCS_QUICK_INSERT_UI_PLUGIN_CONFIG_KEY = "docs-quick-insert-ui.config";
+var configSymbol3 = Symbol(DOCS_QUICK_INSERT_UI_PLUGIN_CONFIG_KEY);
+var defaultPluginConfig3 = {};
+
 // ../packages/docs-quick-insert-ui/src/views/QuickInsertButton.tsx
 var import_react5 = __toESM(require_react());
 
@@ -2326,29 +2485,22 @@ var QuickInsertButton = ({ className = "" }) => {
 };
 QuickInsertButton.componentKey = QuickInsertButtonComponentKey;
 
-// ../packages/docs-quick-insert-ui/src/controllers/ui.controller.ts
-var DocQuickInsertUIController = class extends Disposable {
-  constructor(_commandService, _docQuickInsertPopupService, _componentManager, _iconManager) {
+// ../packages/docs-quick-insert-ui/src/controllers/components.controller.ts
+var ComponentsController2 = class extends Disposable {
+  constructor(_componentManager, _iconManager) {
     super();
-    __publicField(this, "_commandService", _commandService);
-    __publicField(this, "_docQuickInsertPopupService", _docQuickInsertPopupService);
     __publicField(this, "_componentManager", _componentManager);
     __publicField(this, "_iconManager", _iconManager);
-    this._initCommands();
-    this._initComponents();
     this._registerIcons();
-    this._initMenus();
+    this._registerComponents();
   }
-  _initCommands() {
-    [
-      DeleteSearchKeyCommand,
-      ShowQuickInsertPopupOperation,
-      CloseQuickInsertPopupOperation
-    ].forEach((operation) => {
-      this.disposeWithMe(this._commandService.registerCommand(operation));
-    });
+  _registerIcons() {
+    this.disposeWithMe(this._iconManager.register({
+      DividerIcon,
+      TextIcon
+    }));
   }
-  _initComponents() {
+  _registerComponents() {
     [
       [QuickInsertPopup.componentKey, QuickInsertPopup],
       [KeywordInputPlaceholder.componentKey, KeywordInputPlaceholder],
@@ -2359,141 +2511,12 @@ var DocQuickInsertUIController = class extends Disposable {
         this.disposeWithMe(this._componentManager.register(key, comp));
       }
     });
-    const popups = [
-      {
-        keyword: "/",
-        menus$: of(builtInMenus),
-        // only show when the cursor is at the beginning of a line
-        preconditions: (params) => {
-          var _a;
-          return ((_a = params.range.startNodePosition) == null ? void 0 : _a.glyph) === 0;
-        }
-      }
-    ];
-    popups.forEach((popup) => {
-      this.disposeWithMe(this._docQuickInsertPopupService.registerPopup(popup));
-    });
-  }
-  _initMenus() {
-  }
-  _registerIcons() {
-    this.disposeWithMe(this._iconManager.register({
-      DividerIcon,
-      TextIcon
-    }));
   }
 };
-DocQuickInsertUIController = __decorateClass([
-  __decorateParam(0, ICommandService),
-  __decorateParam(1, Inject(DocQuickInsertPopupService)),
-  __decorateParam(2, Inject(ComponentManager)),
-  __decorateParam(3, Inject(IconManager))
-], DocQuickInsertUIController);
-
-// ../packages/docs-quick-insert-ui/package.json
-var package_default3 = {
-  name: "@univerjs/docs-quick-insert-ui",
-  version: "0.25.0",
-  private: false,
-  description: "Quick insert UI integration for Univer Docs.",
-  author: "DreamNum Co., Ltd. <developer@univer.ai>",
-  license: "Apache-2.0",
-  funding: {
-    type: "opencollective",
-    url: "https://opencollective.com/univer"
-  },
-  homepage: "https://univer.ai",
-  repository: {
-    type: "git",
-    url: "https://github.com/dream-num/univer"
-  },
-  bugs: {
-    url: "https://github.com/dream-num/univer/issues"
-  },
-  keywords: [
-    "univer",
-    "docs",
-    "quick-insert",
-    "insert",
-    "ui"
-  ],
-  exports: {
-    ".": "./src/index.ts",
-    "./*": "./src/*",
-    "./locale/*": "./src/locale/*.ts"
-  },
-  main: "./src/index.ts",
-  types: "./lib/types/index.d.ts",
-  publishConfig: {
-    access: "public",
-    main: "./lib/es/index.js",
-    module: "./lib/es/index.js",
-    exports: {
-      ".": {
-        import: "./lib/es/index.js",
-        require: "./lib/cjs/index.js",
-        types: "./lib/types/index.d.ts"
-      },
-      "./*": {
-        import: "./lib/es/*",
-        require: "./lib/cjs/*",
-        types: "./lib/types/index.d.ts"
-      },
-      "./locale/*": {
-        import: "./lib/es/locale/*.js",
-        require: "./lib/cjs/locale/*.js",
-        types: "./lib/types/locale/*.d.ts"
-      },
-      "./lib/*": "./lib/*"
-    }
-  },
-  directories: {
-    lib: "lib"
-  },
-  files: [
-    "lib"
-  ],
-  scripts: {
-    test: "vitest run",
-    "test:watch": "vitest",
-    coverage: "vitest run --coverage",
-    typecheck: "tsc --noEmit",
-    "build:bundle": "univer-cli build",
-    "build:types": "tsc -p tsconfig.node.json",
-    build: "pnpm run build:bundle && pnpm run build:types"
-  },
-  peerDependencies: {
-    react: "^16.9.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc",
-    rxjs: ">=7.0.0"
-  },
-  dependencies: {
-    "@univerjs/core": "workspace:*",
-    "@univerjs/design": "workspace:*",
-    "@univerjs/docs": "workspace:*",
-    "@univerjs/docs-drawing": "workspace:*",
-    "@univerjs/docs-drawing-ui": "workspace:*",
-    "@univerjs/docs-ui": "workspace:*",
-    "@univerjs/drawing": "workspace:*",
-    "@univerjs/drawing-ui": "workspace:*",
-    "@univerjs/engine-render": "workspace:*",
-    "@univerjs/icons": "1.12.0",
-    "@univerjs/ui": "workspace:*"
-  },
-  devDependencies: {
-    "@univerjs-infra/shared": "workspace:*",
-    postcss: "^8.5.15",
-    react: "18.3.1",
-    rxjs: "^7.8.2",
-    tailwindcss: "3.4.18",
-    typescript: "^6.0.3",
-    vitest: "^4.1.9"
-  }
-};
-
-// ../packages/docs-quick-insert-ui/src/config/config.ts
-var DOCS_QUICK_INSERT_UI_PLUGIN_CONFIG_KEY = "docs-quick-insert-ui.config";
-var configSymbol3 = Symbol(DOCS_QUICK_INSERT_UI_PLUGIN_CONFIG_KEY);
-var defaultPluginConfig3 = {};
+ComponentsController2 = __decorateClass([
+  __decorateParam(0, Inject(ComponentManager)),
+  __decorateParam(1, Inject(IconManager))
+], ComponentsController2);
 
 // ../packages/docs-quick-insert-ui/src/plugin.ts
 var UniverDocsQuickInsertUIPlugin = class extends Plugin {
@@ -2514,6 +2537,8 @@ var UniverDocsQuickInsertUIPlugin = class extends Plugin {
     this._configService.setConfig(DOCS_QUICK_INSERT_UI_PLUGIN_CONFIG_KEY, rest);
   }
   onStarting() {
+    this._injector.add([ComponentsController2]);
+    this._injector.get(ComponentsController2);
     const dependencies = [
       [DocQuickInsertUIController],
       [DocQuickInsertTriggerController],
@@ -2848,6 +2873,178 @@ var DOCS_THREAD_COMMENT_UI_PLUGIN_CONFIG_KEY = "docs-thread-comment-ui.config";
 var configSymbol4 = Symbol(DOCS_THREAD_COMMENT_UI_PLUGIN_CONFIG_KEY);
 var defaultPluginConfig4 = {};
 
+// ../packages/docs-thread-comment-ui/src/views/DocThreadCommentPanel.tsx
+var import_react6 = __toESM(require_react());
+
+// ../packages/docs-thread-comment-ui/src/menu/menu.ts
+var shouldDisableAddComment = (accessor) => {
+  var _a;
+  const renderManagerService = accessor.get(IRenderManagerService);
+  const docSelectionManagerService = accessor.get(DocSelectionManagerService);
+  const skeleton = (_a = withCurrentTypeOfRenderer(
+    1 /* UNIVER_DOC */,
+    DocSkeletonManagerService,
+    accessor.get(IUniverInstanceService),
+    renderManagerService
+  )) == null ? void 0 : _a.getSkeleton();
+  const editArea = skeleton == null ? void 0 : skeleton.getViewModel().getEditArea();
+  if (editArea === "FOOTER" /* FOOTER */ || editArea === "HEADER" /* HEADER */) {
+    return true;
+  }
+  const range = docSelectionManagerService.getActiveTextRange();
+  if (range == null || range.collapsed) {
+    return true;
+  }
+  return false;
+};
+function AddDocCommentMenuItemFactory(accessor) {
+  return {
+    id: StartAddCommentOperation.id,
+    type: 0 /* BUTTON */,
+    icon: "CommentIcon",
+    title: "docs-thread-comment-ui.panel.addComment",
+    tooltip: "docs-thread-comment-ui.panel.addComment",
+    hidden$: getMenuHiddenObservable(accessor, 1 /* UNIVER_DOC */, void 0, SHEET_EDITOR_UNITS),
+    disabled$: new Observable(function(subscribe) {
+      const textSelectionService = accessor.get(DocSelectionManagerService);
+      const observer = textSelectionService.textSelection$.pipe(debounceTime(16)).subscribe(() => {
+        subscribe.next(shouldDisableAddComment(accessor));
+      });
+      return () => {
+        observer.unsubscribe();
+      };
+    })
+  };
+}
+function ToolbarDocCommentMenuItemFactory(accessor) {
+  return {
+    id: ToggleCommentPanelOperation.id,
+    type: 0 /* BUTTON */,
+    icon: "CommentIcon",
+    title: "docs-thread-comment-ui.panel.addComment",
+    tooltip: "docs-thread-comment-ui.panel.addComment",
+    hidden$: getMenuHiddenObservable(accessor, 1 /* UNIVER_DOC */)
+  };
+}
+
+// ../packages/docs-thread-comment-ui/src/views/DocThreadCommentPanel.tsx
+var import_jsx_runtime8 = __toESM(require_jsx_runtime());
+var DocThreadCommentPanel = () => {
+  const univerInstanceService = useDependency(IUniverInstanceService);
+  const injector2 = useDependency(Injector);
+  const doc$ = (0, import_react6.useMemo)(() => univerInstanceService.getCurrentTypeOfUnit$(1 /* UNIVER_DOC */).pipe(filter((doc2) => !!doc2 && !isInternalEditorID(doc2.getUnitId()))), [univerInstanceService]);
+  const doc = useObservable(doc$);
+  const subUnitId$ = (0, import_react6.useMemo)(() => new Observable((sub) => sub.next(DEFAULT_DOC_SUBUNIT_ID)), []);
+  const docSelectionManagerService = useDependency(DocSelectionManagerService);
+  const selectionChange$ = (0, import_react6.useMemo)(
+    () => docSelectionManagerService.textSelection$.pipe(debounceTime(16)),
+    [docSelectionManagerService.textSelection$]
+  );
+  useObservable(selectionChange$);
+  const commandService = useDependency(ICommandService);
+  const docCommentService = useDependency(DocThreadCommentService);
+  const tempComment = useObservable(docCommentService.addingComment$);
+  const [commentIds, setCommentIds] = (0, import_react6.useState)([]);
+  (0, import_react6.useEffect)(() => {
+    var _a;
+    const set = /* @__PURE__ */ new Set();
+    const customRanges = doc == null ? void 0 : doc.getCustomDecorations();
+    setCommentIds((_a = customRanges == null ? void 0 : customRanges.map((r) => r.id).filter((i) => {
+      const hasRepeat = set.has(i);
+      set.add(i);
+      return !hasRepeat;
+    })) != null ? _a : []);
+    const dispose = commandService.onCommandExecuted((command) => {
+      var _a2;
+      if (command.id === RichTextEditingMutation.id) {
+        const set2 = /* @__PURE__ */ new Set();
+        const customRanges2 = doc == null ? void 0 : doc.getCustomDecorations();
+        setCommentIds((_a2 = customRanges2 == null ? void 0 : customRanges2.map((r) => r.id).filter((i) => {
+          const hasRepeat = set2.has(i);
+          set2.add(i);
+          return !hasRepeat;
+        })) != null ? _a2 : []);
+      }
+    });
+    return () => {
+      dispose.dispose();
+    };
+  }, [commandService, doc]);
+  if (!doc) {
+    return null;
+  }
+  const isInValidSelection = shouldDisableAddComment(injector2);
+  const unitId = doc.getUnitId();
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
+    ThreadCommentPanel,
+    {
+      unitId,
+      subUnitId$,
+      type: 1 /* UNIVER_DOC */,
+      onAdd: () => {
+        commandService.executeCommand(StartAddCommentOperation.id);
+      },
+      getSubUnitName: () => "",
+      disableAdd: isInValidSelection,
+      tempComment,
+      onAddComment: (comment) => {
+        if (!comment.parentId) {
+          const params = {
+            unitId,
+            range: tempComment,
+            comment
+          };
+          commandService.executeCommand(AddDocCommentComment.id, params);
+          docCommentService.endAdd();
+          return false;
+        }
+        return true;
+      },
+      onDeleteComment: (comment) => {
+        if (!comment.parentId) {
+          const params = {
+            unitId,
+            commentId: comment.id
+          };
+          commandService.executeCommand(DeleteDocCommentComment.id, params);
+          return false;
+        }
+        return true;
+      },
+      showComments: commentIds
+    }
+  );
+};
+
+// ../packages/docs-thread-comment-ui/src/controllers/components.controller.ts
+var ComponentsController3 = class extends Disposable {
+  constructor(_componentManager, _iconManager) {
+    super();
+    __publicField(this, "_componentManager", _componentManager);
+    __publicField(this, "_iconManager", _iconManager);
+    this._registerComponents();
+    this._registerIcons();
+  }
+  _registerComponents() {
+    [
+      [DOCS_THREAD_COMMENT_PANEL, DocThreadCommentPanel]
+    ].forEach(([id, comp]) => {
+      this.disposeWithMe(
+        this._componentManager.register(id, comp)
+      );
+    });
+  }
+  _registerIcons() {
+    this.disposeWithMe(this._iconManager.register({
+      CommentIcon
+    }));
+  }
+};
+ComponentsController3 = __decorateClass([
+  __decorateParam(0, Inject(ComponentManager)),
+  __decorateParam(1, Inject(IconManager))
+], ComponentsController3);
+
 // ../packages/docs-thread-comment-ui/src/controllers/doc-thread-comment-selection.controller.ts
 var DocThreadCommentSelectionController = class extends Disposable {
   constructor(_threadCommentPanelService, _univerInstanceService, _commandService, _docThreadCommentService, _renderManagerService, _threadCommentModel) {
@@ -3043,57 +3240,6 @@ DocThreadCommentRenderController = __decorateClass([
   __decorateParam(6, ICommandService)
 ], DocThreadCommentRenderController);
 
-// ../packages/docs-thread-comment-ui/src/menu/menu.ts
-var shouldDisableAddComment = (accessor) => {
-  var _a;
-  const renderManagerService = accessor.get(IRenderManagerService);
-  const docSelectionManagerService = accessor.get(DocSelectionManagerService);
-  const skeleton = (_a = withCurrentTypeOfRenderer(
-    1 /* UNIVER_DOC */,
-    DocSkeletonManagerService,
-    accessor.get(IUniverInstanceService),
-    renderManagerService
-  )) == null ? void 0 : _a.getSkeleton();
-  const editArea = skeleton == null ? void 0 : skeleton.getViewModel().getEditArea();
-  if (editArea === "FOOTER" /* FOOTER */ || editArea === "HEADER" /* HEADER */) {
-    return true;
-  }
-  const range = docSelectionManagerService.getActiveTextRange();
-  if (range == null || range.collapsed) {
-    return true;
-  }
-  return false;
-};
-function AddDocCommentMenuItemFactory(accessor) {
-  return {
-    id: StartAddCommentOperation.id,
-    type: 0 /* BUTTON */,
-    icon: "CommentIcon",
-    title: "docs-thread-comment-ui.panel.addComment",
-    tooltip: "docs-thread-comment-ui.panel.addComment",
-    hidden$: getMenuHiddenObservable(accessor, 1 /* UNIVER_DOC */, void 0, SHEET_EDITOR_UNITS),
-    disabled$: new Observable(function(subscribe) {
-      const textSelectionService = accessor.get(DocSelectionManagerService);
-      const observer = textSelectionService.textSelection$.pipe(debounceTime(16)).subscribe(() => {
-        subscribe.next(shouldDisableAddComment(accessor));
-      });
-      return () => {
-        observer.unsubscribe();
-      };
-    })
-  };
-}
-function ToolbarDocCommentMenuItemFactory(accessor) {
-  return {
-    id: ToggleCommentPanelOperation.id,
-    type: 0 /* BUTTON */,
-    icon: "CommentIcon",
-    title: "docs-thread-comment-ui.panel.addComment",
-    tooltip: "docs-thread-comment-ui.panel.addComment",
-    hidden$: getMenuHiddenObservable(accessor, 1 /* UNIVER_DOC */)
-  };
-}
-
 // ../packages/docs-thread-comment-ui/src/menu/schema.ts
 var menuSchema2 = {
   ["ribbon.insert.media" /* MEDIA */]: {
@@ -3118,108 +3264,14 @@ var menuSchema2 = {
   }
 };
 
-// ../packages/docs-thread-comment-ui/src/views/DocThreadCommentPanel.tsx
-var import_react6 = __toESM(require_react());
-var import_jsx_runtime8 = __toESM(require_jsx_runtime());
-var DocThreadCommentPanel = () => {
-  const univerInstanceService = useDependency(IUniverInstanceService);
-  const injector2 = useDependency(Injector);
-  const doc$ = (0, import_react6.useMemo)(() => univerInstanceService.getCurrentTypeOfUnit$(1 /* UNIVER_DOC */).pipe(filter((doc2) => !!doc2 && !isInternalEditorID(doc2.getUnitId()))), [univerInstanceService]);
-  const doc = useObservable(doc$);
-  const subUnitId$ = (0, import_react6.useMemo)(() => new Observable((sub) => sub.next(DEFAULT_DOC_SUBUNIT_ID)), []);
-  const docSelectionManagerService = useDependency(DocSelectionManagerService);
-  const selectionChange$ = (0, import_react6.useMemo)(
-    () => docSelectionManagerService.textSelection$.pipe(debounceTime(16)),
-    [docSelectionManagerService.textSelection$]
-  );
-  useObservable(selectionChange$);
-  const commandService = useDependency(ICommandService);
-  const docCommentService = useDependency(DocThreadCommentService);
-  const tempComment = useObservable(docCommentService.addingComment$);
-  const [commentIds, setCommentIds] = (0, import_react6.useState)([]);
-  (0, import_react6.useEffect)(() => {
-    var _a;
-    const set = /* @__PURE__ */ new Set();
-    const customRanges = doc == null ? void 0 : doc.getCustomDecorations();
-    setCommentIds((_a = customRanges == null ? void 0 : customRanges.map((r) => r.id).filter((i) => {
-      const hasRepeat = set.has(i);
-      set.add(i);
-      return !hasRepeat;
-    })) != null ? _a : []);
-    const dispose = commandService.onCommandExecuted((command) => {
-      var _a2;
-      if (command.id === RichTextEditingMutation.id) {
-        const set2 = /* @__PURE__ */ new Set();
-        const customRanges2 = doc == null ? void 0 : doc.getCustomDecorations();
-        setCommentIds((_a2 = customRanges2 == null ? void 0 : customRanges2.map((r) => r.id).filter((i) => {
-          const hasRepeat = set2.has(i);
-          set2.add(i);
-          return !hasRepeat;
-        })) != null ? _a2 : []);
-      }
-    });
-    return () => {
-      dispose.dispose();
-    };
-  }, [commandService, doc]);
-  if (!doc) {
-    return null;
-  }
-  const isInValidSelection = shouldDisableAddComment(injector2);
-  const unitId = doc.getUnitId();
-  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
-    ThreadCommentPanel,
-    {
-      unitId,
-      subUnitId$,
-      type: 1 /* UNIVER_DOC */,
-      onAdd: () => {
-        commandService.executeCommand(StartAddCommentOperation.id);
-      },
-      getSubUnitName: () => "",
-      disableAdd: isInValidSelection,
-      tempComment,
-      onAddComment: (comment) => {
-        if (!comment.parentId) {
-          const params = {
-            unitId,
-            range: tempComment,
-            comment
-          };
-          commandService.executeCommand(AddDocCommentComment.id, params);
-          docCommentService.endAdd();
-          return false;
-        }
-        return true;
-      },
-      onDeleteComment: (comment) => {
-        if (!comment.parentId) {
-          const params = {
-            unitId,
-            commentId: comment.id
-          };
-          commandService.executeCommand(DeleteDocCommentComment.id, params);
-          return false;
-        }
-        return true;
-      },
-      showComments: commentIds
-    }
-  );
-};
-
 // ../packages/docs-thread-comment-ui/src/controllers/ui.controller.ts
 var DocThreadCommentUIController = class extends Disposable {
-  constructor(_commandService, _menuManagerService, _componentManager, _iconManager) {
+  constructor(_commandService, _menuManagerService) {
     super();
     __publicField(this, "_commandService", _commandService);
     __publicField(this, "_menuManagerService", _menuManagerService);
-    __publicField(this, "_componentManager", _componentManager);
-    __publicField(this, "_iconManager", _iconManager);
     this._initCommands();
     this._initMenus();
-    this._initComponents();
-    this._registerIcons();
   }
   _initCommands() {
     [
@@ -3236,26 +3288,10 @@ var DocThreadCommentUIController = class extends Disposable {
     this._menuManagerService.appendRootMenu({ [FLOAT_TOOLBAR_MENU_POSITION]: {} });
     this._menuManagerService.mergeMenu(menuSchema2);
   }
-  _initComponents() {
-    [
-      [DOCS_THREAD_COMMENT_PANEL, DocThreadCommentPanel]
-    ].forEach(([id, comp]) => {
-      this.disposeWithMe(
-        this._componentManager.register(id, comp)
-      );
-    });
-  }
-  _registerIcons() {
-    this.disposeWithMe(this._iconManager.register({
-      CommentIcon
-    }));
-  }
 };
 DocThreadCommentUIController = __decorateClass([
   __decorateParam(0, ICommandService),
-  __decorateParam(1, IMenuManagerService),
-  __decorateParam(2, Inject(ComponentManager)),
-  __decorateParam(3, Inject(IconManager))
+  __decorateParam(1, IMenuManagerService)
 ], DocThreadCommentUIController);
 
 // ../packages/docs-thread-comment-ui/src/plugin.ts
@@ -3277,6 +3313,8 @@ var UniverDocsThreadCommentUIPlugin = class extends Plugin {
     this._configService.setConfig(DOCS_THREAD_COMMENT_UI_PLUGIN_CONFIG_KEY, rest);
   }
   onStarting() {
+    this._injector.add([ComponentsController3]);
+    this._injector.get(ComponentsController3);
     [
       [DocThreadCommentUIController],
       [DocThreadCommentSelectionController],
