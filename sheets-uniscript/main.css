@@ -880,6 +880,9 @@
 .univer-min-w-16 {
   min-width: 4rem;
 }
+.univer-min-w-28 {
+  min-width: 7rem;
+}
 .univer-min-w-32 {
   min-width: 8rem;
 }
@@ -10823,6 +10826,9 @@
 }
 .univer-min-w-16 {
   min-width: 4rem;
+}
+.univer-min-w-28 {
+  min-width: 7rem;
 }
 .univer-min-w-32 {
   min-width: 8rem;
