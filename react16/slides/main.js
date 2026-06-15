@@ -1,18 +1,18 @@
-import "../chunk-LNLBFPTO.js";
+import "../chunk-3O5N4NRK.js";
 import {
   UniverDebuggerPlugin
-} from "../chunk-GD4WTQNV.js";
+} from "../chunk-JRR7MGJJ.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-QL42RB2Y.js";
-import "../chunk-IHX7OEFL.js";
-import "../chunk-WMR2C3XU.js";
+} from "../chunk-IR4OGUQE.js";
+import "../chunk-KPCYPN2H.js";
+import "../chunk-SH32ZBX3.js";
 import {
   DEFAULT_SLIDE_DATA,
   ObjectProvider,
   UniverSlidesPlugin,
   loadDebuggerLocale
-} from "../chunk-ZK353H7U.js";
+} from "../chunk-3MVPNDQV.js";
 import {
   DOCS_COMPONENT_MAIN_LAYER_INDEX,
   DRAWING_IMAGE_ALLOW_IMAGE_LIST,
@@ -28,9 +28,10 @@ import {
   UniverDocsUIPlugin,
   UniverDrawingPlugin,
   getImageSize
-} from "../chunk-X2CHE2KP.js";
+} from "../chunk-CQ4VYZJ4.js";
 import "../chunk-LI6UXASZ.js";
 import {
+  AddImageIcon,
   AutofillDoubleIcon,
   BottomIcon,
   Button,
@@ -46,6 +47,7 @@ import {
   IShortcutService,
   ISidebarService,
   IUIPartsService,
+  IconManager,
   InputNumber,
   MoreDownIcon,
   MoveDownIcon,
@@ -64,17 +66,17 @@ import {
   scrollbarClassName,
   useDependency,
   useObservable
-} from "../chunk-VEIZZIWA.js";
-import "../chunk-VH2IWGAA.js";
+} from "../chunk-YZ63L5OB.js";
+import "../chunk-MNEZ7YZ7.js";
 import {
   zh_CN_default
-} from "../chunk-O57TLGA6.js";
+} from "../chunk-LYLK2WC5.js";
 import "../chunk-GQQW6W3C.js";
 import "../chunk-QAY465GM.js";
-import "../chunk-KBL3NUOK.js";
+import "../chunk-HCSE775N.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-RNEMECLQ.js";
+} from "../chunk-MCE2SNW7.js";
 import {
   FIX_ONE_PIXEL_BLUR_OFFSET,
   IRenderManagerService,
@@ -88,7 +90,7 @@ import {
   fixLineWidthByScale,
   getCurrentTypeOfRenderer,
   pxToNum
-} from "../chunk-RQTPWJDA.js";
+} from "../chunk-GEJ7L5S2.js";
 import {
   BehaviorSubject,
   DEFAULT_EMPTY_DOCUMENT_VALUE,
@@ -126,7 +128,7 @@ import {
   merge_default,
   takeUntil,
   toDisposable
-} from "../chunk-5NEQ5UIN.js";
+} from "../chunk-BFI4GFBQ.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -1688,18 +1690,20 @@ var EditorDeleteLeftShortcut = {
   binding: 8 /* BACKSPACE */
 };
 
-// ../packages/slides-ui/src/controllers/slide-ui.controller.ts
+// ../packages/slides-ui/src/controllers/ui.controller.ts
 var SlidesUIController = class extends Disposable {
-  constructor(_injector, _menuManagerService, _componentManager, _uiPartsService, _commandService, _shortcutService) {
+  constructor(_injector, _menuManagerService, _componentManager, _iconManager, _uiPartsService, _commandService, _shortcutService) {
     super();
     __publicField(this, "_injector", _injector);
     __publicField(this, "_menuManagerService", _menuManagerService);
     __publicField(this, "_componentManager", _componentManager);
+    __publicField(this, "_iconManager", _iconManager);
     __publicField(this, "_uiPartsService", _uiPartsService);
     __publicField(this, "_commandService", _commandService);
     __publicField(this, "_shortcutService", _shortcutService);
     this._initCommands();
     this._initCustomComponents();
+    this._registerIcons();
     this._initUIComponents();
     this._initMenus();
     this._initShortcuts();
@@ -1709,10 +1713,15 @@ var SlidesUIController = class extends Disposable {
   }
   _initCustomComponents() {
     const componentManager = this._componentManager;
-    this.disposeWithMe(componentManager.register("TextIcon", TextIcon));
-    this.disposeWithMe(componentManager.register("GraphIcon", GraphIcon));
     this.disposeWithMe(componentManager.register(COMPONENT_SLIDE_IMAGE_POPUP_MENU, SlideImagePopupMenu));
     this.disposeWithMe(componentManager.register(COMPONENT_SLIDE_SIDEBAR, RectSidebar));
+  }
+  _registerIcons() {
+    this.disposeWithMe(this._iconManager.register({
+      AddImageIcon,
+      TextIcon,
+      GraphIcon
+    }));
   }
   _initCommands() {
     [
@@ -1754,9 +1763,10 @@ SlidesUIController = __decorateClass([
   __decorateParam(0, Inject(Injector)),
   __decorateParam(1, IMenuManagerService),
   __decorateParam(2, Inject(ComponentManager)),
-  __decorateParam(3, IUIPartsService),
-  __decorateParam(4, ICommandService),
-  __decorateParam(5, IShortcutService)
+  __decorateParam(3, Inject(IconManager)),
+  __decorateParam(4, IUIPartsService),
+  __decorateParam(5, ICommandService),
+  __decorateParam(6, IShortcutService)
 ], SlidesUIController);
 
 // ../packages/slides-ui/package.json
@@ -1853,7 +1863,7 @@ var package_default = {
     rxjs: "^7.8.2",
     tailwindcss: "3.4.18",
     typescript: "^6.0.3",
-    vitest: "^4.1.8"
+    vitest: "^4.1.9"
   }
 };
 

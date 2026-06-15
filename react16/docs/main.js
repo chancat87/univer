@@ -1,37 +1,37 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-27NMF5YV.js";
+} from "../chunk-BB3FCHD3.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-EQM23BU2.js";
-import "../chunk-LNLBFPTO.js";
+} from "../chunk-UMEMDVWW.js";
+import "../chunk-3O5N4NRK.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
   ThreadCommentModel,
   getDT
-} from "../chunk-QYV3PGEQ.js";
+} from "../chunk-FOMAEGCK.js";
 import {
   InsertDocImageCommand,
   UniverDebuggerPlugin,
   UniverDocsDrawingUIPlugin
-} from "../chunk-GD4WTQNV.js";
+} from "../chunk-JRR7MGJJ.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-QL42RB2Y.js";
+} from "../chunk-IR4OGUQE.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-IHX7OEFL.js";
-import "../chunk-WMR2C3XU.js";
-import "../chunk-BGPUBGR6.js";
+} from "../chunk-KPCYPN2H.js";
+import "../chunk-SH32ZBX3.js";
+import "../chunk-UF7LOQPM.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE,
   loadDebuggerLocale
-} from "../chunk-ZK353H7U.js";
+} from "../chunk-3MVPNDQV.js";
 import {
   BulletListCommand,
   CutContentCommand,
@@ -68,7 +68,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-X2CHE2KP.js";
+} from "../chunk-CQ4VYZJ4.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -82,6 +82,7 @@ import {
   IMessageService,
   IShortcutService,
   ISidebarService,
+  IconManager,
   IncreaseIcon,
   Input,
   LinkIcon,
@@ -100,25 +101,25 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-VEIZZIWA.js";
+} from "../chunk-YZ63L5OB.js";
 import {
   FUniver
-} from "../chunk-VH2IWGAA.js";
+} from "../chunk-MNEZ7YZ7.js";
 import {
   zh_CN_default
-} from "../chunk-O57TLGA6.js";
+} from "../chunk-LYLK2WC5.js";
 import "../chunk-GQQW6W3C.js";
 import "../chunk-QAY465GM.js";
-import "../chunk-KBL3NUOK.js";
+import "../chunk-HCSE775N.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-RNEMECLQ.js";
+} from "../chunk-MCE2SNW7.js";
 import {
   IRenderManagerService,
   UniverRenderEnginePlugin,
   ptToPixel,
   withCurrentTypeOfRenderer
-} from "../chunk-RQTPWJDA.js";
+} from "../chunk-GEJ7L5S2.js";
 import {
   BehaviorSubject,
   BuildTextUtils,
@@ -154,7 +155,7 @@ import {
   sequenceExecute,
   tap,
   toDisposable
-} from "../chunk-5NEQ5UIN.js";
+} from "../chunk-BFI4GFBQ.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -235,7 +236,7 @@ var package_default = {
   devDependencies: {
     "@univerjs-infra/shared": "workspace:*",
     typescript: "^6.0.3",
-    vitest: "^4.1.8"
+    vitest: "^4.1.9"
   }
 };
 
@@ -478,7 +479,7 @@ var package_default2 = {
     rxjs: "^7.8.2",
     tailwindcss: "3.4.18",
     typescript: "^6.0.3",
-    vitest: "^4.1.8"
+    vitest: "^4.1.9"
   }
 };
 
@@ -1197,12 +1198,11 @@ DocHyperLinkRenderController = __decorateClass([
 ], DocHyperLinkRenderController);
 
 // ../packages/docs-hyper-link-ui/src/menu/menu.ts
-var DOC_LINK_ICON = "doc-hyper-link-icon";
 function AddHyperLinkMenuItemFactory(accessor) {
   return {
     id: ShowDocHyperLinkEditPopupOperation.id,
     type: 0 /* BUTTON */,
-    icon: DOC_LINK_ICON,
+    icon: "LinkIcon",
     title: "docs-hyper-link-ui.menu.tooltip",
     tooltip: "docs-hyper-link-ui.menu.tooltip",
     hidden$: getMenuHiddenObservable(accessor, 1 /* UNIVER_DOC */),
@@ -1268,13 +1268,15 @@ var menuSchema = {
 
 // ../packages/docs-hyper-link-ui/src/controllers/ui.controller.ts
 var DocHyperLinkUIController = class extends Disposable {
-  constructor(_componentManager, _commandService, _menuManagerService, _shortcutService) {
+  constructor(_componentManager, _iconManager, _commandService, _menuManagerService, _shortcutService) {
     super();
     __publicField(this, "_componentManager", _componentManager);
+    __publicField(this, "_iconManager", _iconManager);
     __publicField(this, "_commandService", _commandService);
     __publicField(this, "_menuManagerService", _menuManagerService);
     __publicField(this, "_shortcutService", _shortcutService);
     this._initComponents();
+    this._registerIcons();
     this._initCommands();
     this._initMenus();
     this._initShortcut();
@@ -1282,13 +1284,17 @@ var DocHyperLinkUIController = class extends Disposable {
   _initComponents() {
     [
       [DocHyperLinkEdit.componentKey, DocHyperLinkEdit],
-      [DocLinkPopup.componentKey, DocLinkPopup],
-      [DOC_LINK_ICON, LinkIcon]
+      [DocLinkPopup.componentKey, DocLinkPopup]
     ].forEach(([key, comp]) => {
       this.disposeWithMe(
         this._componentManager.register(key, comp)
       );
     });
+  }
+  _registerIcons() {
+    this.disposeWithMe(this._iconManager.register({
+      LinkIcon
+    }));
   }
   _initCommands() {
     [
@@ -1314,9 +1320,10 @@ var DocHyperLinkUIController = class extends Disposable {
 };
 DocHyperLinkUIController = __decorateClass([
   __decorateParam(0, Inject(ComponentManager)),
-  __decorateParam(1, ICommandService),
-  __decorateParam(2, IMenuManagerService),
-  __decorateParam(3, IShortcutService)
+  __decorateParam(1, Inject(IconManager)),
+  __decorateParam(2, ICommandService),
+  __decorateParam(3, IMenuManagerService),
+  __decorateParam(4, IShortcutService)
 ], DocHyperLinkUIController);
 
 // ../packages/docs-hyper-link-ui/src/types/const/index.ts
@@ -1485,11 +1492,11 @@ function QuickInsertMenu(props) {
   const {
     menus,
     focusedMenuIndex,
-    componentManager,
     onFocusedMenuIndexChange,
     onFocusedMenuChange,
     onSelect
   } = props;
+  const iconManager = useDependency(IconManager);
   const flatMenus = (0, import_react3.useMemo)(() => flattenMenuItems(menus), [menus]);
   const menuNodeMapRef = (0, import_react3.useRef)(/* @__PURE__ */ new Map());
   (0, import_react3.useEffect)(() => {
@@ -1514,7 +1521,7 @@ function QuickInsertMenu(props) {
   function renderMenus(currentMenus) {
     return currentMenus.map((menu, index) => {
       const iconKey = menu.icon;
-      const Icon = iconKey ? componentManager.get(iconKey) : null;
+      const Icon = iconKey ? iconManager.get(iconKey) : null;
       if (isMenuGroup(menu)) {
         return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(
           "div",
@@ -1748,7 +1755,6 @@ var QuickInsertPopup = () => {
     {
       menus: filteredMenus,
       focusedMenuIndex,
-      componentManager,
       onFocusedMenuIndexChange: setFocusedMenuIndex,
       onFocusedMenuChange: handleFocusedMenuChange,
       onSelect: handleMenuSelect
@@ -2320,15 +2326,17 @@ var QuickInsertButton = ({ className = "" }) => {
 };
 QuickInsertButton.componentKey = QuickInsertButtonComponentKey;
 
-// ../packages/docs-quick-insert-ui/src/controllers/doc-quick-insert-ui.controller.ts
+// ../packages/docs-quick-insert-ui/src/controllers/ui.controller.ts
 var DocQuickInsertUIController = class extends Disposable {
-  constructor(_commandService, _docQuickInsertPopupService, _componentManager) {
+  constructor(_commandService, _docQuickInsertPopupService, _componentManager, _iconManager) {
     super();
     __publicField(this, "_commandService", _commandService);
     __publicField(this, "_docQuickInsertPopupService", _docQuickInsertPopupService);
     __publicField(this, "_componentManager", _componentManager);
+    __publicField(this, "_iconManager", _iconManager);
     this._initCommands();
     this._initComponents();
+    this._registerIcons();
     this._initMenus();
   }
   _initCommands() {
@@ -2345,8 +2353,6 @@ var DocQuickInsertUIController = class extends Disposable {
       [QuickInsertPopup.componentKey, QuickInsertPopup],
       [KeywordInputPlaceholder.componentKey, KeywordInputPlaceholder],
       [QuickInsertPlaceholder.componentKey, QuickInsertPlaceholder],
-      [DividerIcon.displayName, DividerIcon],
-      [TextIcon.displayName, TextIcon],
       [QuickInsertButton.componentKey, QuickInsertButton]
     ].forEach(([key, comp]) => {
       if (key) {
@@ -2370,11 +2376,18 @@ var DocQuickInsertUIController = class extends Disposable {
   }
   _initMenus() {
   }
+  _registerIcons() {
+    this.disposeWithMe(this._iconManager.register({
+      DividerIcon,
+      TextIcon
+    }));
+  }
 };
 DocQuickInsertUIController = __decorateClass([
   __decorateParam(0, ICommandService),
   __decorateParam(1, Inject(DocQuickInsertPopupService)),
-  __decorateParam(2, Inject(ComponentManager))
+  __decorateParam(2, Inject(ComponentManager)),
+  __decorateParam(3, Inject(IconManager))
 ], DocQuickInsertUIController);
 
 // ../packages/docs-quick-insert-ui/package.json
@@ -2473,7 +2486,7 @@ var package_default3 = {
     rxjs: "^7.8.2",
     tailwindcss: "3.4.18",
     typescript: "^6.0.3",
-    vitest: "^4.1.8"
+    vitest: "^4.1.9"
   }
 };
 
@@ -2826,7 +2839,7 @@ var package_default4 = {
     rxjs: "^7.8.2",
     tailwindcss: "3.4.18",
     typescript: "^6.0.3",
-    vitest: "^4.1.8"
+    vitest: "^4.1.9"
   }
 };
 
@@ -2929,6 +2942,106 @@ DocThreadCommentSelectionController = __decorateClass([
   __decorateParam(4, IRenderManagerService),
   __decorateParam(5, Inject(ThreadCommentModel))
 ], DocThreadCommentSelectionController);
+
+// ../packages/docs-thread-comment-ui/src/controllers/render-controllers/render.controller.ts
+var DocThreadCommentRenderController = class extends Disposable {
+  constructor(_context, _docInterceptorService, _threadCommentPanelService, _docRenderController, _univerInstanceService, _threadCommentModel, _commandService) {
+    super();
+    __publicField(this, "_context", _context);
+    __publicField(this, "_docInterceptorService", _docInterceptorService);
+    __publicField(this, "_threadCommentPanelService", _threadCommentPanelService);
+    __publicField(this, "_docRenderController", _docRenderController);
+    __publicField(this, "_univerInstanceService", _univerInstanceService);
+    __publicField(this, "_threadCommentModel", _threadCommentModel);
+    __publicField(this, "_commandService", _commandService);
+    this._interceptorViewModel();
+    this._initReRender();
+    this._initSyncComments();
+  }
+  _initReRender() {
+    this.disposeWithMe(this._threadCommentPanelService.activeCommentId$.subscribe((activeComment) => {
+      var _a;
+      if (activeComment) {
+        this._docRenderController.reRender(activeComment.unitId);
+        return;
+      }
+      const unitId = (_a = this._univerInstanceService.getCurrentUnitOfType(1 /* UNIVER_DOC */)) == null ? void 0 : _a.getUnitId();
+      if (unitId) {
+        this._docRenderController.reRender(unitId);
+      }
+    }));
+    this.disposeWithMe(this._threadCommentModel.commentUpdate$.subscribe((update) => {
+      if (update.type === "resolve") {
+        this._docRenderController.reRender(update.unitId);
+      }
+    }));
+  }
+  _interceptorViewModel() {
+    this._docInterceptorService.intercept(DOC_INTERCEPTOR_POINT.CUSTOM_DECORATION, {
+      handler: (data, pos, next) => {
+        if (!data) {
+          return next(data);
+        }
+        const { unitId, index, customDecorations } = pos;
+        const activeComment = this._threadCommentPanelService.activeCommentId;
+        const { commentId, unitId: commentUnitID } = activeComment || {};
+        const activeCustomDecoration = customDecorations.find((i) => i.id === commentId);
+        const comment = this._threadCommentModel.getComment(unitId, DEFAULT_DOC_SUBUNIT_ID, data.id);
+        if (!comment) {
+          return next({
+            ...data,
+            show: false
+          });
+        }
+        const isActiveIndex = activeCustomDecoration && index >= activeCustomDecoration.startIndex && index <= activeCustomDecoration.endIndex;
+        const isActive = commentUnitID === unitId && data.id === commentId;
+        return next({
+          ...data,
+          active: isActive || isActiveIndex,
+          show: !comment.resolved
+        });
+      }
+    });
+  }
+  _initSyncComments() {
+    var _a, _b, _c;
+    const unitId = this._context.unit.getUnitId();
+    const subUnitId = DEFAULT_DOC_SUBUNIT_ID;
+    const threadIds = (_c = (_b = (_a = this._context.unit.getBody()) == null ? void 0 : _a.customDecorations) == null ? void 0 : _b.filter((i) => i.type === 0 /* COMMENT */).map((i) => i.id)) != null ? _c : [];
+    threadIds.length && this._threadCommentModel.syncThreadComments(this._context.unit.getUnitId(), DEFAULT_DOC_SUBUNIT_ID, threadIds);
+    let prevThreadIds = threadIds.sort();
+    this.disposeWithMe(this._commandService.onCommandExecuted((commandInfo) => {
+      var _a2, _b2, _c2;
+      if (commandInfo.id === RichTextEditingMutation.id) {
+        const params = commandInfo.params;
+        if (params.unitId !== this._context.unit.getUnitId()) {
+          return;
+        }
+        const currentThreadIds = (_c2 = (_b2 = (_a2 = this._context.unit.getBody()) == null ? void 0 : _a2.customDecorations) == null ? void 0 : _b2.filter((i) => i.type === 0 /* COMMENT */).map((i) => i.id)) != null ? _c2 : [];
+        const currentThreadIdsSorted = currentThreadIds.sort();
+        if (JSON.stringify(prevThreadIds) !== JSON.stringify(currentThreadIdsSorted)) {
+          const preIds = new Set(prevThreadIds);
+          const addIds = /* @__PURE__ */ new Set();
+          currentThreadIds.forEach((id) => {
+            if (!preIds.has(id)) {
+              addIds.add(id);
+            }
+          });
+          prevThreadIds = currentThreadIdsSorted;
+          this._threadCommentModel.syncThreadComments(unitId, subUnitId, [...addIds]);
+        }
+      }
+    }));
+  }
+};
+DocThreadCommentRenderController = __decorateClass([
+  __decorateParam(1, Inject(DocInterceptorService)),
+  __decorateParam(2, Inject(ThreadCommentPanelService)),
+  __decorateParam(3, Inject(DocRenderController)),
+  __decorateParam(4, IUniverInstanceService),
+  __decorateParam(5, Inject(ThreadCommentModel)),
+  __decorateParam(6, ICommandService)
+], DocThreadCommentRenderController);
 
 // ../packages/docs-thread-comment-ui/src/menu/menu.ts
 var shouldDisableAddComment = (accessor) => {
@@ -3095,16 +3208,18 @@ var DocThreadCommentPanel = () => {
   );
 };
 
-// ../packages/docs-thread-comment-ui/src/controllers/doc-thread-comment-ui.controller.ts
+// ../packages/docs-thread-comment-ui/src/controllers/ui.controller.ts
 var DocThreadCommentUIController = class extends Disposable {
-  constructor(_commandService, _menuManagerService, _componentManager) {
+  constructor(_commandService, _menuManagerService, _componentManager, _iconManager) {
     super();
     __publicField(this, "_commandService", _commandService);
     __publicField(this, "_menuManagerService", _menuManagerService);
     __publicField(this, "_componentManager", _componentManager);
+    __publicField(this, "_iconManager", _iconManager);
     this._initCommands();
     this._initMenus();
     this._initComponents();
+    this._registerIcons();
   }
   _initCommands() {
     [
@@ -3123,120 +3238,25 @@ var DocThreadCommentUIController = class extends Disposable {
   }
   _initComponents() {
     [
-      [DOCS_THREAD_COMMENT_PANEL, DocThreadCommentPanel],
-      ["CommentIcon", CommentIcon]
+      [DOCS_THREAD_COMMENT_PANEL, DocThreadCommentPanel]
     ].forEach(([id, comp]) => {
       this.disposeWithMe(
         this._componentManager.register(id, comp)
       );
     });
   }
+  _registerIcons() {
+    this.disposeWithMe(this._iconManager.register({
+      CommentIcon
+    }));
+  }
 };
 DocThreadCommentUIController = __decorateClass([
   __decorateParam(0, ICommandService),
   __decorateParam(1, IMenuManagerService),
-  __decorateParam(2, Inject(ComponentManager))
+  __decorateParam(2, Inject(ComponentManager)),
+  __decorateParam(3, Inject(IconManager))
 ], DocThreadCommentUIController);
-
-// ../packages/docs-thread-comment-ui/src/controllers/render-controllers/render.controller.ts
-var DocThreadCommentRenderController = class extends Disposable {
-  constructor(_context, _docInterceptorService, _threadCommentPanelService, _docRenderController, _univerInstanceService, _threadCommentModel, _commandService) {
-    super();
-    __publicField(this, "_context", _context);
-    __publicField(this, "_docInterceptorService", _docInterceptorService);
-    __publicField(this, "_threadCommentPanelService", _threadCommentPanelService);
-    __publicField(this, "_docRenderController", _docRenderController);
-    __publicField(this, "_univerInstanceService", _univerInstanceService);
-    __publicField(this, "_threadCommentModel", _threadCommentModel);
-    __publicField(this, "_commandService", _commandService);
-    this._interceptorViewModel();
-    this._initReRender();
-    this._initSyncComments();
-  }
-  _initReRender() {
-    this.disposeWithMe(this._threadCommentPanelService.activeCommentId$.subscribe((activeComment) => {
-      var _a;
-      if (activeComment) {
-        this._docRenderController.reRender(activeComment.unitId);
-        return;
-      }
-      const unitId = (_a = this._univerInstanceService.getCurrentUnitOfType(1 /* UNIVER_DOC */)) == null ? void 0 : _a.getUnitId();
-      if (unitId) {
-        this._docRenderController.reRender(unitId);
-      }
-    }));
-    this.disposeWithMe(this._threadCommentModel.commentUpdate$.subscribe((update) => {
-      if (update.type === "resolve") {
-        this._docRenderController.reRender(update.unitId);
-      }
-    }));
-  }
-  _interceptorViewModel() {
-    this._docInterceptorService.intercept(DOC_INTERCEPTOR_POINT.CUSTOM_DECORATION, {
-      handler: (data, pos, next) => {
-        if (!data) {
-          return next(data);
-        }
-        const { unitId, index, customDecorations } = pos;
-        const activeComment = this._threadCommentPanelService.activeCommentId;
-        const { commentId, unitId: commentUnitID } = activeComment || {};
-        const activeCustomDecoration = customDecorations.find((i) => i.id === commentId);
-        const comment = this._threadCommentModel.getComment(unitId, DEFAULT_DOC_SUBUNIT_ID, data.id);
-        if (!comment) {
-          return next({
-            ...data,
-            show: false
-          });
-        }
-        const isActiveIndex = activeCustomDecoration && index >= activeCustomDecoration.startIndex && index <= activeCustomDecoration.endIndex;
-        const isActive = commentUnitID === unitId && data.id === commentId;
-        return next({
-          ...data,
-          active: isActive || isActiveIndex,
-          show: !comment.resolved
-        });
-      }
-    });
-  }
-  _initSyncComments() {
-    var _a, _b, _c;
-    const unitId = this._context.unit.getUnitId();
-    const subUnitId = DEFAULT_DOC_SUBUNIT_ID;
-    const threadIds = (_c = (_b = (_a = this._context.unit.getBody()) == null ? void 0 : _a.customDecorations) == null ? void 0 : _b.filter((i) => i.type === 0 /* COMMENT */).map((i) => i.id)) != null ? _c : [];
-    threadIds.length && this._threadCommentModel.syncThreadComments(this._context.unit.getUnitId(), DEFAULT_DOC_SUBUNIT_ID, threadIds);
-    let prevThreadIds = threadIds.sort();
-    this.disposeWithMe(this._commandService.onCommandExecuted((commandInfo) => {
-      var _a2, _b2, _c2;
-      if (commandInfo.id === RichTextEditingMutation.id) {
-        const params = commandInfo.params;
-        if (params.unitId !== this._context.unit.getUnitId()) {
-          return;
-        }
-        const currentThreadIds = (_c2 = (_b2 = (_a2 = this._context.unit.getBody()) == null ? void 0 : _a2.customDecorations) == null ? void 0 : _b2.filter((i) => i.type === 0 /* COMMENT */).map((i) => i.id)) != null ? _c2 : [];
-        const currentThreadIdsSorted = currentThreadIds.sort();
-        if (JSON.stringify(prevThreadIds) !== JSON.stringify(currentThreadIdsSorted)) {
-          const preIds = new Set(prevThreadIds);
-          const addIds = /* @__PURE__ */ new Set();
-          currentThreadIds.forEach((id) => {
-            if (!preIds.has(id)) {
-              addIds.add(id);
-            }
-          });
-          prevThreadIds = currentThreadIdsSorted;
-          this._threadCommentModel.syncThreadComments(unitId, subUnitId, [...addIds]);
-        }
-      }
-    }));
-  }
-};
-DocThreadCommentRenderController = __decorateClass([
-  __decorateParam(1, Inject(DocInterceptorService)),
-  __decorateParam(2, Inject(ThreadCommentPanelService)),
-  __decorateParam(3, Inject(DocRenderController)),
-  __decorateParam(4, IUniverInstanceService),
-  __decorateParam(5, Inject(ThreadCommentModel)),
-  __decorateParam(6, ICommandService)
-], DocThreadCommentRenderController);
 
 // ../packages/docs-thread-comment-ui/src/plugin.ts
 var UniverDocsThreadCommentUIPlugin = class extends Plugin {
