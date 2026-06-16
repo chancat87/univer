@@ -1,38 +1,38 @@
 import {
   UniverSheetsNumfmtUIPlugin
-} from "../chunk-3URTNNIX.js";
+} from "../chunk-TOHRTTOO.js";
 import {
   createUniver
-} from "../chunk-NSVTCBNO.js";
-import "../chunk-VZG7H5MJ.js";
-import "../chunk-RU5I6NU5.js";
-import "../chunk-A4IHLPSI.js";
+} from "../chunk-KSFQLBHQ.js";
+import "../chunk-WAMUYVR5.js";
+import "../chunk-PCOJJJNR.js";
+import "../chunk-P2WAQ7MN.js";
 import {
   UniverSheetsFormulaUIPlugin
-} from "../chunk-DOPBWVR7.js";
+} from "../chunk-SQ4FJZVL.js";
 import {
   UniverSheetsNumfmtPlugin
-} from "../chunk-NPL7N7N6.js";
+} from "../chunk-UWVRURRP.js";
 import {
   UniverSheetsUIPlugin
-} from "../chunk-AXTASDKZ.js";
-import "../chunk-PAM4EXF7.js";
+} from "../chunk-ZNI6WOM4.js";
+import "../chunk-F43JEVVE.js";
 import {
   UniverNetworkPlugin
-} from "../chunk-3TYETZLP.js";
-import "../chunk-HYIUNMX3.js";
+} from "../chunk-QM3A44KY.js";
+import "../chunk-U6I3CA3F.js";
 import {
   DEFAULT_WORKBOOK_DATA_DEMO
-} from "../chunk-DLXB6LWY.js";
+} from "../chunk-FOKWLND3.js";
 import {
   UniverDocsPlugin,
   UniverDocsUIPlugin
-} from "../chunk-RBUEDVUD.js";
+} from "../chunk-PLVAV62H.js";
 import "../chunk-LI6UXASZ.js";
 import {
   UniverUIPlugin
-} from "../chunk-TMJAJNJS.js";
-import "../chunk-MNEZ7YZ7.js";
+} from "../chunk-IUZQOUIN.js";
+import "../chunk-S5JPW7X3.js";
 import {
   zh_CN_default as zh_CN_default3,
   zh_CN_default2 as zh_CN_default4,
@@ -47,20 +47,20 @@ import {
 } from "../chunk-QAY465GM.js";
 import {
   UniverSheetsFormulaPlugin
-} from "../chunk-HCSE775N.js";
+} from "../chunk-7K5RKTUX.js";
 import {
   UniverFormulaEnginePlugin,
   UniverRPCMainThreadPlugin,
   UniverSheetsPlugin
-} from "../chunk-MCE2SNW7.js";
+} from "../chunk-X6PSTXJS.js";
 import {
   UniverRenderEnginePlugin
-} from "../chunk-GEJ7L5S2.js";
+} from "../chunk-SXPNKO5K.js";
 import {
   mergeLocales
-} from "../chunk-BFI4GFBQ.js";
+} from "../chunk-SGLSU3TV.js";
 import "../chunk-EQ2B2W73.js";
-import "../chunk-DO7PIA5W.js";
+import "../chunk-HECJ2TYE.js";
 
 // ../presets/packages/preset-sheets-core/src/umd.ts
 function UniverSheetsCorePreset(config = {}) {

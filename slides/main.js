@@ -1,18 +1,18 @@
-import "../chunk-3O5N4NRK.js";
+import "../chunk-QLDWJMWQ.js";
 import {
   UniverDebuggerPlugin
-} from "../chunk-CR24K3IV.js";
+} from "../chunk-GFA45GLO.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-IR4OGUQE.js";
-import "../chunk-T4PRNKCT.js";
-import "../chunk-AXTASDKZ.js";
+} from "../chunk-KOMOXTJE.js";
+import "../chunk-JL6L3JSD.js";
+import "../chunk-ZNI6WOM4.js";
 import {
   DEFAULT_SLIDE_DATA,
   ObjectProvider,
   UniverSlidesPlugin,
   loadDebuggerLocale
-} from "../chunk-DLXB6LWY.js";
+} from "../chunk-FOKWLND3.js";
 import {
   DOCS_COMPONENT_MAIN_LAYER_INDEX,
   DRAWING_IMAGE_ALLOW_IMAGE_LIST,
@@ -28,7 +28,7 @@ import {
   UniverDocsUIPlugin,
   UniverDrawingPlugin,
   getImageSize
-} from "../chunk-RBUEDVUD.js";
+} from "../chunk-PLVAV62H.js";
 import "../chunk-LI6UXASZ.js";
 import {
   AddImageIcon,
@@ -66,17 +66,17 @@ import {
   scrollbarClassName,
   useDependency,
   useObservable
-} from "../chunk-TMJAJNJS.js";
-import "../chunk-MNEZ7YZ7.js";
+} from "../chunk-IUZQOUIN.js";
+import "../chunk-S5JPW7X3.js";
 import {
   zh_CN_default
-} from "../chunk-LYLK2WC5.js";
+} from "../chunk-X5C3K64X.js";
 import "../chunk-GQQW6W3C.js";
 import "../chunk-QAY465GM.js";
-import "../chunk-HCSE775N.js";
+import "../chunk-7K5RKTUX.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-MCE2SNW7.js";
+} from "../chunk-X6PSTXJS.js";
 import {
   FIX_ONE_PIXEL_BLUR_OFFSET,
   IRenderManagerService,
@@ -90,7 +90,7 @@ import {
   fixLineWidthByScale,
   getCurrentTypeOfRenderer,
   pxToNum
-} from "../chunk-GEJ7L5S2.js";
+} from "../chunk-SXPNKO5K.js";
 import {
   BehaviorSubject,
   DEFAULT_EMPTY_DOCUMENT_VALUE,
@@ -128,14 +128,14 @@ import {
   merge_default,
   takeUntil,
   toDisposable
-} from "../chunk-BFI4GFBQ.js";
+} from "../chunk-SGLSU3TV.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
   __decorateParam,
   __publicField,
   __toESM
-} from "../chunk-DO7PIA5W.js";
+} from "../chunk-HECJ2TYE.js";
 
 // ../packages/slides-ui/src/controllers/slide.render-controller.ts
 var SlideRenderController = class extends RxDisposable {

@@ -2,13 +2,13 @@ import {
   UniverFormulaEnginePlugin,
   UniverRPCWorkerThreadPlugin,
   UniverSheetsPlugin
-} from "../chunk-MCE2SNW7.js";
-import "../chunk-GEJ7L5S2.js";
+} from "../chunk-X6PSTXJS.js";
+import "../chunk-SXPNKO5K.js";
 import {
   Univer
-} from "../chunk-BFI4GFBQ.js";
+} from "../chunk-SGLSU3TV.js";
 import "../chunk-EQ2B2W73.js";
-import "../chunk-DO7PIA5W.js";
+import "../chunk-HECJ2TYE.js";
 
 // src/sheets-mobile/worker.ts
 var univer = new Univer({
