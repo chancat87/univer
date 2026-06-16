@@ -1,54 +1,54 @@
 import {
   UniverSheetsSortUIPlugin
-} from "../chunk-MPYJXTNU.js";
+} from "../chunk-UQ5FJYOL.js";
 import {
   UniverSheetsNoteUIPlugin,
   UniverSheetsTableUIPlugin
-} from "../chunk-R2RMOMHN.js";
+} from "../chunk-LBME6IIT.js";
 import {
   UniverSheetsConditionalFormattingUIPlugin,
   UniverSheetsDataValidationUIPlugin,
   UniverSheetsFilterUIPlugin
-} from "../chunk-6LM3KUQD.js";
+} from "../chunk-4EHCIDQB.js";
 import {
   UniverSheetsNumfmtUIPlugin
-} from "../chunk-TOHRTTOO.js";
+} from "../chunk-YD6IAARF.js";
 import {
   en_US_default
-} from "../chunk-TCD3FDE2.js";
+} from "../chunk-FKPNSW5R.js";
 import "../chunk-REZ6O7M2.js";
 import "../chunk-62FTG3QU.js";
 import {
   UniverSheetsNotePlugin,
   UniverSheetsTablePlugin
-} from "../chunk-K4XDEQC5.js";
+} from "../chunk-BE77UY3F.js";
 import {
   UniverSheetsHyperLinkPlugin,
   UniverSheetsHyperLinkUIPlugin
-} from "../chunk-3L2IPCK4.js";
+} from "../chunk-NSKQPV6M.js";
 import {
   UniverSheetsSortPlugin
-} from "../chunk-KNXF6YPQ.js";
+} from "../chunk-XOJIPTRL.js";
 import {
   UniverSheetsConditionalFormattingPlugin
-} from "../chunk-WCON5HUC.js";
+} from "../chunk-HJ5L3MIF.js";
 import {
   UniverSheetsFormulaUIPlugin
-} from "../chunk-SQ4FJZVL.js";
+} from "../chunk-NJAQLUVB.js";
 import {
   UniverSheetsNumfmtPlugin
-} from "../chunk-UWVRURRP.js";
+} from "../chunk-I4FN2AVD.js";
 import {
   UniverSheetsUIPlugin
-} from "../chunk-ZNI6WOM4.js";
+} from "../chunk-MA64BJZM.js";
 import {
   DEFAULT_WORKBOOK_DATA_DEMO
-} from "../chunk-FOKWLND3.js";
+} from "../chunk-D66OSNCZ.js";
 import {
   UniverDocsPlugin,
   UniverDocsUIPlugin,
   UniverSheetsDataValidationPlugin
-} from "../chunk-PLVAV62H.js";
+} from "../chunk-YY5M73BR.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -64,26 +64,28 @@ import {
   render,
   require_jsx_runtime,
   require_react
-} from "../chunk-IUZQOUIN.js";
+} from "../chunk-VRCEW6HR.js";
 import {
   UniverSheetsFilterPlugin
-} from "../chunk-GZTNYRSD.js";
+} from "../chunk-UHWK2B2L.js";
 import {
   UniverSheetsFormulaPlugin
-} from "../chunk-7K5RKTUX.js";
+} from "../chunk-2A7UPOAL.js";
 import {
   UniverFormulaEnginePlugin,
   UniverSheetsPlugin
-} from "../chunk-X6PSTXJS.js";
+} from "../chunk-4ZVQCU3Y.js";
 import {
   UniverRenderEnginePlugin
-} from "../chunk-SXPNKO5K.js";
+} from "../chunk-ZABWMRUZ.js";
 import {
   ThemeService,
   Univer,
   default_default,
-  green_default
-} from "../chunk-SGLSU3TV.js";
+  green_default,
+  purple_default,
+  red_default
+} from "../chunk-2RCPMKBJ.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __toESM
@@ -206,7 +208,9 @@ var LOOP_COLOR_OPTIONS = COLOR_SCALE_KEYS.flatMap(
 );
 var THEME_PRESETS = [
   { key: "default", label: "defaultTheme", theme: default_default },
-  { key: "green", label: "greenTheme", theme: green_default }
+  { key: "green", label: "greenTheme", theme: green_default },
+  { key: "red", label: "redTheme", theme: red_default },
+  { key: "purple", label: "purpleTheme", theme: purple_default }
 ];
 
 // src/theme-customizer/theme-utils.ts
