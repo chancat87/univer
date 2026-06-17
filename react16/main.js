@@ -5,11 +5,11 @@ import {
   render,
   require_jsx_runtime,
   require_react
-} from "./chunk-DHHCXRED.js";
-import "./chunk-EZ7I6SAD.js";
+} from "./chunk-YKMLQ5FL.js";
+import "./chunk-TOWBRTW6.js";
 import {
   default_default
-} from "./chunk-HNUJ6OAX.js";
+} from "./chunk-2NTMFV4P.js";
 import "./chunk-EQ2B2W73.js";
 import {
   __toESM
@@ -95,10 +95,10 @@ var package_default = {
     "eslint-plugin-format": "^2.0.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
+    "eslint-plugin-react-refresh": "^0.5.3",
     husky: "^9.1.7",
     "lint-staged": "^17.0.7",
-    "posthog-node": "^5.37.0",
+    "posthog-node": "^5.38.0",
     react: "19.2.7",
     "react-dom": "19.2.7",
     "release-it": "^19.2.4",
@@ -235,11 +235,11 @@ if (true) {
     // eslint-disable-next-line node/prefer-global/process
     NODE_ENV: "production",
     // eslint-disable-next-line node/prefer-global/process
-    GIT_COMMIT_HASH: "aa5972a",
+    GIT_COMMIT_HASH: "bb00fae",
     // eslint-disable-next-line node/prefer-global/process
     GIT_REF_NAME: "dev",
     // eslint-disable-next-line node/prefer-global/process
-    BUILD_TIME: "2026-06-17T12:43:28.672Z"
+    BUILD_TIME: "2026-06-17T18:26:50.727Z"
   });
 }
 function DemoList({ items }) {

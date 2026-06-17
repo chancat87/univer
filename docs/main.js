@@ -1,37 +1,37 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-36PDURAD.js";
+} from "../chunk-VVRAPR7O.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-CVHJ32K7.js";
-import "../chunk-7U6NRQ2L.js";
+} from "../chunk-R6N4RR7Y.js";
+import "../chunk-JWL4ZHJC.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
   ThreadCommentModel,
   getDT
-} from "../chunk-WKTMTJPB.js";
+} from "../chunk-5IZUWW3O.js";
 import {
   InsertDocImageCommand,
   UniverDebuggerPlugin,
   UniverDocsDrawingUIPlugin
-} from "../chunk-6VFWIMN4.js";
+} from "../chunk-PUQOBUPC.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-J4ULH3HO.js";
+} from "../chunk-7TILZ3T5.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-RFQ2ZO6U.js";
-import "../chunk-ZKQRJE7L.js";
-import "../chunk-GFMGPQSJ.js";
+} from "../chunk-HUCNPSHS.js";
+import "../chunk-DFO4LH6C.js";
+import "../chunk-FPNH6BDD.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE,
   loadDebuggerLocale
-} from "../chunk-JAL66NYS.js";
+} from "../chunk-2GJVB7EP.js";
 import {
   BulletListCommand,
   CutContentCommand,
@@ -68,7 +68,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-AU7KVTCM.js";
+} from "../chunk-J72CIJ5H.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -101,25 +101,25 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-DHHCXRED.js";
+} from "../chunk-YKMLQ5FL.js";
 import {
   FUniver
-} from "../chunk-ERPSXR7T.js";
+} from "../chunk-M347PA2R.js";
 import {
   zh_CN_default
-} from "../chunk-NFW2Z7QB.js";
+} from "../chunk-PRRVBRMN.js";
 import "../chunk-GQQW6W3C.js";
 import "../chunk-QAY465GM.js";
-import "../chunk-VA3QBNTQ.js";
+import "../chunk-TIITL5XZ.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-YA6TPXLL.js";
+} from "../chunk-LO3AO4I4.js";
 import {
   IRenderManagerService,
   UniverRenderEnginePlugin,
   ptToPixel,
   withCurrentTypeOfRenderer
-} from "../chunk-EZ7I6SAD.js";
+} from "../chunk-TOWBRTW6.js";
 import {
   BehaviorSubject,
   BuildTextUtils,
@@ -155,7 +155,7 @@ import {
   sequenceExecute,
   tap,
   toDisposable
-} from "../chunk-HNUJ6OAX.js";
+} from "../chunk-2NTMFV4P.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
