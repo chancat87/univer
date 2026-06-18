@@ -5,14 +5,14 @@ import "../chunk-SEGNKWC6.js";
 import {
   UniverNetworkPlugin
 } from "../chunk-3VNXRUZH.js";
-import "../chunk-FPNH6BDD.js";
+import "../chunk-FHSA4NSA.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE
-} from "../chunk-2GJVB7EP.js";
+} from "../chunk-IEF7J3A7.js";
 import {
   UniverDocsPlugin,
   UniverDocsUIPlugin
-} from "../chunk-J72CIJ5H.js";
+} from "../chunk-7SZIUZPE.js";
 import "../chunk-LI6UXASZ.js";
 import {
   UniverUIPlugin
