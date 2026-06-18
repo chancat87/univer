@@ -1,37 +1,37 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-TJ7PO3N7.js";
+} from "../chunk-3TZTZ7FI.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-UG6N5LKS.js";
-import "../chunk-EFLUWDGW.js";
+} from "../chunk-JRXON6TK.js";
+import "../chunk-JPYIH444.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
   ThreadCommentModel,
   getDT
-} from "../chunk-DZ3Z7OWS.js";
+} from "../chunk-R3NKUFJR.js";
 import {
   InsertDocImageCommand,
   UniverDebuggerPlugin,
   UniverDocsDrawingUIPlugin
-} from "../chunk-VDTYOTRX.js";
+} from "../chunk-SEUOW2PD.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-SVIEONY5.js";
+} from "../chunk-JGQXQIG7.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-6WKDVGJP.js";
-import "../chunk-LJQQEGH7.js";
-import "../chunk-KQNM6OG3.js";
+} from "../chunk-YZIZMSII.js";
+import "../chunk-HWPT7HAO.js";
+import "../chunk-QD4WS327.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE,
   loadDebuggerLocale
-} from "../chunk-HENJB45Y.js";
+} from "../chunk-WRFHUIE7.js";
 import {
   BulletListCommand,
   CutContentCommand,
@@ -68,7 +68,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-24DSUN32.js";
+} from "../chunk-IO7A2VQU.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -101,25 +101,19 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-R57BLDMF.js";
+} from "../chunk-NF47Z4XV.js";
 import {
   FUniver
-} from "../chunk-ZO5MZRTT.js";
+} from "../chunk-FMZL2PTE.js";
 import {
   zh_CN_default
-} from "../chunk-RWJVLWWK.js";
+} from "../chunk-PBJP2MOU.js";
 import "../chunk-GQQW6W3C.js";
 import "../chunk-QAY465GM.js";
-import "../chunk-GIASHSLF.js";
+import "../chunk-W7WW4R4Y.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-TNPXDSFM.js";
-import {
-  IRenderManagerService,
-  UniverRenderEnginePlugin,
-  ptToPixel,
-  withCurrentTypeOfRenderer
-} from "../chunk-YFZT4CFH.js";
+} from "../chunk-FP57X2T3.js";
 import {
   BehaviorSubject,
   BuildTextUtils,
@@ -129,6 +123,7 @@ import {
   DisposableCollection,
   ICommandService,
   IConfigService,
+  IRenderManagerService,
   IResourceManagerService,
   IUniverInstanceService,
   Inject,
@@ -139,6 +134,7 @@ import {
   SHEET_EDITOR_UNITS,
   Tools,
   Univer,
+  UniverRenderEnginePlugin,
   UserManagerService,
   combineLatest,
   debounceTime,
@@ -152,10 +148,12 @@ import {
   merge_default,
   of,
   pairwise,
+  ptToPixel,
   sequenceExecute,
   tap,
-  toDisposable
-} from "../chunk-JAAZE2FX.js";
+  toDisposable,
+  withCurrentTypeOfRenderer
+} from "../chunk-XDSP77UU.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,

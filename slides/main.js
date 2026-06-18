@@ -1,18 +1,18 @@
-import "../chunk-EFLUWDGW.js";
+import "../chunk-JPYIH444.js";
 import {
   UniverDebuggerPlugin
-} from "../chunk-VDTYOTRX.js";
+} from "../chunk-SEUOW2PD.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-SVIEONY5.js";
-import "../chunk-6WKDVGJP.js";
-import "../chunk-LJQQEGH7.js";
+} from "../chunk-JGQXQIG7.js";
+import "../chunk-YZIZMSII.js";
+import "../chunk-HWPT7HAO.js";
 import {
   DEFAULT_SLIDE_DATA,
   ObjectProvider,
   UniverSlidesPlugin,
   loadDebuggerLocale
-} from "../chunk-HENJB45Y.js";
+} from "../chunk-WRFHUIE7.js";
 import {
   DOCS_COMPONENT_MAIN_LAYER_INDEX,
   DRAWING_IMAGE_ALLOW_IMAGE_LIST,
@@ -28,7 +28,7 @@ import {
   UniverDocsUIPlugin,
   UniverDrawingPlugin,
   getImageSize
-} from "../chunk-24DSUN32.js";
+} from "../chunk-IO7A2VQU.js";
 import "../chunk-LI6UXASZ.js";
 import {
   AddImageIcon,
@@ -66,31 +66,17 @@ import {
   scrollbarClassName,
   useDependency,
   useObservable
-} from "../chunk-R57BLDMF.js";
-import "../chunk-ZO5MZRTT.js";
+} from "../chunk-NF47Z4XV.js";
+import "../chunk-FMZL2PTE.js";
 import {
   zh_CN_default
-} from "../chunk-RWJVLWWK.js";
+} from "../chunk-PBJP2MOU.js";
 import "../chunk-GQQW6W3C.js";
 import "../chunk-QAY465GM.js";
-import "../chunk-GIASHSLF.js";
+import "../chunk-W7WW4R4Y.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-TNPXDSFM.js";
-import {
-  FIX_ONE_PIXEL_BLUR_OFFSET,
-  IRenderManagerService,
-  Rect,
-  Scene,
-  ScrollBar,
-  Slide,
-  UniverRenderEnginePlugin,
-  Viewport,
-  convertTextRotation,
-  fixLineWidthByScale,
-  getCurrentTypeOfRenderer,
-  pxToNum
-} from "../chunk-YFZT4CFH.js";
+} from "../chunk-FP57X2T3.js";
 import {
   BehaviorSubject,
   DEFAULT_EMPTY_DOCUMENT_VALUE,
@@ -98,6 +84,7 @@ import {
   DisposableCollection,
   DocumentDataModel,
   EDITOR_ACTIVATED,
+  FIX_ONE_PIXEL_BLUR_OFFSET,
   FOCUSING_COMMON_DRAWINGS,
   FOCUSING_EDITOR_BUT_HIDDEN,
   FOCUSING_EDITOR_STANDALONE,
@@ -108,27 +95,38 @@ import {
   IConfigService,
   IContextService,
   IImageIoService,
+  IRenderManagerService,
   IUndoRedoService,
   IUniverInstanceService,
   Inject,
   Injector,
   LocaleService,
   Plugin,
+  Rect,
   RxDisposable,
+  Scene,
+  ScrollBar,
+  Slide,
   Subject,
   Univer,
+  UniverRenderEnginePlugin,
+  Viewport,
+  convertTextRotation,
   createIdentifier,
   createInternalEditorID,
   createParagraphId,
   debounce_default,
   filter,
+  fixLineWidthByScale,
   generateRandomId,
   getColorStyle,
+  getCurrentTypeOfRenderer,
   mergeOverrideWithDependencies,
   merge_default,
+  pxToNum,
   takeUntil,
   toDisposable
-} from "../chunk-JAAZE2FX.js";
+} from "../chunk-XDSP77UU.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,

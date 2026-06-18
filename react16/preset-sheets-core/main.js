@@ -1,38 +1,38 @@
 import {
   UniverSheetsNumfmtUIPlugin
-} from "../chunk-W2NIYLCH.js";
+} from "../chunk-5RG3VDPQ.js";
 import {
   createUniver
-} from "../chunk-ZOPQKTXM.js";
-import "../chunk-2WZI4GGC.js";
-import "../chunk-7T3ZFHE4.js";
-import "../chunk-55GOK6QY.js";
+} from "../chunk-Z77D6GFI.js";
+import "../chunk-3FNLNWZ4.js";
+import "../chunk-DIUGVRX6.js";
+import "../chunk-ZRVPWXUO.js";
 import {
   UniverSheetsFormulaUIPlugin
-} from "../chunk-YLLESA75.js";
+} from "../chunk-GL3WHIUS.js";
 import {
   UniverSheetsNumfmtPlugin
-} from "../chunk-ZYLZ4AM5.js";
+} from "../chunk-QN2QVGT7.js";
 import {
   UniverSheetsUIPlugin
-} from "../chunk-LJQQEGH7.js";
-import "../chunk-XZXCNWYZ.js";
+} from "../chunk-HWPT7HAO.js";
+import "../chunk-WDLLYOCJ.js";
 import {
   UniverNetworkPlugin
-} from "../chunk-CGIXWYME.js";
-import "../chunk-KQNM6OG3.js";
+} from "../chunk-6LWLEZUX.js";
+import "../chunk-QD4WS327.js";
 import {
   DEFAULT_WORKBOOK_DATA_DEMO
-} from "../chunk-HENJB45Y.js";
+} from "../chunk-WRFHUIE7.js";
 import {
   UniverDocsPlugin,
   UniverDocsUIPlugin
-} from "../chunk-24DSUN32.js";
+} from "../chunk-IO7A2VQU.js";
 import "../chunk-LI6UXASZ.js";
 import {
   UniverUIPlugin
-} from "../chunk-R57BLDMF.js";
-import "../chunk-ZO5MZRTT.js";
+} from "../chunk-NF47Z4XV.js";
+import "../chunk-FMZL2PTE.js";
 import {
   zh_CN_default as zh_CN_default3,
   zh_CN_default2 as zh_CN_default4,
@@ -47,18 +47,16 @@ import {
 } from "../chunk-QAY465GM.js";
 import {
   UniverSheetsFormulaPlugin
-} from "../chunk-GIASHSLF.js";
+} from "../chunk-W7WW4R4Y.js";
 import {
   UniverFormulaEnginePlugin,
   UniverRPCMainThreadPlugin,
   UniverSheetsPlugin
-} from "../chunk-TNPXDSFM.js";
+} from "../chunk-FP57X2T3.js";
 import {
-  UniverRenderEnginePlugin
-} from "../chunk-YFZT4CFH.js";
-import {
+  UniverRenderEnginePlugin,
   mergeLocales
-} from "../chunk-JAAZE2FX.js";
+} from "../chunk-XDSP77UU.js";
 import "../chunk-EQ2B2W73.js";
 import "../chunk-HECJ2TYE.js";
 
@@ -143,7 +141,8 @@ function UniverSheetsCorePreset(config = {}) {
 }
 
 // ../presets/packages/preset-sheets-core/src/locales/zh-CN.ts
-var zh_CN_default9 = mergeLocales(
+var zh_CN_default9 = Object.assign(
+  {},
   zh_CN_default,
   zh_CN_default2,
   zh_CN_default3,
