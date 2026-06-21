@@ -1,37 +1,37 @@
 import {
   UniverDocsMentionUIPlugin
-} from "../chunk-3TZTZ7FI.js";
+} from "../chunk-TK5W4SCP.js";
 import {
   SetActiveCommentOperation,
   ThreadCommentPanel,
   ThreadCommentPanelService,
   UniverThreadCommentUIPlugin
-} from "../chunk-JRXON6TK.js";
-import "../chunk-JPYIH444.js";
+} from "../chunk-NTD2IJSL.js";
+import "../chunk-E6THH3R4.js";
 import {
   AddCommentMutation,
   IThreadCommentDataSourceService,
   ThreadCommentModel,
   getDT
-} from "../chunk-R3NKUFJR.js";
+} from "../chunk-NY2DSWSQ.js";
 import {
   InsertDocImageCommand,
   UniverDebuggerPlugin,
   UniverDocsDrawingUIPlugin
-} from "../chunk-SEUOW2PD.js";
+} from "../chunk-4WCJDT26.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-JGQXQIG7.js";
+} from "../chunk-R2E34KCA.js";
 import {
   UniverDocsDrawingPlugin,
   UniverDrawingUIPlugin
-} from "../chunk-YZIZMSII.js";
-import "../chunk-HWPT7HAO.js";
-import "../chunk-QD4WS327.js";
+} from "../chunk-XUEKLQVJ.js";
+import "../chunk-L6PTLA7O.js";
+import "../chunk-S43ZO4AN.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE,
   loadDebuggerLocale
-} from "../chunk-WRFHUIE7.js";
+} from "../chunk-Y26DBFT2.js";
 import {
   BulletListCommand,
   CutContentCommand,
@@ -68,7 +68,7 @@ import {
   getAnchorBounding,
   replaceSelectionFactory,
   whenDocAndEditorFocused
-} from "../chunk-IO7A2VQU.js";
+} from "../chunk-5KHTBPHV.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -101,19 +101,19 @@ import {
   useDependency,
   useEvent,
   useObservable
-} from "../chunk-NF47Z4XV.js";
+} from "../chunk-LOHY7AAA.js";
 import {
   FUniver
-} from "../chunk-FMZL2PTE.js";
+} from "../chunk-TKKSW2K4.js";
 import {
   zh_CN_default
 } from "../chunk-PBJP2MOU.js";
 import "../chunk-GQQW6W3C.js";
 import "../chunk-QAY465GM.js";
-import "../chunk-W7WW4R4Y.js";
+import "../chunk-BIZC7Y24.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-FP57X2T3.js";
+} from "../chunk-HAF7HUA6.js";
 import {
   BehaviorSubject,
   BuildTextUtils,
@@ -153,7 +153,7 @@ import {
   tap,
   toDisposable,
   withCurrentTypeOfRenderer
-} from "../chunk-XDSP77UU.js";
+} from "../chunk-CCEXUECC.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
