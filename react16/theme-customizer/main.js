@@ -1,54 +1,54 @@
 import {
-  UniverSheetsSortUIPlugin
-} from "../chunk-HS7MB7LP.js";
-import {
   UniverSheetsNoteUIPlugin,
   UniverSheetsTableUIPlugin
-} from "../chunk-NIFSTT3P.js";
+} from "../chunk-3BLOT4I4.js";
+import {
+  UniverSheetsSortUIPlugin
+} from "../chunk-KYDBL4JQ.js";
 import {
   UniverSheetsConditionalFormattingUIPlugin,
   UniverSheetsDataValidationUIPlugin,
   UniverSheetsFilterUIPlugin
-} from "../chunk-VBLFG4C4.js";
+} from "../chunk-HRS7BS4O.js";
 import {
   UniverSheetsNumfmtUIPlugin
-} from "../chunk-LKGWSBMP.js";
+} from "../chunk-GEZVA24X.js";
 import {
   en_US_default
 } from "../chunk-TO3NLQ5U.js";
 import "../chunk-REZ6O7M2.js";
 import "../chunk-62FTG3QU.js";
 import {
+  DEFAULT_WORKBOOK_DATA_DEMO
+} from "../chunk-AE7SMOJJ.js";
+import {
   UniverSheetsNotePlugin,
   UniverSheetsTablePlugin
-} from "../chunk-EGFJMTPO.js";
+} from "../chunk-NQMKE4RY.js";
 import {
   UniverSheetsHyperLinkPlugin,
   UniverSheetsHyperLinkUIPlugin
-} from "../chunk-M7N3RPKA.js";
+} from "../chunk-55PVUM4T.js";
 import {
   UniverSheetsSortPlugin
-} from "../chunk-3B72GOSY.js";
+} from "../chunk-NJ4A6MU4.js";
 import {
   UniverSheetsConditionalFormattingPlugin
-} from "../chunk-S6JMBF4C.js";
+} from "../chunk-QTO2H6RN.js";
 import {
   UniverSheetsFormulaUIPlugin
-} from "../chunk-VNOZ73SZ.js";
+} from "../chunk-4NPMPVHI.js";
 import {
   UniverSheetsNumfmtPlugin
-} from "../chunk-XCTXJ3NV.js";
+} from "../chunk-YR5UNHC6.js";
 import {
   UniverSheetsUIPlugin
-} from "../chunk-L6PTLA7O.js";
-import {
-  DEFAULT_WORKBOOK_DATA_DEMO
-} from "../chunk-Y26DBFT2.js";
+} from "../chunk-WZIS5H2B.js";
 import {
   UniverDocsPlugin,
   UniverDocsUIPlugin,
   UniverSheetsDataValidationPlugin
-} from "../chunk-5KHTBPHV.js";
+} from "../chunk-3QW3A2DW.js";
 import "../chunk-LI6UXASZ.js";
 import {
   Button,
@@ -64,17 +64,17 @@ import {
   render,
   require_jsx_runtime,
   require_react
-} from "../chunk-LOHY7AAA.js";
+} from "../chunk-RVRSM6WU.js";
 import {
   UniverSheetsFilterPlugin
-} from "../chunk-MCLGDLLQ.js";
+} from "../chunk-SZGQ3BB2.js";
 import {
   UniverSheetsFormulaPlugin
-} from "../chunk-BIZC7Y24.js";
+} from "../chunk-3WNTGTNW.js";
 import {
   UniverFormulaEnginePlugin,
   UniverSheetsPlugin
-} from "../chunk-HAF7HUA6.js";
+} from "../chunk-HHTIJANW.js";
 import {
   ThemeService,
   Univer,
@@ -84,14 +84,14 @@ import {
   orange_default,
   purple_default,
   red_default
-} from "../chunk-CCEXUECC.js";
+} from "../chunk-TSO7IYVY.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __toESM
 } from "../chunk-HECJ2TYE.js";
 
 // src/theme-customizer/components/toolbar-controls.tsx
-var import_jsx_runtime = __toESM(require_jsx_runtime());
+var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
 function ToolbarField(props) {
   const { label, children } = props;
   return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "univer-inline-flex univer-items-center univer-gap-2", children: [
@@ -127,7 +127,7 @@ function ToolbarToggleGroup(props) {
 }
 
 // src/theme-customizer/components/sidebar-header.tsx
-var import_jsx_runtime2 = __toESM(require_jsx_runtime());
+var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
 function SidebarHeader(props) {
   const {
     darkMode,
@@ -191,7 +191,7 @@ function SidebarHeader(props) {
 }
 
 // src/theme-customizer/components/theme-sections.tsx
-var import_react = __toESM(require_react());
+var import_react = __toESM(require_react(), 1);
 
 // src/theme-customizer/constants.ts
 var PREVIEW_CONTAINER_ID = "theme-customizer-preview";
@@ -301,7 +301,7 @@ function updateLoopColor(theme, key, value) {
 }
 
 // src/theme-customizer/components/theme-sections.tsx
-var import_jsx_runtime3 = __toESM(require_jsx_runtime());
+var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
 function ThemeCodeBlock({ children }) {
   return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
     "pre",
@@ -598,7 +598,7 @@ function JsonEditorPanel(props) {
 }
 
 // src/theme-customizer/components/token-editor-panel.tsx
-var import_jsx_runtime4 = __toESM(require_jsx_runtime());
+var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
 function TokenEditorPanel(props) {
   const { copyLabel, theme, visibleScaleKeys, onCopy, onLoopColorChange, onRootColorChange, onScaleColorChange } = props;
   return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "univer-flex univer-flex-col univer-gap-4", children: [
@@ -620,8 +620,8 @@ function TokenEditorPanel(props) {
 }
 
 // src/theme-customizer/components/univer-preview.tsx
-var import_react2 = __toESM(require_react());
-var import_jsx_runtime5 = __toESM(require_jsx_runtime());
+var import_react2 = __toESM(require_react(), 1);
+var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
 function UniverPreview(props) {
   const { theme, darkMode } = props;
   const univerRef = (0, import_react2.useRef)(null);
@@ -694,7 +694,7 @@ function UniverPreview(props) {
 }
 
 // src/theme-customizer/hooks/use-theme-customizer-state.ts
-var import_react3 = __toESM(require_react());
+var import_react3 = __toESM(require_react(), 1);
 function useThemeCustomizerState() {
   const [theme, setTheme] = (0, import_react3.useState)(() => cloneTheme(default_default));
   const [editorMode, setEditorMode] = (0, import_react3.useState)("tokens");
@@ -781,7 +781,7 @@ function useThemeCustomizerState() {
 }
 
 // src/theme-customizer/theme-customizer-app.tsx
-var import_jsx_runtime6 = __toESM(require_jsx_runtime());
+var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
 function ThemeCustomizerApp() {
   const {
     copyLabel,
@@ -886,7 +886,7 @@ function ThemeCustomizerApp() {
 }
 
 // src/theme-customizer/main.tsx
-var import_jsx_runtime7 = __toESM(require_jsx_runtime());
+var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
 render(
   /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(ConfigProvider, { locale: en_US_default.design, mountContainer: document.body, children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(ThemeCustomizerApp, {}) }),
   document.getElementById("app")

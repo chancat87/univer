@@ -5,17 +5,17 @@ import {
   render,
   require_jsx_runtime,
   require_react
-} from "./chunk-LOHY7AAA.js";
+} from "./chunk-RVRSM6WU.js";
 import {
   default_default
-} from "./chunk-CCEXUECC.js";
+} from "./chunk-TSO7IYVY.js";
 import "./chunk-EQ2B2W73.js";
 import {
   __toESM
 } from "./chunk-HECJ2TYE.js";
 
 // src/main.tsx
-var import_react = __toESM(require_react());
+var import_react = __toESM(require_react(), 1);
 
 // ../package.json
 var package_default = {
@@ -56,13 +56,13 @@ var package_default = {
     dev: "pnpm --filter univer-examples dev:demo -- --host 0.0.0.0",
     "dev:umd": "serve .",
     "dev:e2e": "pnpm --filter univer-examples dev:e2e",
-    "use:react16": "tsx ./scripts/react-version-manager.ts --react=16",
-    "use:react19": "tsx ./scripts/react-version-manager.ts --react=19",
+    "use:react16": "node --experimental-strip-types ./scripts/react-version-manager.mts --react=16",
+    "use:react19": "node --experimental-strip-types ./scripts/react-version-manager.mts --react=19",
     typecheck: "turbo typecheck",
     "serve:umd": "serve .",
     test: "turbo test -- --passWithNoTests",
-    coverage: "turbo coverage -- --passWithNoTests",
-    "analyze:build": "tsx ./scripts/build-analysis.ts",
+    coverage: "turbo --concurrency 50% coverage -- --passWithNoTests ",
+    "analyze:build": "node --experimental-strip-types ./scripts/build-analysis.mts",
     build: "pnpm run build:plugins && pnpm run build:presets",
     "build:ci": "pnpm run build",
     "build:plugins": "turbo build --filter '!./common/*' --filter '!./presets/**'",
@@ -80,12 +80,12 @@ var package_default = {
     "@antfu/eslint-config": "^9.0.0",
     "@commitlint/cli": "^21.0.2",
     "@commitlint/config-conventional": "^21.0.2",
-    "@eslint-react/eslint-plugin": "^5.9.0",
+    "@eslint-react/eslint-plugin": "^5.9.1",
     "@eslint/compat": "^2.1.0",
     "@playwright/test": "^1.57.0",
     "@release-it-plugins/workspaces": "^5.0.3",
     "@release-it/conventional-changelog": "^10.0.6",
-    "@types/node": "^25.9.3",
+    "@types/node": "^26.0.0",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
     "@univerjs-infra/shared": "workspace:*",
@@ -96,14 +96,13 @@ var package_default = {
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
     husky: "^9.1.7",
-    "lint-staged": "^17.0.7",
-    "posthog-node": "^5.38.0",
+    "lint-staged": "^17.0.8",
+    "posthog-node": "^5.38.2",
     react: "19.2.7",
     "react-dom": "19.2.7",
     "release-it": "^19.2.4",
     serve: "^14.2.6",
     tailwindcss: "3.4.18",
-    tsx: "^4.22.4",
     turbo: "^2.9.18",
     typescript: "^6.0.3",
     vitest: "^4.1.9"
@@ -143,6 +142,11 @@ var demos = [
     "dir": "preset-sheets-core",
     "href": "./preset-sheets-core/",
     "title": "Preset Sheets Core"
+  },
+  {
+    "dir": "preset-sheets-core-with-worker",
+    "href": "./preset-sheets-core-with-worker/",
+    "title": "Preset Sheets Core With Worker"
   },
   {
     "dir": "sheets",
@@ -192,7 +196,7 @@ var demos = [
 ];
 
 // src/main.tsx
-var import_jsx_runtime = __toESM(require_jsx_runtime());
+var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
 var CATEGORY_ORDER = ["sheets", "docs", "slides", "others"];
 var PRIMARY_CATEGORY_ORDER = ["sheets", "docs", "slides"];
 var CATEGORY_TITLES = {
@@ -228,11 +232,11 @@ if (true) {
     // eslint-disable-next-line node/prefer-global/process
     NODE_ENV: "production",
     // eslint-disable-next-line node/prefer-global/process
-    GIT_COMMIT_HASH: "dc8dd28",
+    GIT_COMMIT_HASH: "e955a29",
     // eslint-disable-next-line node/prefer-global/process
     GIT_REF_NAME: "dev",
     // eslint-disable-next-line node/prefer-global/process
-    BUILD_TIME: "2026-06-22T06:26:59.204Z"
+    BUILD_TIME: "2026-06-22T12:22:10.065Z"
   });
 }
 function DemoList({ items }) {

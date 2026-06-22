@@ -1,111 +1,116 @@
 import {
   UniverSheetsFindReplacePlugin
-} from "../chunk-DOKHUB7O.js";
-import {
-  UniverSheetsSortUIPlugin
-} from "../chunk-HS7MB7LP.js";
+} from "../chunk-LJ7JNWRB.js";
 import {
   UniverSheetsNoteUIPlugin,
   UniverSheetsTableUIPlugin
-} from "../chunk-NIFSTT3P.js";
+} from "../chunk-3BLOT4I4.js";
+import {
+  UniverSheetsSortUIPlugin
+} from "../chunk-KYDBL4JQ.js";
 import {
   UniverSheetsConditionalFormattingUIPlugin,
   UniverSheetsDataValidationUIPlugin,
   UniverSheetsFilterUIPlugin
-} from "../chunk-VBLFG4C4.js";
+} from "../chunk-HRS7BS4O.js";
 import {
   UniverSheetsThreadCommentUIPlugin
-} from "../chunk-USMDVO7Q.js";
-import {
-  UniverThreadCommentUIPlugin
-} from "../chunk-NTD2IJSL.js";
+} from "../chunk-Y73ZXPYU.js";
 import {
   UniverSheetsNumfmtUIPlugin
-} from "../chunk-LKGWSBMP.js";
+} from "../chunk-GEZVA24X.js";
+import {
+  UniverThreadCommentUIPlugin
+} from "../chunk-DTB5SSOI.js";
 import {
   UniverVue3AdapterPlugin,
   UniverWebComponentAdapterPlugin
-} from "../chunk-6YIVLB2L.js";
+} from "../chunk-TEYLZ76F.js";
+import {
+  UniverSheetsCrosshairHighlightPlugin
+} from "../chunk-RJPPWJ2M.js";
+import {
+  UniverWatermarkPlugin
+} from "../chunk-GLGKMDO5.js";
+import {
+  zh_CN_default
+} from "../chunk-5NAVWEQE.js";
+import "../chunk-EDYVLQ5J.js";
+import {
+  DEFAULT_WORKBOOK_DATA_DEMO
+} from "../chunk-AE7SMOJJ.js";
 import {
   UniverSheetsNotePlugin,
   UniverSheetsTablePlugin
-} from "../chunk-EGFJMTPO.js";
-import {
-  UniverSheetsCrosshairHighlightPlugin
-} from "../chunk-UADPVCSK.js";
+} from "../chunk-NQMKE4RY.js";
+import "../chunk-BUXOUBFL.js";
 import {
   UniverSheetsThreadCommentPlugin
-} from "../chunk-JBJKEJZV.js";
+} from "../chunk-H7H44NSG.js";
+import "../chunk-LQWFYSIS.js";
 import {
   UniverSheetsHyperLinkPlugin,
   UniverSheetsHyperLinkUIPlugin
-} from "../chunk-M7N3RPKA.js";
+} from "../chunk-55PVUM4T.js";
 import {
   UniverSheetsSortPlugin
-} from "../chunk-3B72GOSY.js";
+} from "../chunk-NJ4A6MU4.js";
 import {
   UniverSheetsConditionalFormattingPlugin
-} from "../chunk-S6JMBF4C.js";
+} from "../chunk-QTO2H6RN.js";
 import {
-  UniverThreadCommentPlugin
-} from "../chunk-NY2DSWSQ.js";
+  UniverSheetsFormulaUIPlugin
+} from "../chunk-4NPMPVHI.js";
 import {
-  UniverWatermarkPlugin
-} from "../chunk-R2E34KCA.js";
+  UniverSheetsNumfmtPlugin
+} from "../chunk-YR5UNHC6.js";
 import {
   UniverSheetsDrawingPlugin,
   UniverSheetsDrawingUIPlugin
-} from "../chunk-XUEKLQVJ.js";
-import "../chunk-WJVLEVUU.js";
-import {
-  UniverSheetsFormulaUIPlugin
-} from "../chunk-VNOZ73SZ.js";
-import {
-  UniverSheetsNumfmtPlugin
-} from "../chunk-XCTXJ3NV.js";
+} from "../chunk-D6M66X3V.js";
 import {
   UniverSheetsUIPlugin
-} from "../chunk-L6PTLA7O.js";
+} from "../chunk-WZIS5H2B.js";
+import "../chunk-IMWY7PB3.js";
 import {
   UniverNetworkPlugin
-} from "../chunk-BPMFCCIM.js";
+} from "../chunk-IIEQMUHM.js";
 import {
-  DEFAULT_WORKBOOK_DATA_DEMO
-} from "../chunk-Y26DBFT2.js";
+  UniverThreadCommentPlugin
+} from "../chunk-HQS5AD5N.js";
+import "../chunk-6RUFGJLY.js";
 import {
   UniverDocsPlugin,
   UniverDocsUIPlugin,
   UniverSheetsDataValidationPlugin
-} from "../chunk-5KHTBPHV.js";
+} from "../chunk-3QW3A2DW.js";
+import "../chunk-WRDP6BX6.js";
 import "../chunk-LI6UXASZ.js";
 import {
   UniverUIPlugin,
   render,
   require_jsx_runtime,
   require_react
-} from "../chunk-LOHY7AAA.js";
-import {
-  FUniver
-} from "../chunk-TKKSW2K4.js";
+} from "../chunk-RVRSM6WU.js";
 import {
   UniverSheetsFilterPlugin
-} from "../chunk-MCLGDLLQ.js";
+} from "../chunk-SZGQ3BB2.js";
+import "../chunk-LOQW54LO.js";
 import {
-  zh_CN_default
-} from "../chunk-PBJP2MOU.js";
-import "../chunk-GQQW6W3C.js";
+  FUniver
+} from "../chunk-UU5HAGBO.js";
 import "../chunk-QAY465GM.js";
 import {
   UniverSheetsFormulaPlugin
-} from "../chunk-BIZC7Y24.js";
+} from "../chunk-3WNTGTNW.js";
 import {
   UniverFormulaEnginePlugin,
   UniverSheetsPlugin
-} from "../chunk-HAF7HUA6.js";
+} from "../chunk-HHTIJANW.js";
 import {
   Univer,
   UniverRenderEnginePlugin
-} from "../chunk-CCEXUECC.js";
+} from "../chunk-TSO7IYVY.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -739,8 +744,8 @@ var t4 = (t5) => (e6, o6) => {
 };
 
 // src/sheets-webcomponent/main.tsx
-var React = __toESM(require_react());
-var import_jsx_runtime = __toESM(require_jsx_runtime());
+var React = __toESM(require_react(), 1);
+var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
 var MyWebComponent = class extends i4 {
   firstUpdated() {
     const container = this.renderRoot.querySelector("#containerId");
