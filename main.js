@@ -69,7 +69,6 @@ var package_default = {
     "build:presets": "turbo build --filter './presets/**...' --filter '!./presets/**' && turbo build --filter './presets/**'",
     "build:demo": "pnpm --filter univer-examples build:demo",
     "build:e2e": "pnpm --filter univer-examples build:e2e",
-    "build:e2e:presets-umd": "turbo build --filter '@univerjs/presets...' --filter '@univerjs/preset-sheets-core...' --filter '@univerjs/preset-docs-core...'",
     "serve:e2e": "serve ./examples/local",
     "test:e2e": "playwright test",
     lint: "eslint .",
@@ -229,11 +228,11 @@ if (true) {
     // eslint-disable-next-line node/prefer-global/process
     NODE_ENV: "production",
     // eslint-disable-next-line node/prefer-global/process
-    GIT_COMMIT_HASH: "d1cf4ef",
+    GIT_COMMIT_HASH: "dc8dd28",
     // eslint-disable-next-line node/prefer-global/process
     GIT_REF_NAME: "dev",
     // eslint-disable-next-line node/prefer-global/process
-    BUILD_TIME: "2026-06-21T12:25:35.574Z"
+    BUILD_TIME: "2026-06-22T06:26:59.204Z"
   });
 }
 function DemoList({ items }) {
