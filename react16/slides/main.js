@@ -1,22 +1,25 @@
-import "../chunk-NPMIMA7Z.js";
+import "../chunk-BA4F4S6X.js";
 import {
   UniverDebuggerPlugin
-} from "../chunk-CGWN3G2E.js";
+} from "../chunk-HPYU5N3Z.js";
 import {
   UniverWatermarkPlugin
-} from "../chunk-SGTCUN67.js";
+} from "../chunk-55KTSYOY.js";
 import {
   zh_CN_default
-} from "../chunk-JB3QWVLM.js";
+} from "../chunk-LMLFG63V.js";
+import "../chunk-E5Q63FI5.js";
+import "../chunk-DBRQB4K6.js";
 import {
   DEFAULT_SLIDE_DATA,
   ObjectProvider,
   UniverSlidesPlugin,
   loadDebuggerLocale
-} from "../chunk-SGZ2HHVL.js";
-import "../chunk-4UBAF5MM.js";
-import "../chunk-E76AX5ER.js";
-import "../chunk-NYYGRMLU.js";
+} from "../chunk-TAWGJECY.js";
+import "../chunk-XDJQRT7P.js";
+import "../chunk-QI2AEB5F.js";
+import "../chunk-IMWY7PB3.js";
+import "../chunk-6JGXY3LE.js";
 import {
   DOCS_COMPONENT_MAIN_LAYER_INDEX,
   DRAWING_IMAGE_ALLOW_IMAGE_LIST,
@@ -32,7 +35,8 @@ import {
   UniverDocsUIPlugin,
   UniverDrawingPlugin,
   getImageSize
-} from "../chunk-MAD3JRBW.js";
+} from "../chunk-RUBWMXYG.js";
+import "../chunk-WRDP6BX6.js";
 import "../chunk-LI6UXASZ.js";
 import {
   AddImageIcon,
@@ -70,14 +74,14 @@ import {
   scrollbarClassName,
   useDependency,
   useObservable
-} from "../chunk-CK4XAVSA.js";
+} from "../chunk-VDSGT5AZ.js";
 import "../chunk-LOQW54LO.js";
-import "../chunk-BIOJ5KTK.js";
-import "../chunk-QAY465GM.js";
-import "../chunk-UBUTY46K.js";
+import "../chunk-E7KT3G3T.js";
+import "../chunk-2236G4QD.js";
+import "../chunk-RJX7H74E.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-M3MJBN7C.js";
+} from "../chunk-QSEVI5FA.js";
 import {
   BehaviorSubject,
   DEFAULT_EMPTY_DOCUMENT_VALUE,
@@ -127,7 +131,7 @@ import {
   pxToNum,
   takeUntil,
   toDisposable
-} from "../chunk-XMQDOTMR.js";
+} from "../chunk-TGSCZSOP.js";
 import "../chunk-EQ2B2W73.js";
 import {
   __decorateClass,
@@ -1272,7 +1276,6 @@ function SlideShapeMenuFactory(accessor) {
     icon: "GraphIcon",
     tooltip: "slides-ui.shape.insert.title",
     hidden$: getMenuHiddenObservable(accessor, 3 /* UNIVER_SLIDE */)
-    // disabled$: getCurrentRangeDisable$(accessor, { workbookTypes: [WorkbookEditablePermission], worksheetTypes: [WorksheetEditPermission], rangeTypes: [RangeProtectionPermissionEditPoint] }),
   };
 }
 function UploadSlideFloatRectangleShapeMenuFactory(_accessor) {

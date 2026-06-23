@@ -1534,9 +1534,6 @@
 .univer-border-\[rgba\(13\,13\,13\,0\.06\)\] {
   border-color: rgba(13, 13, 13, 0.06);
 }
-.univer-border-\[rgba\(13\,13\,13\,0\.12\)\] {
-  border-color: rgba(13, 13, 13, 0.12);
-}
 .univer-border-blue-300 {
   border-color: var(--univer-blue-300);
 }
@@ -5711,9 +5708,6 @@
 }
 .univer-border-\[rgba\(13\,13\,13\,0\.06\)\] {
   border-color: rgba(13, 13, 13, 0.06);
-}
-.univer-border-\[rgba\(13\,13\,13\,0\.12\)\] {
-  border-color: rgba(13, 13, 13, 0.12);
 }
 .univer-border-blue-300 {
   border-color: var(--univer-blue-300);

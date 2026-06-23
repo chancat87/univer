@@ -1,40 +1,68 @@
 import {
+  UniverDocsHyperLinkPlugin,
+  UniverDocsHyperLinkUIPlugin,
+  UniverDocsThreadCommentUIPlugin
+} from "../chunk-VVRLNB7M.js";
+import {
+  UniverThreadCommentUIPlugin
+} from "../chunk-OYNTQE7A.js";
+import {
   createUniver
-} from "../chunk-OUW7ZZJK.js";
+} from "../chunk-YUBTVLIY.js";
+import {
+  UniverDocsDrawingUIPlugin
+} from "../chunk-E5Q63FI5.js";
+import {
+  zh_CN_default as zh_CN_default2,
+  zh_CN_default2 as zh_CN_default3,
+  zh_CN_default3 as zh_CN_default4
+} from "../chunk-DBRQB4K6.js";
 import {
   DEFAULT_DOCUMENT_DATA_SIMPLE
-} from "../chunk-SGZ2HHVL.js";
-import "../chunk-I6GUBEEQ.js";
+} from "../chunk-TAWGJECY.js";
+import "../chunk-3EHXFAKA.js";
 import {
   UniverNetworkPlugin
-} from "../chunk-KDGVEVAK.js";
-import "../chunk-27VYB5XE.js";
+} from "../chunk-AC3C4POW.js";
+import "../chunk-HNRLDDQL.js";
+import "../chunk-RWIIW5II.js";
+import {
+  UniverDocsDrawingPlugin,
+  UniverDrawingUIPlugin
+} from "../chunk-6JGXY3LE.js";
 import {
   UniverDocsPlugin,
-  UniverDocsUIPlugin
-} from "../chunk-MAD3JRBW.js";
+  UniverDocsUIPlugin,
+  UniverDrawingPlugin
+} from "../chunk-RUBWMXYG.js";
+import {
+  zh_CN_default as zh_CN_default6,
+  zh_CN_default2 as zh_CN_default7
+} from "../chunk-WRDP6BX6.js";
 import "../chunk-LI6UXASZ.js";
 import {
   UniverUIPlugin
-} from "../chunk-CK4XAVSA.js";
-import "../chunk-BIOJ5KTK.js";
+} from "../chunk-VDSGT5AZ.js";
+import "../chunk-E7KT3G3T.js";
 import {
   zh_CN_default,
-  zh_CN_default2,
-  zh_CN_default3
-} from "../chunk-QAY465GM.js";
-import "../chunk-UBUTY46K.js";
+  zh_CN_default2 as zh_CN_default5,
+  zh_CN_default3 as zh_CN_default8
+} from "../chunk-2236G4QD.js";
+import "../chunk-RJX7H74E.js";
 import {
   UniverFormulaEnginePlugin
-} from "../chunk-M3MJBN7C.js";
+} from "../chunk-QSEVI5FA.js";
 import {
+  IImageIoService,
   UniverRenderEnginePlugin,
+  default_default,
   mergeLocales
-} from "../chunk-XMQDOTMR.js";
+} from "../chunk-TGSCZSOP.js";
 import "../chunk-EQ2B2W73.js";
 import "../chunk-HECJ2TYE.js";
 
-// ../presets/packages/preset-docs-core/src/umd.ts
+// ../presets/packages/preset-docs-core/src/preset.ts
 function UniverDocsCorePreset(config = {}) {
   const {
     container = "app",
@@ -68,24 +96,85 @@ function UniverDocsCorePreset(config = {}) {
 }
 
 // ../presets/packages/preset-docs-core/src/locales/zh-CN.ts
-var zh_CN_default4 = Object.assign(
+var zh_CN_default9 = Object.assign(
   {},
   zh_CN_default,
+  zh_CN_default5,
+  zh_CN_default8
+);
+
+// ../presets/packages/preset-docs-drawing/src/preset.ts
+function UniverDocsDrawingPreset(config = {}) {
+  const { collaboration = false } = config;
+  return {
+    plugins: [
+      [UniverDrawingPlugin, { override: collaboration ? [[IImageIoService, null]] : [] }],
+      UniverDrawingUIPlugin,
+      UniverDocsDrawingPlugin,
+      UniverDocsDrawingUIPlugin
+    ].filter((v) => !!v)
+  };
+}
+
+// ../presets/packages/preset-docs-drawing/src/locales/zh-CN.ts
+var zh_CN_default10 = Object.assign(
+  {},
   zh_CN_default2,
+  zh_CN_default6
+);
+
+// ../presets/packages/preset-docs-hyper-link/src/preset.ts
+function UniverDocsHyperLinkPreset() {
+  return {
+    plugins: [
+      UniverDocsHyperLinkPlugin,
+      UniverDocsHyperLinkUIPlugin
+    ].filter((v) => !!v)
+  };
+}
+
+// ../presets/packages/preset-docs-hyper-link/src/locales/zh-CN.ts
+var zh_CN_default11 = Object.assign(
+  {},
   zh_CN_default3
+);
+
+// ../presets/packages/preset-docs-thread-comment/src/preset.ts
+function UniverDocsThreadCommentPreset(_config = {}) {
+  const plugins = [
+    UniverThreadCommentUIPlugin,
+    UniverDocsThreadCommentUIPlugin
+  ];
+  return { plugins };
+}
+
+// ../presets/packages/preset-docs-thread-comment/src/locales/zh-CN.ts
+var zh_CN_default12 = Object.assign(
+  {},
+  zh_CN_default4,
+  zh_CN_default7
 );
 
 // src/preset-docs-core/main.ts
 var { univer, univerAPI } = createUniver({
   locale: "zhCN" /* ZH_CN */,
   locales: {
-    ["zhCN" /* ZH_CN */]: mergeLocales(zh_CN_default4)
+    ["zhCN" /* ZH_CN */]: mergeLocales(
+      zh_CN_default9,
+      zh_CN_default10,
+      zh_CN_default11,
+      zh_CN_default12
+    )
   },
+  theme: default_default,
   logLevel: 4 /* VERBOSE */,
   presets: [
     UniverDocsCorePreset({
       container: "app"
-    })
+    }),
+    UniverDocsDrawingPreset(),
+    UniverDocsHyperLinkPreset(),
+    UniverDocsThreadCommentPreset()
   ]
 });
 univer.createUnit(1 /* UNIVER_DOC */, DEFAULT_DOCUMENT_DATA_SIMPLE);
