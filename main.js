@@ -5,7 +5,7 @@ import {
   render,
   require_jsx_runtime,
   require_react
-} from "./chunk-VDSGT5AZ.js";
+} from "./chunk-5LNBNADJ.js";
 import {
   default_default
 } from "./chunk-TGSCZSOP.js";
@@ -68,7 +68,7 @@ var package_default = {
     "build:plugins": "turbo build --filter '!./common/*' --filter '!./presets/**'",
     "build:presets": "turbo build --filter './presets/**...' --filter '!./presets/**' && turbo build --filter './presets/**'",
     "build:demo": "pnpm --filter univer-examples build:demo",
-    "build:e2e": "pnpm --filter univer-examples build:e2e",
+    "build:e2e": "turbo build:e2e --filter univer-examples",
     "serve:e2e": "serve ./examples/local",
     "test:e2e": "playwright test",
     lint: "eslint .",
@@ -232,11 +232,11 @@ if (true) {
     // eslint-disable-next-line node/prefer-global/process
     NODE_ENV: "production",
     // eslint-disable-next-line node/prefer-global/process
-    GIT_COMMIT_HASH: "9873065",
+    GIT_COMMIT_HASH: "1378fce",
     // eslint-disable-next-line node/prefer-global/process
     GIT_REF_NAME: "dev",
     // eslint-disable-next-line node/prefer-global/process
-    BUILD_TIME: "2026-06-23T18:22:23.858Z"
+    BUILD_TIME: "2026-06-24T06:44:39.435Z"
   });
 }
 function DemoList({ items }) {
