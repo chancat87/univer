@@ -111,6 +111,7 @@ storybook-static
 /playwright-assets/
 /blob-report/
 /playwright/.cache/
+/.playwright-snapshots/
 playwright-report.json
 /artifacts/
 

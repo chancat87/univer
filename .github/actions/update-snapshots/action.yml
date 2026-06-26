@@ -1,9 +1,13 @@
 name: 📸 Update Snapshots
-description: Update snapshots and push a new commit.
+description: Update Playwright snapshots and upload them as a workflow artifact.
 
 runs:
     using: composite
     steps:
+        - name: Clean Snapshot Directory
+          shell: bash
+          run: rm -rf .playwright-snapshots
+
         - name: Install Playwright Browsers
           shell: bash
           run: pnpm exec playwright install --with-deps chromium
@@ -14,4 +18,14 @@ runs:
 
         - name: Update Snapshots
           shell: bash
-          run: pnpm exec playwright test e2e/visual-comparison --update-snapshots
+          env:
+              PW_SNAPSHOT_DIR: .playwright-snapshots
+          run: pnpm exec playwright test e2e/visual-comparison e2e/thread-comment --update-snapshots
+
+        - name: Upload Snapshot Artifact
+          uses: actions/upload-artifact@v7
+          with:
+              name: playwright-snapshots
+              path: .playwright-snapshots/
+              include-hidden-files: true
+              retention-days: 90

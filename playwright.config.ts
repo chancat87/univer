@@ -1,4 +1,4 @@
-/* eslint-disable node/prefer-global/process */
+import process from 'node:process';
 import { defineConfig, devices } from '@playwright/test';
 
 /**
@@ -6,6 +6,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 const IS_CI = !!process.env.CI;
 const HEADLESS = !!process.env.HEADLESS;
+const SNAPSHOT_DIR = process.env.PW_SNAPSHOT_DIR || '.playwright-snapshots';
 
 /**
  * Read environment variables from file.
@@ -19,6 +20,7 @@ const HEADLESS = !!process.env.HEADLESS;
 export default defineConfig({
     testDir: './e2e',
     outputDir: 'test-results/', // Make sure this is set
+    snapshotPathTemplate: `${SNAPSHOT_DIR}/{testFileDir}/{testFileName}-snapshots/{arg}{-projectName}{-snapshotSuffix}{ext}`,
     /* Run tests in files in parallel */
     fullyParallel: true,
     /* Fail the build on CI if you accidentally left test.only in the source code. */
